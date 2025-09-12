@@ -21,14 +21,14 @@ const HeroSection = ({ t }: HeroSectionProps) => {
     "Система Qezvoro обрабатывает миллиарды данных ежесекундно: от ценовых колебаний до настроений социальных медиа, от экономических индикаторов до геополитических событий. Получите рекомендации, автоматизируйте инвестиционные стратегии и принимайте взвешенные решения, опираясь на технологии следующего поколения.";
 
   const ctaLabel =
-    t?.quickForm?.button ?? "Активировать ИИ-анализ";
+    t?.hero?.cta?.activateAnalysis ?? "Активировать ИИ-анализ";
 
   const g1 =
-    t?.quickForm?.guarantees?.freeRegistration ?? "Бесплатная регистрация";
+    t?.hero?.badges?.freeReg ?? "Бесплатная регистрация";
   const g2 =
-    t?.quickForm?.guarantees?.virtualAccount ?? "Виртуальный счет для практики";
+    t?.hero?.badges?.demoAccount ?? "Виртуальный счет для практики";
   const g3 =
-    t?.quickForm?.guarantees?.noObligations ?? "Никаких обязательств";
+    t?.hero?.badges?.noObligations ?? "Никаких обязательств";
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -45,7 +45,7 @@ const HeroSection = ({ t }: HeroSectionProps) => {
         <div className="max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8 animate-fade-up">
             <span className="gradient-text">{brandName}</span> —{" "}
-            <span className="text-foreground">{heroTitle}</span>
+            <span className="text-foreground">{heroTitle.replace(brandName + ' —', "")}</span>
           </h1>
 
           <div

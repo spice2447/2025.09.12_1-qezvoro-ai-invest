@@ -2,50 +2,70 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Cpu, Shield, Target } from "lucide-react";
 
-const AITechnologies = () => {
+type Props = { t: any };
+
+const AITechnologies = ({ t }: Props) => {
+  const title =
+    t?.ai?.title ?? "Технологии искусственного интеллекта";
+  const subtitle =
+    t?.ai?.subtitle ??
+    "Qezvoro AI — это комплекс продвинутых алгоритмов машинного обучения, анализирующий рыночную динамику со скоростью и точностью, недоступной человеку.";
+
+  const bottomTitle =
+    t?.ai?.extraTitle ?? "Принципы работы нашей ИИ-движки";
+  const bottomText =
+    t?.ai?.extraText ??
+    "За 2 года наши алгоритмы обработали более 15 ТБ рыночных данных и изучили 50+ млн транзакций, постоянно улучшая модели.";
+
   const technologies = [
     {
       icon: Cpu,
-      title: "Предиктивное моделирование",
-      description: "Наши нейросети ежесекундно обрабатывают более 10 000 рыночных параметров, обнаруживая скрытые взаимосвязи и прогнозируя ценовые движения с 87% точностью.",
-      features: [
-        "10,000+ параметров/сек",
-        "87% точность предсказаний",
-        "Технический анализ",
-        "Фундаментальные индикаторы",
-        "Макроэкономические тенденции",
-        "Социальные настроения"
-      ],
-      color: "primary"
+      title: t?.ai?.cards?.predictive?.title ?? "Предиктивное моделирование",
+      description:
+        t?.ai?.cards?.predictive?.desc ??
+        "Наши нейросети ежесекундно обрабатывают более 10 000 параметров, выявляя скрытые связи и предсказывая движения с точностью 87%.",
+      features:
+        t?.ai?.cards?.predictive?.features ?? [
+          "10,000+ параметров/сек",
+          "87% точность предсказаний",
+          "Технический анализ",
+          "Фундаментальные индикаторы",
+          "Макроэкономические тенденции",
+          "Социальные настроения",
+        ],
     },
     {
       icon: Shield,
-      title: "Автоматическое управление рисками",
-      description: "ИИ самостоятельно вычисляет оптимальные размеры позиций, устанавливает адаптивные уровни стоп-лосса и тейк-профита, учитывая волатильность активов.",
-      features: [
-        "Адаптивное позиционирование",
-        "Автоматический стоп-лосс",
-        "Анализ волатильности",
-        "Индивидуальный риск-профиль",
-        "Защита от эмоций",
-        "Контроль просадки"
-      ],
-      color: "success"
+      title: t?.ai?.cards?.risk?.title ?? "Автоматическое управление рисками",
+      description:
+        t?.ai?.cards?.risk?.desc ??
+        "ИИ рассчитывает размеры позиций, стоп-лоссы/тейк-профиты с учётом волатильности и индивидуального риск-профиля.",
+      features:
+        t?.ai?.cards?.risk?.features ?? [
+          "Адаптивное позиционирование",
+          "Автоматический стоп-лосс",
+          "Анализ волатильности",
+          "Индивидуальный риск-профиль",
+          "Защита от эмоций",
+          "Контроль просадки",
+        ],
     },
     {
       icon: Target,
-      title: "Портфельная оптимизация",
-      description: "Алгоритмы непрерывно отслеживают структуру вашего портфеля и предлагают перераспределение активов для достижения максимальной доходности при контролируемом риске.",
-      features: [
-        "Непрерывный мониторинг",
-        "Автоматическая ребалансировка",
-        "Максимизация доходности",
-        "Контролируемый риск",
-        "Диверсификация активов",
-        "Оптимальные пропорции"
-      ],
-      color: "accent"
-    }
+      title: t?.ai?.cards?.portfolio?.title ?? "Портфельная оптимизация",
+      description:
+        t?.ai?.cards?.portfolio?.desc ??
+        "Алгоритмы непрерывно мониторят структуру портфеля и предлагают ребалансировку для максимизации доходности при контролируемом риске.",
+      features:
+        t?.ai?.cards?.portfolio?.features ?? [
+          "Непрерывный мониторинг",
+          "Автоматическая ребалансировка",
+          "Максимизация доходности",
+          "Контролируемый риск",
+          "Диверсификация активов",
+          "Оптимальные пропорции",
+        ],
+    },
   ];
 
   return (
@@ -53,20 +73,21 @@ const AITechnologies = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Технологии <span className="gradient-text">искусственного интеллекта</span>
+            {title.split(" ").length ? (
+              <>
+                {title.split(" ")[0]} <span className="gradient-text">{title.split(" ").slice(1).join(" ")}</span>
+              </>
+            ) : title}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-            Qezvoro AI представляет собой комплекс продвинутых алгоритмов машинного обучения, 
-            анализирующий рыночную динамику со скоростью и точностью, недоступной человеку.
-          </p>
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">{subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {technologies.map((tech, index) => {
             const Icon = tech.icon;
             return (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="card-gradient border-primary/20 hover:border-primary/40 transition-all duration-500 group hover:glow animate-fade-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
@@ -82,18 +103,17 @@ const AITechnologies = () => {
                 <CardContent>
                   <div className="space-y-3">
                     <h4 className="font-semibold text-sm text-foreground mb-3">
-                      Ключевые возможности:
+                      {t?.ai?.featuresTitle ?? "Ключевые возможности:"}
                     </h4>
                     <div className="grid grid-cols-1 gap-2">
-                      {tech.features.map((feature, featureIndex) => (
-                        <Badge 
-                          key={featureIndex}
-                          variant="secondary"
-                          className="justify-start py-2 px-3 bg-secondary/40 border-primary/20"
+                      {tech.features.map((feature: string, i: number) => (
+                        <span
+                          key={i}
+                          className="justify-start py-2 px-3 bg-secondary/40 border-primary/20 rounded-md text-sm inline-flex items-center"
                         >
-                          <div className="w-2 h-2 bg-accent rounded-full mr-2 flex-shrink-0" />
+                          <span className="w-2 h-2 bg-accent rounded-full mr-2 flex-shrink-0" />
                           {feature}
-                        </Badge>
+                        </span>
                       ))}
                     </div>
                   </div>
@@ -105,16 +125,8 @@ const AITechnologies = () => {
 
         <div className="text-center mt-16">
           <div className="inline-block bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-2xl p-8 max-w-3xl">
-            <h3 className="text-2xl font-bold gradient-text mb-4">
-              Принципы работы нашей ИИ-движки
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              За 2 года работы наши алгоритмы обработали более{" "}
-              <span className="text-accent font-semibold">15 терабайт</span> рыночных данных, 
-              совершили анализ{" "}
-              <span className="text-primary font-semibold">50+ миллионов</span> транзакций
-              и постоянно совершенствуют прогностические модели на основе машинного обучения.
-            </p>
+            <h3 className="text-2xl font-bold gradient-text mb-4">{bottomTitle}</h3>
+            <p className="text-muted-foreground text-lg leading-relaxed">{bottomText}</p>
           </div>
         </div>
       </div>

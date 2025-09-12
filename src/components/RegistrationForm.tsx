@@ -6,7 +6,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Shield, Users, Zap } from "lucide-react";
 import { useState } from "react";
 
-const RegistrationForm = () => {
+type Props = { t: any; locale?: string };
+
+const RegistrationForm = ({ t, locale }: Props) => {
+  const tt = t?.quickForm ?? {};
+
   const [formData, setFormData] = useState({
     email: "",
     phone: "",
@@ -16,8 +20,7 @@ const RegistrationForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission
+    console.log("Form submitted:", formData, { locale });
   };
 
   return (
@@ -25,15 +28,17 @@ const RegistrationForm = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-            {/* Left Side - Information */}
+            {/* Left */}
             <div className="space-y-8">
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  Запустите <span className="gradient-text">ИИ-инвестирование</span> за 60 секунд
+                  {(tt.title.slice(0, tt.title.indexOf(tt.titleAccent)) ?? "Запустите")} <span className="gradient-text">
+                    {tt.titleAccent ?? "ИИ-инвестирование"}
+                  </span>{" "}
+                  {tt.title.slice(tt.title.indexOf(tt.titleAccent) + tt.titleAccent.length) ?? "за 60 секунд"}
                 </h2>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Более 50 000 трейдеров доверяют нашим алгоритмам.
+                  {tt.desc ?? "Более 50 000 трейдеров доверяют нашим алгоритмам."}
                 </p>
               </div>
 
@@ -43,8 +48,12 @@ const RegistrationForm = () => {
                     <Shield className="w-6 h-6 text-success" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg">Бесплатная регистрация</h3>
-                    <p className="text-muted-foreground">Никаких скрытых платежей или комиссий</p>
+                    <h3 className="font-semibold text-lg">
+                      {tt.left?.freeRegTitle ?? "Бесплатная регистрация"}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {tt.left?.freeRegText ?? "Никаких скрытых платежей или комиссий"}
+                    </p>
                   </div>
                 </div>
 
@@ -53,8 +62,12 @@ const RegistrationForm = () => {
                     <Users className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg">Виртуальный счет для практики</h3>
-                    <p className="text-muted-foreground">$100,000 виртуальных средств для обучения</p>
+                    <h3 className="font-semibold text-lg">
+                      {tt.left?.demoTitle ?? "Виртуальный счет для практики"}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {tt.left?.demoText ?? "$100,000 виртуальных средств для обучения"}
+                    </p>
                   </div>
                 </div>
 
@@ -63,29 +76,35 @@ const RegistrationForm = () => {
                     <Zap className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg">Никаких обязательств</h3>
-                    <p className="text-muted-foreground">Отмените в любое время без комиссий</p>
+                    <h3 className="font-semibold text-lg">
+                      {tt.left?.noOblTitle ?? "Никаких обязательств"}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {tt.left?.noOblText ?? "Отмените в любое время без комиссий"}
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Right Side - Form */}
+            {/* Right - Form */}
             <Card className="card-gradient border-primary/20 glow">
               <CardHeader>
-                <CardTitle className="text-2xl gradient-text">Начать инвестирование</CardTitle>
+                <CardTitle className="text-2xl gradient-text">
+                  {tt.formTitle ?? "Начать инвестирование"}
+                </CardTitle>
                 <CardDescription>
-                  Заполните форму и получите доступ к ИИ-анализу рынка
+                  {tt.formSubtitle ?? "Заполните форму и получите доступ к ИИ-анализу рынка"}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email-адрес</Label>
+                    <Label htmlFor="email">{tt.fields?.email ?? "Email-адрес"}</Label>
                     <Input
                       id="email"
                       type="email"
-                      placeholder="your@email.com"
+                      placeholder={tt.form?.emailPlaceholder ?? "your@email.com"}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
@@ -93,11 +112,11 @@ const RegistrationForm = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Номер телефона</Label>
+                    <Label htmlFor="phone">{tt.fields?.phone ?? "Номер телефона"}</Label>
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="+7 (999) 123-45-67"
+                      placeholder={tt.form?.phonePlaceholder ?? "+7 (999) 123-45-67"}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
@@ -105,11 +124,11 @@ const RegistrationForm = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="fullName">Полное имя</Label>
+                    <Label htmlFor="fullName">{tt.fields?.fullName ?? "Полное имя"}</Label>
                     <Input
                       id="fullName"
                       type="text"
-                      placeholder="Иван Иванов"
+                      placeholder={tt.form?.namePlaceholder ?? "Иван Иванов"}
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       required
@@ -117,33 +136,44 @@ const RegistrationForm = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label>Инвестиционный опыт</Label>
-                    <Select value={formData.experience} onValueChange={(value) => setFormData({ ...formData, experience: value })}>
+                    <Label>{tt.fields?.experience ?? "Инвестиционный опыт"}</Label>
+                    <Select
+                      value={formData.experience}
+                      onValueChange={(value) => setFormData({ ...formData, experience: value })}
+                    >
                       <SelectTrigger>
-                        <SelectValue placeholder="Выберите ваш опыт" />
+                        <SelectValue placeholder={tt.select?.placeholder ?? "Выберите ваш опыт"} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="beginner">Новичок (0-1 год)</SelectItem>
-                        <SelectItem value="intermediate">Средний (1-3 года)</SelectItem>
-                        <SelectItem value="advanced">Продвинутый (3-5 лет)</SelectItem>
-                        <SelectItem value="expert">Эксперт (5+ лет)</SelectItem>
+                        <SelectItem value="beginner">
+                          {tt.select.beginner ?? "Новичок (0-1 год)"}
+                        </SelectItem>
+                        <SelectItem value="intermediate">
+                          {tt.select.intermediate ?? "Средний (1-3 года)"}
+                        </SelectItem>
+                        <SelectItem value="advanced">
+                          {tt.select.advanced ?? "Продвинутый (3-5 лет)"}
+                        </SelectItem>
+                        <SelectItem value="expert">
+                          {tt.select.expert ?? "Эксперт (5+ лет)"}
+                        </SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
                   <Button type="submit" size="lg" className="w-full gradient-bg hover:opacity-90 transition-all">
                     <Zap className="w-5 h-5 mr-2" />
-                    Активировать ИИ-анализ
+                    {tt.action ?? "Активировать ИИ-анализ"}
                   </Button>
 
                   <p className="text-xs text-muted-foreground text-center">
-                    Нажимая кнопку, вы соглашаетесь с нашими{" "}
+                    {tt.smallText?.byPressing ?? "Нажимая кнопку, вы соглашаетесь с нашими"}{" "}
                     <a href="#" className="text-primary hover:underline">
-                      условиями использования
+                      {tt.smallText?.terms ?? "условиями использования"}
                     </a>{" "}
-                    и{" "}
+                    {tt.smallText?.and ?? "и"}{" "}
                     <a href="#" className="text-primary hover:underline">
-                      политикой конфиденциальности
+                      {tt.smallText?.privacy ?? "политикой конфиденциальности"}
                     </a>
                   </p>
                 </form>

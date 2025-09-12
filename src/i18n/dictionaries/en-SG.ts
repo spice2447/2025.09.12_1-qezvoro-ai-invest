@@ -12,6 +12,12 @@ const enSG = {
     privacy: "Privacy Policy",
   },
 
+  // common shared labels (buttons etc.)
+  common: {
+    contacts: "Contacts",
+    ctaStart: "Start now",
+  },
+
   hero: {
     title: "Qezvoro Invest — a revolutionary AI platform for modern nations",
     paragraph1:
@@ -20,10 +26,19 @@ const enSG = {
       "The Qezvoro system processes billions of data points every second: from price movements to social media sentiment, from economic indicators to geopolitical events. Get recommendations, automate investment strategies and make informed decisions based on next-generation technologies.",
     extra:
       "The modern financial world requires not only expertise, but also lightning-fast processing of information flows. Qezvoro Trading combines classic investment approaches with revolutionary artificial intelligence capabilities, setting new standards in the financial technology industry.",
+    cta: {
+      activateAnalysis: "Activate AI analysis",
+    },
+    badges: {
+      freeReg: "Free registration",
+      demoAccount: "Virtual practice account",
+      noObligations: "No obligations",
+    },
   },
 
   quickForm: {
     title: "Start AI Investing in 60 Seconds",
+    titleAccent: "AI Investing",
     desc: "Over 50,000 traders trust our algorithms.",
     fields: {
       email: "Email address",
@@ -31,12 +46,41 @@ const enSG = {
       fullName: "Full name",
       experience: "Investment experience",
     },
+    // right card
+    formTitle: "Start investing",
+    formSubtitle: "Fill the form to access AI market analysis",
+    terms: "Terms of Use",
+    privacy: "Privacy Policy",
+    select: {
+      placeholder: "Select your experience",
+      beginner: "Beginner (0–1 yr)",
+      intermediate: "Intermediate (1–3 yrs)",
+      advanced: "Advanced (3–5 yrs)",
+      expert: "Expert (5+ yrs)",
+    },
+    // left perks block
+    left: {
+      freeRegTitle: "Free registration",
+      freeRegText: "No hidden fees or charges",
+      demoTitle: "Virtual practice account",
+      demoText: "$100,000 virtual funds for learning",
+      noOblTitle: "No obligations",
+      noOblText: "Cancel anytime with no fees",
+    },
+    smallText: {
+      byPressing: 'By pressing the button, you agree to our',
+      terms: "terms of use",
+      and: "and",
+      privacy: "privacy policy",
+    },
     action: "Activate AI analysis",
     guarantees: "Free registration • Virtual account for practice • No obligations",
   },
 
   kpis: {
     title: "Achievements in numbers",
+    subtitle: "Figures that prove the efficiency of our AI solutions",
+    realtimeNotice: "All metrics update in real time",
     items: [
       { label: "Registered traders", value: "50,000+" },
       { label: "Completed transactions", value: "$2.3B+" },
@@ -72,6 +116,9 @@ const enSG = {
           "Customizable dashboards, advanced charting, one-click trading and a mobile app provide 24/7 accessibility.",
       },
     ],
+    bottomTitle: "The modern financial world",
+    bottomText:
+      "Requires not only expertise, but lightning-fast processing of information flows. Qezvoro Trading merges classical approaches with AI to deliver an institutional-grade edge.",
   },
 
   aiTech: {
@@ -95,6 +142,9 @@ const enSG = {
           "Algorithms track portfolio structure and suggest rebalancing to maximize profitability at controlled risk, with automatic rebalancing.",
       },
     ],
+    bottomTitle: "How we train the models",
+    bottomText:
+      "In two years our algorithms processed 15+ TB of market data and analyzed 50M+ transactions — continuously improving predictive performance.",
   },
 
   advantages: {
@@ -126,10 +176,13 @@ const enSG = {
           "Licensing in 12 jurisdictions (SEC, FCA, CySEC). MFA, biometrics, strong encryption, segregated client funds and periodic external audits.",
       },
     ],
+    banner: "These advantages are unavailable to 99% of investors",
   },
 
   partners: {
     title: "Our partners are global leaders",
+    subtitle:
+      "Integration with leading exchanges and data providers ensures optimal trading conditions and access to premium analytics.",
     items: [
       { name: "Binance — Cryptocurrency Giant", text: "Largest crypto exchange; 500+ instruments, ultra-low spreads, fast execution. Special fees from 0.05%." },
       { name: "Coinbase — US regulated", text: "Public NASDAQ company with high security & compliance; access to Coinbase Prime and exclusive listings." },
@@ -137,16 +190,34 @@ const enSG = {
       { name: "Interactive Brokers — Global stocks", text: "Access to 135 markets in 33 countries at institutional rates." },
       { name: "Bloomberg terminal integration", text: "Professional analytics, research, news and macro data." },
     ],
+    ecoTitle: "Partner ecosystem",
+    ecoText:
+      "Our network includes exchanges, banks, regulators, data vendors and technology leaders — bringing institutional-grade services to retail investors.",
+    stats: {
+      markets: "Markets",
+      countries: "Countries",
+      instruments: "Instruments",
+      uptime: "Uptime",
+    },
   },
 
   testimonials: {
     title: "Qezvoro Reviews: real experience",
+    subtitle:
+      "Real user stories focusing on ROI, prediction accuracy, trust and regulatory compliance.",
     items: [
       { author: "Rajesh T., financial advisor, Singapore", text: "5 months, +31% vs STI +6%. Precise signals — caught DBS rally 3 weeks before earnings." },
       { author: "Michelle L., marketing executive, Singapore", text: "Beginner; S$5,400 profit in 7 months. Auto risk-management saved me during tech selloff." },
       { author: "David C., portfolio manager, Singapore", text: "12 years trading — analytics outperform Reuters. API automation; 15% → 42% annual returns." },
       { author: "Priya S., tech entrepreneur, Singapore", text: "Initially skeptical; MAS compliance + transparency. +187% in crypto positions in 9 months." },
     ],
+    labels: {
+      verified: "Verified",
+      roi: "ROI",
+      period: "Usage period",
+    },
+    banner:
+      "Many initially wondered “Qezvoro — scam or legit?”, but results and transparency removed doubts.",
     note: "Many users initially wondered “Qezvoro scam or legit?”, but consistent results and regulatory transparency proved credibility.",
   },
 
@@ -161,6 +232,9 @@ const enSG = {
 
   faq: {
     title: "FAQ: All about Qezvoro Invest",
+    titleAccent: "questions",
+    subtitle:
+      "Answers to key questions about Qezvoro Invest, security, functionality and terms of use.",
     items: [
       { q: "What is Qezvoro Invest and what makes it different?", a: "AI-driven platform unifying traditional markets and crypto; 10,000+ parameters analyzed in real time; personalized signals." },
       { q: "How reliable is the AI?", a: "Deep neural networks trained on 15 years of data across major markets; ~87% historical signal accuracy." },
@@ -171,19 +245,52 @@ const enSG = {
       { q: "Fees?", a: "Transparent: stocks from $0.01/share, crypto from 0.05% (via Binance), FX conversion interbank +0.1%, withdrawals free to $10k/mo; AI subscription $0–$99/mo." },
       { q: "Availability by country?", a: "95+ countries; 12 languages supported." },
     ],
+    support: {
+      title: "Didn't find an answer?",
+      subtitle: "Our support works 24/7 and is ready to help you",
+      email: "support@qezvoro.com",
+      chat: "Online chat on the website",
+      phone: "+1 (555) 123-4567",
+    },
   },
 
   gettingStarted: {
     title: "Launch AI Investing in 3 Easy Steps",
+    titleAccent: "3 easy steps",
+    subtitle:
+      "From registration to your first AI recommendation — under 6 minutes. A fully automated, hassle-free process.",
+    stepLabel: "Step",
     steps: [
-      { title: "Quick Registration", text: "Enter email and phone, verify via document upload or video call." },
-      { title: "Top up your account", text: "Cards, bank transfer, PayPal, crypto, e-wallets. Instant funding. From $100." },
-      { title: "Activate AI assistant", text: "Take a quick profile test, get recommendations and start trading." },
+      { title: "Quick Registration", text: "Enter email and phone, verify via document upload or video call.", time: "2 min",
+        details: ["2 minutes to register","Automated process","No complex forms","Instant activation"] },
+      { title: "Top up your account", text: "Cards, bank transfer, PayPal, crypto, e-wallets. Instant funding. From $100.", time: "1 min",
+        details: ["Multiple funding methods","Instant crediting","First top-up from $100","Secure transactions"] },
+      { title: "Activate AI assistant", text: "Quick profile test, personal recommendations and start trading.", time: "3 min",
+        details: ["Personalised profile","Individual recommendations","AI support 24/7","Immediate trading start"] },
     ],
+    ctaTitle: "Ready to start AI investing?",
+    ctaText:
+      "Join 50,000+ successful investors already leveraging AI to generate stable returns.",
+    ctaButton: "Start now",
+    bulletSafe: "100% safe & licensed",
+    bulletTime: "Activation in 6 minutes",
+    totalTimeLabel: "Total process time:",
+    totalTimeValue: "≈ 6 minutes",
   },
 
   finalCta: {
     title: "Join the AI Investing Revolution Today",
+    // split title parts for flexible layout
+    titlePrefix: "Join the",
+    titleAccent: "AI Investing Revolution",
+    titleSuffix: "today",
+    lead:
+      "Over 50,000 investors already use Qezvoro Invest. AI works 24/7, analysing millions of data points so you never miss opportunities.",
+    insight:
+      "In a world where seconds determine investment outcomes, institutional-grade AI is now available to everyone via Qezvoro Invest.",
+    benefitsTitle: "Getting started benefits",
+    guaranteesTitle: "Security guarantees",
+
     bullets: [
       "Free registration in 2 minutes",
       "$100,000 demo account",
@@ -191,7 +298,7 @@ const enSG = {
       "24/7 support",
       "No hidden fees",
     ],
-    button: "Launch AI Investing Now",
+    benefits: undefined,
     security: [
       "Licenses from international regulators",
       "Deposit insurance up to $250,000",
@@ -199,8 +306,39 @@ const enSG = {
       "SSL data encryption",
       "PwC security audit",
     ],
+    guarantees: undefined,
+
+    button: "Launch AI Investing Now",
+    ctaButton: "Launch AI Investing Now",
+    ctaFootnote: "No hidden fees • Cancel anytime • 24/7 support",
+
+    stats: {
+      users: "50,000+",
+      accuracy: "87%",
+      volume: "$2.3B+",
+      uptime: "24/7",
+    },
+    statsLabels: {
+      users: "Active traders",
+      accuracy: "AI accuracy",
+      volume: "Processed volume",
+      uptime: "AI uptime",
+    },
+
     quote:
       "“The best time to invest was 10 years ago. The second best time is today.”",
+    quoteBefore:
+      "The best time to invest was 10 years ago. The second best time is",
+    quoteAccent: "today",
+    quoteAfter:
+      "With Qezvoro Invest you have the tools to succeed.",
+
+    badges: {
+      sec: "SEC Licensed",
+      pwc: "PwC Audited",
+      insurance: "$250K Insurance",
+    },
   },
 };
+
 export default enSG;
