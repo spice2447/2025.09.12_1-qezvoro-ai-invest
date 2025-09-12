@@ -8,6 +8,7 @@ import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+
 export default function LanguageSelector({ locale }: { locale: string }) {
   const router = useRouter();
   const pathname = usePathname() || "/";
@@ -18,8 +19,13 @@ export default function LanguageSelector({ locale }: { locale: string }) {
     // parts[0] === "" (из-за лидирующего "/"), локаль — в parts[1]
     parts[1] = code;
     const next = parts.join("/") || `/${code}`;
+
+    document.cookie = `locale=${code}; Path=/; Max-Age=31536000; SameSite=Lax`;
+
     router.push(next);
   }
+
+  
 
   return (
     <DropdownMenu>

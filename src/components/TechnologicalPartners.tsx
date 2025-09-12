@@ -1,8 +1,19 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Building, TrendingUp, DollarSign, Globe, BarChart } from "lucide-react";
+import { Building, TrendingUp, DollarSign, Globe, BarChart, LucideIcon } from "lucide-react";
 
 type Props = { t: any };
+
+
+type Partner = {
+  icon: LucideIcon;
+  name: string;
+  category: string;
+  description: string;
+  features: string[];
+  volume: string;
+  color: "warning" | "primary" | "accent" | "success";
+};
 
 const colorClasses: Record<string, string> = {
   warning: "bg-yellow-500/20 text-yellow-700",
@@ -14,7 +25,7 @@ const colorClasses: Record<string, string> = {
 const TechnologicalPartners = ({ t }: Props) => {
   const tt = t?.partners ?? {};
 
-  const partners = [
+  const partners: Partner[] = [
     {
       icon: Building,
       name: "Binance",
