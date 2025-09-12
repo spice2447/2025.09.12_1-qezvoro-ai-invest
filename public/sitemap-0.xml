@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://example.com</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/cs</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/de-CH</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/en-SG</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/es</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/fr-CH</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/it-CH</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/ja</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/ms-MY</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/pt-PT</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/ru</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/cs/contacts</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/de-CH/contacts</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/en-SG/contacts</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/es/contacts</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/fr-CH/contacts</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/it-CH/contacts</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/ja/contacts</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/ms-MY/contacts</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/pt-PT/contacts</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://example.com/ru/contacts</loc><lastmod>2025-09-12T05:08:55.426Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+</urlset>

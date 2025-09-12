@@ -43,13 +43,13 @@ const HeroSection = ({ t }: HeroSectionProps) => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-32">
         <div className="max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8 animate-fade-up">
+          <h1 className="text-4xl md:text-7xl font-bold leading-tight mb-8 animate-fade-up">
             <span className="gradient-text">{brandName}</span> —{" "}
             <span className="text-foreground">{heroTitle.replace(brandName + ' —', "")}</span>
           </h1>
 
           <div
-            className="space-y-6 text-lg md:text-xl text-muted-foreground mb-8 animate-fade-up"
+            className="space-y-6 text-md md:text-xl text-muted-foreground mb-8 animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
             <p>{p1}</p>
