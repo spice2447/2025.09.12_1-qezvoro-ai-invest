@@ -7,7 +7,9 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "postbuild": "next-sitemap --config next-sitemap.config.cjs"
+    "postbuild": "next-sitemap --config next-sitemap.config.cjs",
+    "i18n:fix-keys": "node scripts/i18n-codemod.js"
+    
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
