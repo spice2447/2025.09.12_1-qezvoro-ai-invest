@@ -1,17 +1,29 @@
 import type { Metadata } from "next";
-import Header from "@/components/header/Header";
-import Footer from "@/components/Footer";
 import ContactHero from "@/components/contacts/ContactHero";
 import ContactForm from "@/components/contacts/ContactForm";
 import ContactInfo from "@/components/contacts/ContactInfo";
 import Offices from "@/components/contacts/Offices";
 import ContactCTA from "@/components/contacts/ContactCTA";
 
-export const metadata: Metadata = {
-  title: "Contacts — Qezvoro",
-  description: "How to contact us",
-  alternates: { canonical: "/contacts" } // опционально
-};
+import { absUrl, baseOpenGraph, buildAlternates } from "@/lib/seo";
+import { getMessages } from "@/i18n";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getMessages(locale);
+  const title = `${t.brand?.name ?? "Qezvoro Invest"} — ${t.common?.contacts ?? "Contacts"}`;
+  const description = t.hero?.extra ?? "Get in touch with Qezvoro Invest.";
+  const url = absUrl(locale, "/contacts");
+
+  return {
+    ...baseOpenGraph(title, description, url),
+    alternates: buildAlternates(locale, "/contacts"),
+  };
+}
 
 export default function ContactsPage() {
   return (

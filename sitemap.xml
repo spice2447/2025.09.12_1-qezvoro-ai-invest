@@ -1,0 +1,21 @@
+import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/seo";
+import { localeCodes } from "@/i18n/locales";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+  const paths = ["", "/contacts"];
+  const entries: MetadataRoute.Sitemap = [];
+
+  for (const locale of localeCodes) {
+    for (const path of paths) {
+      entries.push({
+        url: `${SITE_URL}/${locale}${path}`,
+        lastModified: now,
+        changeFrequency: "weekly",
+        priority: path === "" ? 1 : 0.7,
+      });
+    }
+  }
+  return entries;
+}
