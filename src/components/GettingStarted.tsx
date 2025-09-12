@@ -8,21 +8,29 @@ const GettingStarted = ({ t, locale }: Props) => {
   const tt = t?.gettingStarted ?? {};
 
   const steps =
-    tt.steps ??
-    [
+    (tt.steps ?? []).map((step: any, index: number) => ({
+      icon: [UserPlus, CreditCard, Bot][index] ?? UserPlus,
+      title: step.title,
+      description: step.text,
+      details: step.details,
+      time: step.time,
+    }));
+
+  if (steps.length === 0) {
+    steps.push(
       {
         icon: UserPlus,
         title: "Быстрая регистрация",
         description:
-          "Укажите email и телефон, пройдите экспресс-подтверждение через загрузку документов или видеозвонок.",
+          "Email/телефон, экспресс-KYC — полностью автоматизировано.",
         details: ["2 минуты на регистрацию", "Автоматизированный процесс", "Никаких сложных форм", "Мгновенная активация"],
         time: "2 мин",
       },
       {
         icon: CreditCard,
-        title: "Пополнение счета",
+        title: "Пополнение счёта",
         description:
-          "Банковские карты, переводы, PayPal, криптовалюты, e-кошельки. Мгновенное зачисление средств.",
+          "Карты, переводы, PayPal, крипто — моментальное зачисление. От $100.",
         details: ["Множество способов пополнения", "Мгновенное зачисление", "Первое пополнение от $100", "Безопасные транзакции"],
         time: "1 мин",
       },
@@ -30,22 +38,22 @@ const GettingStarted = ({ t, locale }: Props) => {
         icon: Bot,
         title: "Активация ИИ-ассистента",
         description:
-          "Пройдите быстрый тест профиля, получите персональные рекомендации и начните торговать с поддержкой ИИ.",
+          "Тест профиля, персональные рекомендации и старт торговли.",
         details: ["Персонализированный профиль", "Индивидуальные рекомендации", "ИИ-поддержка 24/7", "Немедленный старт торговли"],
         time: "3 мин",
       },
-    ];
+    )
+  }
 
   return (
     <section className="py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {(tt.title ?? "Начало работы —")}{" "}
-            <span className="gradient-text">{tt.titleAccent ?? "3 простых шага"}</span>
+            {(tt.title ?? "Запустите ИИ-инвестирование за 3 шага")}
           </h2>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          {tt.subtitle ?? "От регистрации до первой ИИ-рекомендации — менее 6 минут. Без сложностей и бюрократии."}
+          {tt.subtitle ?? "От регистрации до первой ИИ-рекомендации — менее 6 минут. Полностью автоматизированный процесс без сложностей и бюрократии."}
         </p>
         </div>
 
@@ -112,7 +120,7 @@ const GettingStarted = ({ t, locale }: Props) => {
                 {tt.ctaTitle ?? "Готовы начать ИИ-инвестирование?"}
               </h3>
               <p className="text-muted-foreground mb-6 text-lg">
-                {tt.ctaText ?? "Присоединяйтесь к 50,000+ инвесторов, уже использующих преимущества искусственного интеллекта."}
+                {tt.ctaText ?? "Присоединяйтесь к 50 000+ успешных инвесторов, которые уже используют преимущества искусственного интеллекта."}
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-6">

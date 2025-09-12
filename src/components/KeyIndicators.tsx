@@ -15,18 +15,18 @@ const KeyIndicators = ({ t }: Props) => {
   const [animatedValues, setAnimatedValues] = useState<number[]>([0, 0, 0, 0, 0]);
 
   const title =
-    t?.keyIndicators?.title ?? "Ключевые показатели";
+    t?.kpis?.title ?? "Ключевые показатели";
   const subtitle =
-    t?.keyIndicators?.subtitle ?? "Достижения в цифрах — доказательство эффективности наших ИИ-решений";
+    t?.kpis?.subtitle ?? "Достижения в цифрах — доказательство эффективности наших ИИ-решений";
   const liveNote =
-    t?.keyIndicators?.liveNote ?? "Все показатели обновляются в режиме реального времени";
+    t?.kpis?.realtimeNotice ?? "Все показатели обновляются в режиме реального времени";
 
   const indicators: Indicator[] = [
-    { icon: Users,   label: t?.keyIndicators?.items?.traders ?? "зарегистрированных трейдеров", animatedValue: 50000, suffix: "+" },
-    { icon: DollarSign, label: t?.keyIndicators?.items?.volume  ?? "совершенных транзакций",     animatedValue: 2.3,   suffix: "B+" },
-    { icon: TrendingUp, label: t?.keyIndicators?.items?.accuracy ?? "успешности ИИ-предсказаний", animatedValue: 87,    suffix: "%" },
-    { icon: Clock,      label: t?.keyIndicators?.items?.monitor  ?? "непрерывный рыночный мониторинг", animatedValue: 24, suffix: "/7" },
-    { icon: Building,   label: t?.keyIndicators?.items?.venues   ?? "интегрированных торговых площадок", animatedValue: 15, suffix: "+" },
+    { icon: Users,   label: t?.kpis?.items?.[0].label ?? "Зарегистрированные трейдеры", animatedValue: 50000, suffix: "+" },
+    { icon: DollarSign, label: t?.kpis?.items?.[1].label ?? "Совершённые транзакции",     animatedValue: 2.3,   suffix: "B+" },
+    { icon: TrendingUp, label: t?.kpis?.items?.[2].label ?? "Точность предсказаний", animatedValue: 87,    suffix: "%" },
+    { icon: Clock,      label: t?.kpis?.items?.[3].label ?? "Непрерывный мониторинг", animatedValue: 24, suffix: "/7" },
+    { icon: Building,   label: t?.kpis?.items?.[4].label ?? "Интегрированные площадки", animatedValue: 15, suffix: "+" },
   ];
 
   useEffect(() => {

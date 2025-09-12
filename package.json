@@ -8,7 +8,7 @@
     "start": "next start",
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.cjs",
-    "i18n:fix-keys": "node scripts/i18n-codemod.js"
+    "i18n:fix-keys": "node scripts/i18n-codemod.cjs"
     
   },
   "dependencies": {

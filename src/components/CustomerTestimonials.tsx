@@ -21,21 +21,54 @@ const CustomerTestimonials = ({ t }: Props) => {
   const tt = t?.testimonials ?? {};
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const testimonials: Testimonial[] =
-    tt.items ?? [
+  const testimonials: Testimonial[] = (tt.items ?? []).map((item: any) => ({
+    name: item.author,
+    content: item.text,
+    role: 'Инвестор',
+    location: 'Россия',
+    roi: '+0%',
+    duration: 'N/A',
+    rating: 5,
+    verified: true,
+  }));
+
+  if (testimonials.length === 0) {
+    testimonials.push(
       {
         name: "Алексей К.",
         role: "Предприниматель",
         location: "Москва",
         content:
-          "За 3 месяца использования Qezvoro мой портфель продемонстрировал 23% доходности, тогда как S&P 500 показал лишь 4% роста. ИИ-сигналы действительно эффективны.",
+          "За 3 месяца +23% против +4% S&P 500. Сигналы помогли поймать ралли Tesla.",
         roi: "+23%",
         duration: "3 месяца",
         rating: 5,
         verified: true,
       },
-      // …можно оставить ещё 3 как в исходнике
-    ];
+       {
+        name: "Мария С.",
+        role: "Дизайнер",
+        location: "Санкт-Петербург",
+        content:
+          "Новичок, но с ИИ-наставником +$3 200 за 6 месяцев. Авто-стоп-лосс спасал в волатильность.",
+        roi: "+$3200",
+        duration: "6 месяцев",
+        rating: 5,
+        verified: true,
+      },
+      {
+        name: "Дмитрий В.",
+        role: "Управляющий активами",
+        location: "Екатеринбург",
+        content:
+          "Аналитика превосходит альтернативы. API автоматизировал стратегии. Доходность 34%/год.",
+        roi: "+34%/год",
+        duration: "1 год",
+        rating: 5,
+        verified: true,
+      },
+    )
+  }
 
   const next = () => setCurrentIndex((p) => (p + 1) % testimonials.length);
   const prev = () => setCurrentIndex((p) => (p - 1 + testimonials.length) % testimonials.length);
@@ -46,11 +79,11 @@ const CustomerTestimonials = ({ t }: Props) => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {(tt.title ?? "Отзывы")} <span className="gradient-text">{tt.titleAccent ?? "клиентов"}</span>
+            {(tt.title ?? "Отзывы о Qezvoro: реальный опыт")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             {tt.subtitle ??
-              "Реальный опыт наших пользователей — акцент на ROI, точность прогнозов, доверие и соответствие регуляторным требованиям."}
+              "Реальный опыт пользователей — акцент на ROI, точность прогнозов, доверие и соответствие регуляторным требованиям."}
           </p>
         </div>
 
@@ -68,7 +101,7 @@ const CustomerTestimonials = ({ t }: Props) => {
                         <h3 className="text-xl font-bold">{cur.name}</h3>
                         {cur.verified && (
                           <Badge variant="secondary" className="bg-success/20 text-success border-success/30">
-                            {tt.verified ?? "Проверен"}
+                            {tt.labels?.verified ?? "Проверен"}
                           </Badge>
                         )}
                       </div>
@@ -92,11 +125,11 @@ const CustomerTestimonials = ({ t }: Props) => {
                 <div className="md:w-48 space-y-4">
                   <div className="bg-success/10 border border-success/20 rounded-lg p-4 text-center">
                     <div className="text-2xl font-bold text-success mb-1">{cur.roi}</div>
-                    <div className="text-sm text-muted-foreground">{tt.roi ?? "Доходность"}</div>
+                    <div className="text-sm text-muted-foreground">{tt.labels?.roi ?? "Доходность"}</div>
                   </div>
                   <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 text-center">
                     <div className="text-lg font-bold text-primary mb-1">{cur.duration}</div>
-                    <div className="text-sm text-muted-foreground">{tt.period ?? "Период использования"}</div>
+                    <div className="text-sm text-muted-foreground">{tt.labels?.period ?? "Период использования"}</div>
                   </div>
                 </div>
               </div>
@@ -126,8 +159,8 @@ const CustomerTestimonials = ({ t }: Props) => {
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-success/20 to-primary/20 border border-success/30 rounded-full px-8 py-4">
             <TrendingUp className="w-6 h-6 text-success" />
             <span className="text-lg font-semibold">
-              {tt.trustNote ??
-                <>Многие пользователи поначалу скептически относились к вопросу <span className="gradient-text">"Qezvoro — афера или легитимная платформа?"</span>, но реальные результаты и прозрачность операций развеяли все сомнения.</>}
+              {tt.banner ??
+                "Многие пользователи поначалу скептически относились к вопросу «Qezvoro — афера или платформа?», но результаты и прозрачность развеяли сомнения."}
             </span>
           </div>
         </div>

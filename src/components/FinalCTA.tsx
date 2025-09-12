@@ -8,21 +8,19 @@ const FinalCTA = ({ t, locale }: Props) => {
   const tt = t?.finalCta ?? {};
 
   const benefits: string[] =
-    tt.benefits ?? [
+    tt.bullets ?? [
       "Бесплатная регистрация за 2 минуты",
-      "Демо-счет $100,000 для практики",
-      "Первые 30 дней ИИ-сигналы бесплатно",
-      "Русскоязычная поддержка 24/7",
-      "Никаких обязательств и скрытых комиссий",
+      "Демо-счёт $100 000",
+      "30 дней ИИ-сигналы бесплатно",
+      "Поддержка 24/7",
+      "Никаких скрытых комиссий",
     ];
 
   const guarantees: string[] =
     tt.guarantees ?? [
-      "Лицензии международных регуляторов",
-      "Страхование вкладов до $250,000",
-      "30-дневная гарантия возврата денег",
-      "SSL-шифрование данных",
-      "Аудит безопасности PwC",
+      "Отмена в любое время",
+      "Поддержка 24/7",
+      "Отсутствие скрытых комиссий",
     ];
 
   return (
@@ -130,15 +128,15 @@ const FinalCTA = ({ t, locale }: Props) => {
           <div className="flex flex-wrap items-center justify-center gap-6">
             <Badge variant="secondary" className="bg-success/20 text-success border-success/30 px-4 py-2">
               <Shield className="w-4 h-4 mr-2" />
-              {tt.badges?.sec ?? "SEC Лицензировано"}
+              {tt.badges?.sec ?? "SEC — лицензия"}
             </Badge>
             <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30 px-4 py-2">
               <Check className="w-4 h-4 mr-2" />
-              {tt.badges?.pwc ?? "PwC Аудит"}
+              {tt.badges?.pwc ?? "PwC — аудит"}
             </Badge>
             <Badge variant="secondary" className="bg-accent/20 text-accent border-accent/30 px-4 py-2">
               <DollarSign className="w-4 h-4 mr-2" />
-              {tt.badges?.insurance ?? "$250K Страховка"}
+              {tt.badges?.insurance ?? "$250K — страховка"}
             </Badge>
           </div>
         </div>

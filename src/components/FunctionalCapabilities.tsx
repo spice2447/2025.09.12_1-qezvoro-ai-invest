@@ -1,100 +1,87 @@
+import {
+  Brain,
+  Globe,
+  Smartphone,
+  Zap,
+  Cpu,
+  Shield,
+  Target,
+  Award,
+  Users,
+  LucideIcon,
+} from "lucide-react";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Globe, Brain, Zap, Smartphone } from "lucide-react";
+
+interface Capability {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  features: string[];
+}
 
 type Props = { t: any };
 
 const FunctionalCapabilities = ({ t }: Props) => {
-  const title =
-    t?.functional?.title ?? "Функциональные возможности";
-  const subtitle =
-    t?.functional?.subtitle ??
-    "Qezvoro Invest создает комплексную экосистему для умного инвестирования. Наша технологическая платформа интегрирует классические и инновационные финансовые инструменты в единое пространство.";
+  const tt = t?.features;
+
+  const capabilities: Capability[] = (tt.items ?? []).map(
+    (item: any, index: number) => ({
+      icon: [Globe, Brain, Zap, Smartphone][index] ?? Globe,
+      title: item.title,
+      description: item.text,
+      features: item.features ?? [],
+    }),
+  );
 
   const bottomTitle =
-    t?.functional?.extraTitle ?? "Современный финансовый мир";
+    tt?.bottomTitle ?? "Современный финансовый мир";
   const bottomText =
-    t?.functional?.extraText ??
-    "Требует не только экспертизы, но и молниеносной обработки информационных потоков. Qezvoro Trading объединяет классические инвестиционные подходы с революционными возможностями искусственного интеллекта.";
-
-  const capabilities = [
-    {
-      icon: Globe,
-      title: t?.functional?.cards?.universal?.title ?? "Универсальная торговая среда",
-      description: t?.functional?.cards?.universal?.desc ??
-        "Операции с глобальными акциями, криптоактивами, криптовалютными фондами, ресурсами и валютными парами через один интерфейс.",
-      features: t?.functional?.cards?.universal?.features ?? [
-        "15+ международных бирж", "500+ торговых инструментов", "Диверсификация портфеля", "Минимальные комиссии",
-      ],
-    },
-    {
-      icon: Brain,
-      title: t?.functional?.cards?.analytics?.title ?? "Интеллектуальная аналитика и прогнозирование",
-      description: t?.functional?.cards?.analytics?.desc ??
-        "Персонализированные торговые сигналы, созданные на основе анализа статистических данных, технических закономерностей и рыночных настроений.",
-      features: t?.functional?.cards?.analytics?.features ?? [
-        "87% точность прогнозов", "10,000+ параметров анализа", "Машинное обучение", "Реальное время",
-      ],
-    },
-    {
-      icon: Zap,
-      title: t?.functional?.cards?.execution?.title ?? "Мгновенное выполнение операций",
-      description: t?.functional?.cards?.execution?.desc ??
-        "Прямая интеграция с топовыми международными биржами обеспечивает быстрое выполнение заказов без проскальзывания.",
-      features: t?.functional?.cards?.execution?.features ?? [
-        "Скорость <50мс", "Прямое подключение к биржам", "Честное ценообразование", "Отсутствие проскальзывания",
-      ],
-    },
-    {
-      icon: Smartphone,
-      title: t?.functional?.cards?.ui?.title ?? "Удобный пользовательский интерфейс",
-      description: t?.functional?.cards?.ui?.desc ??
-        "Профессиональный функционал в интуитивной оболочке. Кастомизируемые панели управления и мобильное приложение.",
-      features: t?.functional?.cards?.ui?.features ?? [
-        "Адаптивный дизайн", "Торговля одним кликом", "Настраиваемые панели", "Мобильное приложение 24/7",
-      ],
-    },
-  ];
+    tt?.bottomText ??
+    "Требует не только экспертизы, но и молниеносной обработки информационных потоков. Qezvoro Trading объединяет классические инвестиционные подходы с возможностями искусственного интеллекта.";
 
   return (
     <section id="platform" className="py-24 bg-secondary/10">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {title.split(" ").length ? (
+            {tt.title ? (
               <>
-                {title.split(" ")[0]} <span className="gradient-text">{title.split(" ").slice(1).join(" ")}</span>
+                {tt.title.split(" ")[0]} <span className="gradient-text">{tt.title.split(" ").slice(1).join(" ")}</span>
               </>
-            ) : title}
+            ) : "Qezvoro создаёт экосистему умного инвестирования"}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">{subtitle}</p>
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">{tt.intro ?? "Интеграция классических и инновационных инструментов в единое пространство с мощными ИИ-вычислениями и глубокой аналитикой."}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {capabilities.map((capability, index) => {
-            const Icon = capability.icon;
+          {capabilities.map((capability: Capability, index: number) => {
             return (
-              <Card
-                key={index}
-                className="card-gradient border-primary/20 hover:border-primary/40 transition-all duration-500 group hover:glow animate-fade-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+              <Card key={index} className="h-full">
                 <CardHeader>
-                  <div className="w-16 h-16 mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-8 h-8 text-primary" />
+                  <div className="flex items-center gap-4">
+                    <capability.icon className="w-8 h-8 text-primary" />
+                    <CardTitle>{capability.title}</CardTitle>
                   </div>
-                  <CardTitle className="text-xl mb-2">{capability.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground leading-relaxed">
-                    {capability.description}
-                  </CardDescription>
                 </CardHeader>
                 <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    {capability.description}
+                  </p>
                   <div className="grid grid-cols-2 gap-3">
-                    {capability.features.map((feature: string, featureIndex: number) => (
-                      <div key={featureIndex} className="flex items-center gap-2 text-sm">
-                        <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0" />
-                        <span className="text-muted-foreground">{feature}</span>
-                      </div>
-                    ))}
+                    {(capability.features ?? []).map(
+                      (feature: string, featureIndex: number) => (
+                        <div
+                          key={featureIndex}
+                          className="flex items-center gap-2 text-sm"
+                        >
+                          <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0" />
+                          <span className="text-muted-foreground">
+                            {feature}
+                          </span>
+                        </div>
+                      ),
+                    )}
                   </div>
                 </CardContent>
               </Card>

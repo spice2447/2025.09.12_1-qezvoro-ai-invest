@@ -104,7 +104,7 @@ const RegistrationForm = ({ t, locale }: Props) => {
                     <Input
                       id="email"
                       type="email"
-                      placeholder={tt.form?.emailPlaceholder ?? "your@email.com"}
+                      placeholder={tt.fields?.emailPlaceholder ?? "your@email.com"}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
@@ -116,7 +116,7 @@ const RegistrationForm = ({ t, locale }: Props) => {
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder={tt.form?.phonePlaceholder ?? "+7 (999) 123-45-67"}
+                      placeholder={tt.fields?.phonePlaceholder ?? "+7 (999) 123-45-67"}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
@@ -128,7 +128,7 @@ const RegistrationForm = ({ t, locale }: Props) => {
                     <Input
                       id="fullName"
                       type="text"
-                      placeholder={tt.form?.namePlaceholder ?? "Иван Иванов"}
+                      placeholder={tt.fields?.namePlaceholder ?? "Иван Иванов"}
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       required
