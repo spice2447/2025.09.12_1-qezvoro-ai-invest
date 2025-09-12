@@ -14,23 +14,29 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+      <div className="relative z-10 container mx-auto px-6 py-32">
         <div className="max-w-4xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 gradient-text leading-tight">
-            Qezvoro Invest — революционная ИИ-платформа для современного инвестирования
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8 animate-fade-up">
+            <span className="gradient-text">Qezvoro Invest</span> —{" "}
+            <span className="text-foreground">
+              революционная ИИ-платформа для современных народов
+            </span>
           </h1>
           
-          <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
-              Откройте свои инвестиции с помощью новых технологий машинного обучения. Торговля цифровыми активами, международными акциями, фондовыми индексами и сырьевыми товарами становится доступной благодаря каждому нашему интеллектуальному алгоритму.
+          <div className="space-y-6 text-lg md:text-xl text-muted-foreground mb-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            <p>
+              Откройте свои инвестиции с помощью новых технологий машинного обучения. 
+              Торговля цифровыми активами, международными акциями, фондовыми индексами 
+              и сырьевыми товарами становится доступной благодаря каждому нашему 
+              интеллектуальному алгоритму.
             </p>
             
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed">
-              Система Qezvoro обрабатывает миллиарды данных ежесекундно: от ценовых колебаний до настроений социальных медиа, от экономических индикаторов до геополитических событий. Получите рекомендации, автоматизируйте инвестиционные стратегии и принимайте взвешенные решения, опираясь на технологии следующего поколения.
-            </p>
-
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground/80 leading-relaxed">
-              Современный финансовый мир требует не только экспертизы, но и молниеносной обработки информационных потоков. Qezvoro Trading объединяет классические инвестиционные подходы с революционными возможностями искусственного интеллекта, устанавливающие новые стандарты в индустрии финансовых технологий.
+            <p>
+              Система Qezvoro обрабатывает <span className="text-accent font-semibold">
+              миллиарды данных ежесекундно</span>: от ценовых колебаний до настроений 
+              социальных медиа, от экономических индикаторов до геополитических событий. 
+              Получите рекомендации, автоматизируйте инвестиционные стратегии и принимайте 
+              взвешенные решения, опираясь на технологии следующего поколения.
             </p>
           </div>
 
