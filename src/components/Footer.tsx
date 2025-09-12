@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
-import qezvoroLogo from "@/assets/qezvoro-logo.png";
+// import qezvoroLogo from "@/assets/qezvoro-logo.png";
 
 const Footer = () => {
   const navigation = {
@@ -50,7 +50,7 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
                 <img 
-                  src={qezvoroLogo} 
+                  src={'/assets/qezvoro-logo.png'} 
                   alt="Qezvoro Invest" 
                   className="h-8 w-auto"
                 />

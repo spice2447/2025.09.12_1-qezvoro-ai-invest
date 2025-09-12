@@ -2,101 +2,57 @@ import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, DollarSign, TrendingUp, Clock, Building } from "lucide-react";
 
+type Props = { t: any };
+
 interface Indicator {
   icon: React.ElementType;
-  value: string;
   label: string;
   animatedValue: number;
   suffix: string;
 }
 
-const KeyIndicators = () => {
+const KeyIndicators = ({ t }: Props) => {
   const [animatedValues, setAnimatedValues] = useState<number[]>([0, 0, 0, 0, 0]);
 
+  const title =
+    t?.keyIndicators?.title ?? "Ключевые показатели";
+  const subtitle =
+    t?.keyIndicators?.subtitle ?? "Достижения в цифрах — доказательство эффективности наших ИИ-решений";
+  const liveNote =
+    t?.keyIndicators?.liveNote ?? "Все показатели обновляются в режиме реального времени";
+
   const indicators: Indicator[] = [
-    {
-      icon: Users,
-      value: "50,000+",
-      label: "зарегистрированных трейдеров",
-      animatedValue: 50000,
-      suffix: "+"
-    },
-    {
-      icon: DollarSign,
-      value: "$2.3B+",
-      label: "совершенных транзакций",
-      animatedValue: 2.3,
-      suffix: "B+"
-    },
-    {
-      icon: TrendingUp,
-      value: "87%",
-      label: "успешности ИИ-предсказаний",
-      animatedValue: 87,
-      suffix: "%"
-    },
-    {
-      icon: Clock,
-      value: "24/7",
-      label: "непрерывный рыночный мониторинг",
-      animatedValue: 24,
-      suffix: "/7"
-    },
-    {
-      icon: Building,
-      value: "15+",
-      label: "интегрированных торговых площадок",
-      animatedValue: 15,
-      suffix: "+"
-    }
+    { icon: Users,   label: t?.keyIndicators?.items?.traders ?? "зарегистрированных трейдеров", animatedValue: 50000, suffix: "+" },
+    { icon: DollarSign, label: t?.keyIndicators?.items?.volume  ?? "совершенных транзакций",     animatedValue: 2.3,   suffix: "B+" },
+    { icon: TrendingUp, label: t?.keyIndicators?.items?.accuracy ?? "успешности ИИ-предсказаний", animatedValue: 87,    suffix: "%" },
+    { icon: Clock,      label: t?.keyIndicators?.items?.monitor  ?? "непрерывный рыночный мониторинг", animatedValue: 24, suffix: "/7" },
+    { icon: Building,   label: t?.keyIndicators?.items?.venues   ?? "интегрированных торговых площадок", animatedValue: 15, suffix: "+" },
   ];
 
   useEffect(() => {
     const animateCounters = () => {
-      indicators.forEach((_, index) => {
-        const targetValue = indicators[index].animatedValue;
-        const duration = 2000; // 2 seconds
-        const steps = 60; // 60 FPS
-        const stepValue = targetValue / steps;
-        let currentValue = 0;
-
+      indicators.forEach((ind, index) => {
+        const target = ind.animatedValue;
+        const duration = 2000;
+        const steps = 60;
+        const step = target / steps;
+        let current = 0;
         const interval = setInterval(() => {
-          currentValue += stepValue;
-          if (currentValue >= targetValue) {
-            currentValue = targetValue;
-            clearInterval(interval);
-          }
-
-          setAnimatedValues(prev => {
-            const newValues = [...prev];
-            newValues[index] = currentValue;
-            return newValues;
-          });
+          current += step;
+          if (current >= target) { current = target; clearInterval(interval); }
+          setAnimatedValues(prev => { const next = [...prev]; next[index] = current; return next; });
         }, duration / steps);
       });
     };
-
-    // Start animation after component mounts
     const timer = setTimeout(animateCounters, 500);
     return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const formatValue = (value: number, index: number): string => {
-    const indicator = indicators[index];
-    
-    if (index === 0) { // Users
-      return Math.round(value).toLocaleString();
-    } else if (index === 1) { // Dollar amount
-      return `$${value.toFixed(1)}`;
-    } else if (index === 2) { // Percentage
-      return Math.round(value).toString();
-    } else if (index === 3) { // 24/7
-      return Math.round(value).toString();
-    } else if (index === 4) { // Platforms
-      return Math.round(value).toString();
-    }
-    
-    return value.toString();
+    if (index === 0) return Math.round(value).toLocaleString();
+    if (index === 1) return `$${value.toFixed(1)}`;
+    return Math.round(value).toString();
   };
 
   return (
@@ -104,10 +60,14 @@ const KeyIndicators = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ключевые <span className="gradient-text">показатели</span>
+            {title.split(" ").length ? (
+              <>
+                {title.split(" ")[0]} <span className="gradient-text">{title.split(" ").slice(1).join(" ")}</span>
+              </>
+            ) : title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Достижения в цифрах — доказательство эффективности наших ИИ-решений
+            {subtitle}
           </p>
         </div>
 
@@ -115,19 +75,14 @@ const KeyIndicators = () => {
           {indicators.map((indicator, index) => {
             const Icon = indicator.icon;
             return (
-              <Card 
-                key={index} 
-                className="card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:glow"
-              >
+              <Card key={index} className="card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:glow">
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Icon className="w-8 h-8 text-primary" />
                   </div>
-                  
                   <div className="text-3xl font-bold gradient-text mb-2 animate-counter">
                     {formatValue(animatedValues[index], index)}{indicator.suffix}
                   </div>
-                  
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {indicator.label}
                   </p>
@@ -140,7 +95,7 @@ const KeyIndicators = () => {
         <div className="text-center mt-16">
           <div className="inline-flex items-center gap-2 bg-success/10 text-success px-4 py-2 rounded-full text-sm font-medium">
             <TrendingUp className="w-4 h-4" />
-            Все показатели обновляются в режиме реального времени
+            {liveNote}
           </div>
         </div>
       </div>
