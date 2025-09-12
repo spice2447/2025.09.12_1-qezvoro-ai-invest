@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import qezvoroLogo from "@/assets/qezvoro-logo.png";
 import {
   DropdownMenu,
@@ -40,7 +39,7 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+          <div className="flex items-center space-x-3">
             <img 
               src={qezvoroLogo} 
               alt="Qezvoro Invest" 
@@ -49,7 +48,7 @@ const Header = () => {
             <span className="text-xl font-bold gradient-text">
               Qezvoro Invest
             </span>
-          </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
