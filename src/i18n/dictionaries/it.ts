@@ -377,7 +377,7 @@ const it = {
       legal: {
         title: "Legale",
         links: [
-          { name: "Informativa sulla privacy", href: "#privacy" },
+          { name: "Informativa sulla privacy", href: "/privacy" },
           { name: "Termini di servizio", href: "#terms" },
           { name: "Conformità", href: "#compliance" },
           { name: "Informativa sui rischi", href: "#risks" },

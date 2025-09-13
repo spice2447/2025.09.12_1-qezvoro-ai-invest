@@ -379,7 +379,7 @@ const ja = {
       legal: {
         title: "法務",
         links: [
-          { name: "プライバシーポリシー", href: "#privacy" },
+          { name: "プライバシーポリシー", href: "/privacy" },
           { name: "利用規約", href: "#terms" },
           { name: "コンプライアンス", href: "#compliance" },
           { name: "リスク開示", href: "#risks" },

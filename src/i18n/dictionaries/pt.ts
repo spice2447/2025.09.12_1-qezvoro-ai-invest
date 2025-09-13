@@ -377,7 +377,7 @@ const pt = {
       legal: {
         title: "Legal",
         links: [
-          { name: "Política de Privacidade", href: "#privacy" },
+          { name: "Política de Privacidade", href: "/privacy" },
           { name: "Termos de Serviço", href: "#terms" },
           { name: "Conformidade", href: "#compliance" },
           { name: "Divulgação de Riscos", href: "#risks" },

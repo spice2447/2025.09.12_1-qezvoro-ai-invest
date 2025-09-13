@@ -7,14 +7,14 @@ export default function ContactCTA() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-6">Готовы начать инвестировать с ИИ?</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Присоединяйтесь к 50,000+ инвесторов, которые уже используют наши алгоритмы
+            Присоединяйтесь к 50,000+ инвесторов, которые уже используют наши алгоритмы.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="gradient-bg hover:opacity-90 transition-opacity">
-              Начать инвестирование
+              Начать инвестировать прямо сейчас
             </Button>
             <Button size="lg" variant="outline">
-              Демо-счет $100,000
+              Демо-счёт $100,000
             </Button>
           </div>
         </div>

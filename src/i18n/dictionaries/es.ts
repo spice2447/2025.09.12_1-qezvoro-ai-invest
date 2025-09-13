@@ -379,7 +379,7 @@ const es = {
       legal: {
         title: "Legal",
         links: [
-          { name: "Política de privacidad", href: "#privacy" },
+          { name: "Política de privacidad", href: "/privacy" },
           { name: "Términos de servicio", href: "#terms" },
           { name: "Cumplimiento", href: "#compliance" },
           { name: "Divulgación de riesgos", href: "#risks" },

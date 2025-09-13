@@ -377,7 +377,7 @@ const fr = {
       legal: {
         title: "Légal",
         links: [
-          { name: "Politique de confidentialité", href: "#privacy" },
+          { name: "Politique de confidentialité", href: "/privacy" },
           { name: "Conditions d'utilisation", href: "#terms" },
           { name: "Conformité", href: "#compliance" },
           { name: "Divulgation des risques", href: "#risks" },

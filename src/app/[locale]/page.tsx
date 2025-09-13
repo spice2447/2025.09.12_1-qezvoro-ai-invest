@@ -4,6 +4,7 @@ import QezvoroLanding from "@/components/pages/QezvoroLanding";
 import { getMessages } from "@/i18n";
 import Script from "next/script";
 import { baseOpenGraph, absUrl, buildAlternates, BRAND } from "@/lib/seo";
+import { localeCodes } from "@/i18n/locales";
 
 export async function generateMetadata({
   params,
@@ -33,6 +34,10 @@ export async function generateMetadata({
       "ETF",
     ],
   };
+}
+
+export async function generateStaticParams() {
+  return localeCodes.map((locale) => ({ locale }));
 }
 
 export default async function HomeLocale(props: { params: Promise<{ locale: string }> }) {

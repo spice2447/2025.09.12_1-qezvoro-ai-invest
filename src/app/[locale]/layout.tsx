@@ -31,19 +31,22 @@ export async function generateMetadata({
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
   params: { locale: Locale };
 }) {
+  const { locale } = params;
   const dict = await getMessages(locale);
   return (
-
-    <Providers>
-      <LocalizedHeader locale={locale} />
-      <main>{children}</main>
-      <Footer dict={dict} />
-    </Providers>
-
+    <html lang={locale} dir={isRtl(locale) ? "rtl" : "ltr"}>
+      <body>
+        <Providers>
+          <LocalizedHeader locale={locale} />
+          <main>{children}</main>
+          <Footer dict={dict} />
+        </Providers>
+      </body>
+    </html>
   );
 }

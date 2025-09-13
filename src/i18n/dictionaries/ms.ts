@@ -377,7 +377,7 @@ const ms = {
       legal: {
         title: "Undang-undang",
         links: [
-          { name: "Dasar Privasi", href: "#privacy" },
+          { name: "Dasar Privasi", href: "/privacy" },
           { name: "Syarat Perkhidmatan", href: "#terms" },
           { name: "Pematuhan", href: "#compliance" },
           { name: "Pendedahan Risiko", href: "#risks" },

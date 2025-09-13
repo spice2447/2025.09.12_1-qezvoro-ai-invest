@@ -399,7 +399,7 @@ const enSG = {
       legal: {
         title: "Legal",
         links: [
-          { name: "Privacy Policy", href: "#privacy" },
+          { name: "Privacy Policy", href: "/privacy" },
           { name: "Terms of Service", href: "#terms" },
           { name: "Compliance", href: "#compliance" },
           { name: "Risk Disclosure", href: "#risks" },

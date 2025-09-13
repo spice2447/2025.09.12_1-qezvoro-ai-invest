@@ -377,7 +377,7 @@ const de = {
       legal: {
         title: "Rechtliches",
         links: [
-          { name: "Datenschutzrichtlinie", href: "#privacy" },
+          { name: "Datenschutzrichtlinie", href: "/privacy" },
           { name: "Nutzungsbedingungen", href: "#terms" },
           { name: "Compliance", href: "#compliance" },
           { name: "Risikohinweis", href: "#risks" },
