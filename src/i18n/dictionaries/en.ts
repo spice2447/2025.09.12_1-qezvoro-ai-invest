@@ -216,19 +216,18 @@ const enSG = {
   },
 
   testimonials: {
-    title: "Qezvoro Reviews: real experience",
+    title: "Reviews of Qezvoro: real experience",
     subtitle:
-      "Real user stories focusing on ROI, prediction accuracy, trust and regulatory compliance.",
+      "Real user experience - emphasis on ROI, forecast accuracy, trust and regulatory compliance.",
     items: [
-      { author: "Rajesh T., financial advisor, Singapore", text: "5 months, +31% vs STI +6%. Precise signals — caught DBS rally 3 weeks before earnings." },
-      { author: "Michelle L., marketing executive, Singapore", text: "Beginner; S$5,400 profit in 7 months. Auto risk-management saved me during tech selloff." },
-      { author: "David C., portfolio manager, Singapore", text: "12 years trading — analytics outperform Reuters. API automation; 15% → 42% annual returns." },
-      { author: "Priya S., tech entrepreneur, Singapore", text: "Initially skeptical; MAS compliance + transparency. +187% in crypto positions in 9 months." },
+      { author: "Alexey K.", role: "Entrepreneur", location: "Moscow", text: "In 3 months +23% vs +4% S&P 500. The signals helped to catch the Tesla rally." },
+      { author: "Maria S.", role: "Designer", location: "Saint Petersburg", text: "A beginner, but with an AI mentor +$3,200 in 6 months. Auto-stop-loss saved me in volatility." },
+      { author: "Dmitry V.", role: "Asset Manager", location: "Yekaterinburg", text: "Analytics surpasses alternatives. The API has automated strategies. Profitability is 34%/year." },
     ],
     labels: {
       verified: "Verified",
-      roi: "ROI",
-      period: "Usage period",
+      roi: "Profitability",
+      period: "Period of use",
     },
     banner:
       "Many initially wondered “Qezvoro — scam or legit?”, but results and transparency removed doubts.",

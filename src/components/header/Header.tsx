@@ -17,7 +17,7 @@ export default function Header({ t, locale }: HeaderProps) {
     { label: t?.nav?.about ?? "О платформе", href: "#platform" },
     { label: t?.nav?.reviews ?? "Qezvoro Отзывы", href: "#reviews" },
     { label: t?.nav?.contactStart ?? "Контакты", href: "/contacts" },
-    { label: t?.nav?.privacy ?? "Политика конфиденциальности", href: "#privacy" },
+    // { label: t?.nav?.privacy ?? "Политика конфиденциальности", href: "#privacy" },
   ];
 
   return (

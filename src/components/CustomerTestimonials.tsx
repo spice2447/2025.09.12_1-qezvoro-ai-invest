@@ -24,8 +24,8 @@ const CustomerTestimonials = ({ t }: Props) => {
   const testimonials: Testimonial[] = (tt.items ?? []).map((item: any) => ({
     name: item.author,
     content: item.text,
-    role: 'Инвестор',
-    location: 'Россия',
+    role: item.role,
+    location: item.location,
     roi: '+0%',
     duration: 'N/A',
     rating: 5,

@@ -1,16 +1,16 @@
 // src/i18n/locales.ts
 
 export const locales = [
-  { code: 'ru',    name: 'Русский',         flag: '🇷🇺' },
-  { code: 'en-SG', name: 'English (SG)',    flag: '🇸🇬' },
-  { code: 'ms-MY', name: 'Bahasa Melayu',   flag: '🇲🇾' },
-  { code: 'es',    name: 'Español (ES)',    flag: '🇪🇸' },
-  { code: 'pt-PT', name: 'Português (PT)',  flag: '🇵🇹' },
-  { code: 'ja',    name: '日本語',            flag: '🇯🇵' },
-  { code: 'cs',    name: 'Čeština',         flag: '🇨🇿' },
-  { code: 'it-CH', name: 'Italiano (CH)',   flag: '🇨🇭' },
-  { code: 'fr-CH', name: 'Français (CH)',   flag: '🇨🇭' },
-  { code: 'de-CH', name: 'Deutsch (CH)',    flag: '🇨🇭' },
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+  { code: 'en', name: 'English', flag: '🇬🇧' },
+  { code: 'ms', name: 'Bahasa Melayu', flag: '🇲🇾' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: 'pt', name: 'Português', flag: '🇵🇹' },
+  { code: 'ja', name: '日本語', flag: '🇯🇵' },
+  { code: 'cs', name: 'Čeština', flag: '🇨🇿' },
+  { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
 ] as const;
 
 export type Locale = typeof locales[number]['code'];

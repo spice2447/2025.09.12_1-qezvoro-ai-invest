@@ -213,5 +213,64 @@ const cs = {
       lastUpdated: "15. srpna 2025",
     },
   },
+
+  finalCta: {
+    title: "Připojte se k revoluci v investování s Qezvoro",
+    subtitle: "Začněte ještě dnes a objevte sílu umělé inteligence ve svém investičním portfoliu.",
+    ctaButton: "Zaregistrujte se nyní",
+    learnMore: "Zjistit více",
+  },
+
+  footer: {
+    brand: {
+      description: "Revoluční platforma s umělou inteligencí pro moderní investování. Zpracováváme miliardy datových bodů každou sekundu, abychom vám poskytli výhodu na institucionální úrovni.",
+      email: "support@qezvoro.com",
+      phone: "+1 (555) 123-4567",
+      locations: "New York, Londýn, Singapur",
+    },
+    nav: {
+      platform: {
+        title: "Platforma",
+        links: [
+          { name: "O platformě", href: "#platform" },
+          { name: "Funkce AI", href: "#ai" },
+          { name: "Ceny", href: "#pricing" },
+          { name: "Dokumentace API", href: "#api" },
+        ],
+      },
+      company: {
+        title: "Společnost",
+        links: [
+          { name: "O nás", href: "#about" },
+          { name: "Tým", href: "#team" },
+          { name: "Partneři", href: "#partners" },
+          { name: "Kariéra", href: "#careers" },
+        ],
+      },
+      support: {
+        title: "Podpora",
+        links: [
+          { name: "Centrum nápovědy", href: "#help" },
+          { name: "Návody", href: "#education" },
+          { name: "Stav systému", href: "#status" },
+          { name: "Kontaktujte nás", href: "#contact" },
+        ],
+      },
+      legal: {
+        title: "Právní",
+        links: [
+          { name: "Zásady ochrany osobních údajů", href: "#privacy" },
+          { name: "Podmínky služby", href: "#terms" },
+          { name: "Shoda", href: "#compliance" },
+          { name: "Zveřejnění rizik", href: "#risks" },
+        ],
+      },
+    },
+    bottom: {
+      copyright: "© 2025 Qezvoro Invest. Všechna práva vyhrazena.",
+      riskWarning: "Obchodování s finančními nástroji zahrnuje vysokou míru rizika a může vést ke ztrátě investovaných prostředků.",
+    },
+  },
 };
+
 export default cs;

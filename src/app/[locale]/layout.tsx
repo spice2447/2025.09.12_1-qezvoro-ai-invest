@@ -3,15 +3,13 @@ import Providers from "../providers";
 import { localeCodes, isRtl } from "@/i18n/locales";
 import LocalizedHeader from "@/components/header/LocalizedHeader";
 import Footer from "@/components/Footer";
-import HtmlLangDir from "@/components/HtmlLangDir"; // добавим ниже
 import { locales, type Locale } from "@/i18n/locales";
 import { buildAlternates, SITE_URL } from "@/lib/seo";
-
+import { getMessages } from "@/i18n";
 
 export async function generateStaticParams() {
-  return localeCodes.map((code) => ({ locale: code }));
+  return localeCodes.map((locale) => ({ locale }));
 }
-
 
 export async function generateMetadata({
   params,
@@ -19,6 +17,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const dict = await getMessages(locale);
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -30,24 +29,21 @@ export async function generateMetadata({
   };
 }
 
-export default async function LocaleLayout(props: {
+export default async function LocaleLayout({
+  children,
+  params: { locale },
+}: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: Locale };
 }) {
-  const { children } = props;
-  const { locale } = await props.params;
-  const dir = isRtl(locale) ? "rtl" : "ltr";
-
+  const dict = await getMessages(locale);
   return (
-    <Providers>
-      {/* Синхронизируем <html> (lang/dir) на клиенте после навигации */}
-      <HtmlLangDir locale={locale} dir={dir} />
 
+    <Providers>
       <LocalizedHeader locale={locale} />
-      <div dir={dir} data-locale={locale}>
-        {children}
-      </div>
-      <Footer />
+      <main>{children}</main>
+      <Footer dict={dict} />
     </Providers>
+
   );
 }

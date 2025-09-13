@@ -1,5 +1,7 @@
 import ru from "./dictionaries/ru";
 
+export type Dictionary = typeof ru;
+
 /** Преобразует все листовые литералы в «широкие» типы (string/number/boolean) */
 type WidenLeaf<T> =
   T extends string ? string :

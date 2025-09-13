@@ -1,34 +1,19 @@
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
-// import qezvoroLogo from "@/assets/qezvoro-logo.png";
+import { Dictionary } from "@/i18n/types";
 
-const Footer = () => {
+interface FooterProps {
+  dict: Dictionary;
+}
+
+const Footer = ({ dict }: FooterProps) => {
+  const { footer, brand } = dict;
+
   const navigation = {
-    platform: [
-      { name: "О платформе", href: "#platform" },
-      { name: "Функции ИИ", href: "#ai" },
-      { name: "Тарифы", href: "#pricing" },
-      { name: "API документация", href: "#api" }
-    ],
-    company: [
-      { name: "О компании", href: "#about" },
-      { name: "Команда", href: "#team" },
-      { name: "Партнеры", href: "#partners" },
-      { name: "Карьера", href: "#careers" }
-    ],
-    support: [
-      { name: "Справочный центр", href: "#help" },
-      { name: "Обучение", href: "#education" },
-      { name: "Статус системы", href: "#status" },
-      { name: "Связаться с нами", href: "#contact" }
-    ],
-    legal: [
-      { name: "Политика конфиденциальности", href: "#privacy" },
-      { name: "Условия использования", href: "#terms" },
-      { name: "Соответствие требованиям", href: "#compliance" },
-      { name: "Раскрытие рисков", href: "#risks" }
-    ]
+    platform: footer.nav.platform.links.map(link => ({ ...link })),
+    company: footer.nav.company.links.map(link => ({ ...link })),
+    support: footer.nav.support.links.map(link => ({ ...link })),
+    legal: footer.nav.legal.links.map(link => ({ ...link })),
   };
 
   const socialLinks = [
@@ -51,40 +36,38 @@ const Footer = () => {
               <div className="flex items-center space-x-3 mb-6">
                 <img 
                   src={'/assets/qezvoro-logo.png'} 
-                  alt="Qezvoro Invest" 
+                  alt={brand.logoAlt}
                   className="h-8 w-auto"
                 />
                 <span className="text-xl font-bold gradient-text">
-                  Qezvoro Invest
+                  {brand.name}
                 </span>
               </div>
               
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Революционная ИИ-платформа для современного инвестирования. 
-                Обрабатываем миллиарды данных ежесекундно, чтобы предоставить 
-                вам преимущества институционального уровня.
+                {footer.brand.description}
               </p>
 
               {/* Contact Info */}
               <div className="space-y-3 text-sm">
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Mail className="w-4 h-4" />
-                  <span>support@qezvoro.com</span>
+                  <span>{footer.brand.email}</span>
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>{footer.brand.phone}</span>
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <MapPin className="w-4 h-4" />
-                  <span>New York, London, Singapore</span>
+                  <span>{footer.brand.locations}</span>
                 </div>
               </div>
             </div>
 
             {/* Navigation Sections */}
             <div>
-              <h3 className="font-semibold mb-4">Платформа</h3>
+              <h3 className="font-semibold mb-4">{footer.nav.platform.title}</h3>
               <ul className="space-y-2">
                 {navigation.platform.map((item) => (
                   <li key={item.name}>
@@ -100,7 +83,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">Компания</h3>
+              <h3 className="font-semibold mb-4">{footer.nav.company.title}</h3>
               <ul className="space-y-2">
                 {navigation.company.map((item) => (
                   <li key={item.name}>
@@ -116,7 +99,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">Поддержка</h3>
+              <h3 className="font-semibold mb-4">{footer.nav.support.title}</h3>
               <ul className="space-y-2">
                 {navigation.support.map((item) => (
                   <li key={item.name}>
@@ -132,7 +115,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">Правовая информация</h3>
+              <h3 className="font-semibold mb-4">{footer.nav.legal.title}</h3>
               <ul className="space-y-2">
                 {navigation.legal.map((item) => (
                   <li key={item.name}>
@@ -152,54 +135,21 @@ const Footer = () => {
         <Separator />
 
         {/* Bottom Footer */}
-        <div className="py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            
-            {/* Copyright & Legal */}
-            <div className="text-center md:text-left">
-              <p className="text-sm text-muted-foreground mb-2">
-                © 2024 Qezvoro Invest. Все права защищены.
-              </p>
-              <p className="text-xs text-muted-foreground">
-                Лицензировано: SEC (США), FCA (Великобритания), CySEC (Кипр). 
-                Инвестиции сопряжены с рисками.
-              </p>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
-              <span className="text-sm text-muted-foreground mr-2">Следите за нами:</span>
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <Button
-                    key={social.label}
-                    variant="ghost"
-                    size="sm"
-                    asChild
-                    className="hover:bg-primary/20 transition-colors"
-                  >
-                    <a href={social.href} aria-label={social.label}>
-                      <Icon className="w-4 h-4" />
-                    </a>
-                  </Button>
-                );
-              })}
-            </div>
+        <div className="py-8 md:flex md:items-center md:justify-between">
+          <div className="flex justify-center space-x-6 md:order-2">
+            {socialLinks.map((item) => (
+              <a key={item.label} href={item.href} className="text-muted-foreground hover:text-foreground">
+                <span className="sr-only">{item.label}</span>
+                <item.icon className="h-5 w-5" aria-hidden="true" />
+              </a>
+            ))}
           </div>
-        </div>
-
-        {/* Regulatory Disclaimer */}
-        <div className="py-6 border-t border-border">
-          <div className="text-xs text-muted-foreground leading-relaxed">
-            <p className="mb-2">
-              <strong>Предупреждение о рисках:</strong> Торговля финансовыми инструментами и криптовалютами связана с высоким риском 
-              и может привести к потере всего инвестированного капитала. Инвестируйте только те средства, 
-              потерю которых вы можете себе позволить.
+          <div className="mt-8 md:mt-0 md:order-1">
+            <p className="text-center text-xs text-muted-foreground">
+              {footer.bottom.copyright}
             </p>
-            <p>
-              Qezvoro Invest не предоставляет инвестиционные консультации. Все материалы носят 
-              информационный характер. Прошлые результаты не гарантируют будущую доходность.
+            <p className="text-center text-xs text-muted-foreground mt-2">
+              {footer.bottom.riskWarning}
             </p>
           </div>
         </div>
