@@ -259,7 +259,7 @@ const cs = {
       legal: {
         title: "Právní",
         links: [
-          { name: "Zásady ochrany osobních údajů", href: "/privacy" },
+          { name: "Zásady ochrany osobních údajů", href: "/cs/privacy" },
           { name: "Podmínky služby", href: "#terms" },
           { name: "Shoda", href: "#compliance" },
           { name: "Zveřejnění rizik", href: "#risks" },

@@ -417,7 +417,7 @@ const ru = {
       legal: {
         title: "Правовая информация",
         links: [
-          { name: "Политика конфиденциальности", href: "/privacy" },
+          { name: "Политика конфиденциальности", href: "/ru/privacy" },
           { name: "Условия использования", href: "#terms" },
           { name: "Соответствие требованиям", href: "#compliance" },
           { name: "Раскрытие рисков", href: "#risks" },
