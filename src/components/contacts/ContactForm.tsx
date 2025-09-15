@@ -44,7 +44,7 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="text-sm font-medium mb-2 block">Телефон</label>
-              <Input name="phone" placeholder="+7 (999) 123-45-67" />
+              <Input name="phone" placeholder="+1 (202) 555-0147" />
             </div>
             <div>
               <label className="text-sm font-medium mb-2 block">Опыт инвестирования</label>

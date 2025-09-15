@@ -44,7 +44,7 @@ const ru = {
       email: "Email-адрес",
       emailPlaceholder: "your@email.com",
       phone: "Номер телефона",
-      phonePlaceholder: "+7 (999) 123-45-67",
+      phonePlaceholder: "+1 (202) 555-0147",
       fullName: "Полное имя",
       namePlaceholder: "Иван Иванов",
       experience: "Инвестиционный опыт",

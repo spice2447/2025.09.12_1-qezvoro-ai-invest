@@ -116,7 +116,7 @@ const RegistrationForm = ({ t, locale }: Props) => {
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder={tt.fields?.phonePlaceholder ?? "+7 (999) 123-45-67"}
+                      placeholder={tt.fields?.phonePlaceholder ?? "+1 (202) 555-0147"}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required

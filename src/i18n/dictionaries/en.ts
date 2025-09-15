@@ -42,9 +42,13 @@ const enSG = {
     desc: "Over 50,000 traders trust our algorithms.",
     fields: {
       email: "Email address",
+      emailPlaceholder: "your@email.com",
       phone: "Phone number",
-      fullName: "Full name",
+      phonePlaceholder: "+1 (202) 555-0147",
+      fullName: "Full name",  
       experience: "Investment experience",
+      namePlaceholder: "John Johnson",
+
     },
     // right card
     formTitle: "Start investing",
