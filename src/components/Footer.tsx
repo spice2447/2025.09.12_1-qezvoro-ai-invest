@@ -1,6 +1,11 @@
+'use client'
 import { Separator } from "@/components/ui/separator";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import { Dictionary } from "@/i18n/types";
+import { INFO } from "@/lib/site-config";
+import { useModal } from "./modal/ModalProvider";
+import QuickRegistrationForm from "./forms/QuickRegistrationForm";
+import { Button } from "./ui/button";
 
 interface FooterProps {
   dict: Dictionary;
@@ -8,7 +13,25 @@ interface FooterProps {
 
 const Footer = ({ dict }: FooterProps) => {
   const { footer, brand } = dict;
+  const { openModal, closeModal } = useModal();
 
+  // const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  //   // Здесь можно добавить логику для кнопки, например, открыть модальное окно
+  //   openModal({
+  //     // title: t?.common?.ctaStart ?? "Начать сейчас",
+  //     title: "",
+  //     // description: t?.common?.ctaDescription ?? "Свяжитесь с нами, чтобы начать ваше инвестиционное путешествие с Qezvoro.",
+  //     description: "",
+  //     content: <QuickRegistrationForm t={t} locale={locale} />,
+  //     footer: (
+  //       <Button onClick={closeModal} className="gradient-bg hover:opacity-90 transition-opacity">
+  //         {t?.common?.close ?? "Закрыть"}
+  //       </Button>
+  //     ),
+  //     dismissible: true,
+  //     contentClassName: "sm:max-w-lg",
+  //   });
+  // }
   const navigation = {
     platform: footer.nav.platform.links.map(link => ({ ...link })),
     company: footer.nav.company.links.map(link => ({ ...link })),
@@ -26,16 +49,16 @@ const Footer = ({ dict }: FooterProps) => {
   return (
     <footer className="bg-secondary/20 border-t border-border">
       <div className="container mx-auto px-6">
-        
+
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-            
+
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
-                <img 
-                  src={'/assets/qezvoro-logo.png'} 
+                <img
+                  src={'/assets/qezvoro-logo.png'}
                   alt={brand.logoAlt}
                   className="h-8 w-auto"
                 />
@@ -43,7 +66,7 @@ const Footer = ({ dict }: FooterProps) => {
                   {brand.name}
                 </span>
               </div>
-              
+
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 {footer.brand.description}
               </p>
@@ -52,11 +75,11 @@ const Footer = ({ dict }: FooterProps) => {
               <div className="space-y-3 text-sm">
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Mail className="w-4 h-4" />
-                  <span>{footer.brand.email}</span>
+                  <span>{INFO.email}</span>
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Phone className="w-4 h-4" />
-                  <span>{footer.brand.phone}</span>
+                  <span>{INFO.phone}</span>
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <MapPin className="w-4 h-4" />
@@ -71,8 +94,8 @@ const Footer = ({ dict }: FooterProps) => {
               <ul className="space-y-2">
                 {navigation.platform.map((item) => (
                   <li key={item.name}>
-                    <a 
-                      href={item.href} 
+                    <a
+                      href={item.href}
                       className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                     >
                       {item.name}
@@ -87,8 +110,8 @@ const Footer = ({ dict }: FooterProps) => {
               <ul className="space-y-2">
                 {navigation.company.map((item) => (
                   <li key={item.name}>
-                    <a 
-                      href={item.href} 
+                    <a
+                      href={item.href}
                       className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                     >
                       {item.name}
@@ -103,8 +126,8 @@ const Footer = ({ dict }: FooterProps) => {
               <ul className="space-y-2">
                 {navigation.support.map((item) => (
                   <li key={item.name}>
-                    <a 
-                      href={item.href} 
+                    <a
+                      href={item.href}
                       className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                     >
                       {item.name}
@@ -119,8 +142,8 @@ const Footer = ({ dict }: FooterProps) => {
               <ul className="space-y-2">
                 {navigation.legal.map((item) => (
                   <li key={item.name}>
-                    <a 
-                      href={item.href} 
+                    <a
+                      href={item.href}
                       className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                     >
                       {item.name}

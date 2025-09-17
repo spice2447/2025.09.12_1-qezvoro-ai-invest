@@ -11,6 +11,7 @@ import SecurityBadges from "@/components/contacts/SecurityBadges";
 import { absUrl, baseOpenGraph, buildAlternates } from "@/lib/seo";
 import { getMessages } from "@/i18n";
 import { LocalePageProps } from "../layout";
+import QuickRegistrationForm from "@/components/forms/QuickRegistrationForm";
 
 export async function generateMetadata({
   params,
@@ -19,9 +20,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getMessages(locale);
-  const title = `${t.brand?.name ?? "Qezvoro Invest"} — ${
-    t.common?.contacts ?? "Contacts"
-  }`;
+  const title = `${t.brand?.name ?? "Qezvoro Invest"} — ${t.common?.contacts ?? "Contacts"
+    }`;
   const description = t.contactPage?.meta?.description;
   const url = absUrl(locale, "/contacts");
 
@@ -47,7 +47,10 @@ export default async function ContactsPage({
           <div className="container mx-auto px-4 sm:px-6">
             <ContactHero dictionary={d?.hero} />
             <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-              <ContactForm dictionary={d?.form} />
+              {/* <ContactForm dictionary={d?.form} /> */}
+              <div className="">
+                <QuickRegistrationForm t={t} />
+              </div>
               <div className="space-y-8">
                 <ContactInfo dictionary={d?.info} />
                 <Offices dictionary={d?.offices} />
