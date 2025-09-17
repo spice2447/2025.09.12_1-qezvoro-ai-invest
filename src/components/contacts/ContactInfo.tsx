@@ -1,11 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, Clock, MessageCircle } from "lucide-react";
 
-export default function ContactInfo() {
+export default function ContactInfo({ dictionary }: { dictionary: any }) {
   return (
     <Card className="border-border/50 backdrop-blur-sm">
       <CardHeader>
-        <CardTitle className="text-2xl">Свяжитесь с нами</CardTitle>
+        <CardTitle className="text-2xl">{dictionary.title}</CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="flex items-start space-x-4">
@@ -13,10 +13,10 @@ export default function ContactInfo() {
             <Mail className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold mb-1">Email</h3>
-            <p className="text-muted-foreground">support@qezvoro.com — техподдержка</p>
-            <p className="text-muted-foreground">sales@qezvoro.com — вопросы по тарифам</p>
-            <p className="text-muted-foreground">partners@qezvoro.com — сотрудничество</p>
+            <h3 className="font-semibold mb-1">{dictionary.email.title}</h3>
+            <p className="text-muted-foreground">{dictionary.email.support}</p>
+            <p className="text-muted-foreground">{dictionary.email.sales}</p>
+            <p className="text-muted-foreground">{dictionary.email.partners}</p>
           </div>
         </div>
 
@@ -25,9 +25,9 @@ export default function ContactInfo() {
             <MessageCircle className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold mb-1">Мессенджеры</h3>
-            <p className="text-muted-foreground">Telegram: @QezvoroSupport</p>
-            <p className="text-muted-foreground">WhatsApp: +1 (202) 555-0147</p>
+            <h3 className="font-semibold mb-1">{dictionary.messengers.title}</h3>
+            <p className="text-muted-foreground">{dictionary.messengers.telegram}</p>
+            <p className="text-muted-foreground">{dictionary.messengers.whatsapp}</p>
           </div>
         </div>
 
@@ -36,10 +36,10 @@ export default function ContactInfo() {
             <Phone className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold mb-1">Телефон</h3>
-            <p className="text-muted-foreground">+44 20 7946 0958 (Лондон)</p>
-            <p className="text-muted-foreground">+1 212 555 0123 (Нью-Йорк)</p>
-            <p className="text-muted-foreground">+65 6789 0123 (Сингапур)</p>
+            <h3 className="font-semibold mb-1">{dictionary.phone.title}</h3>
+            <p className="text-muted-foreground">{dictionary.phone.london}</p>
+            <p className="text-muted-foreground">{dictionary.phone.ny}</p>
+            <p className="text-muted-foreground">{dictionary.phone.singapore}</p>
           </div>
         </div>
 
@@ -48,9 +48,9 @@ export default function ContactInfo() {
             <Clock className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold mb-1">Поддержка</h3>
-            <p className="text-muted-foreground">Среднее время ответа — менее 2 минут в рабочее время</p>
-            <p className="text-muted-foreground">Онлайн-чат, телефон, email</p>
+            <h3 className="font-semibold mb-1">{dictionary.support.title}</h3>
+            <p className="text-muted-foreground">{dictionary.support.responseTime}</p>
+            <p className="text-muted-foreground">{dictionary.support.channels}</p>
           </div>
         </div>
       </CardContent>

@@ -203,9 +203,9 @@ const es = {
     subtitle:
       "Experiencia real del usuario: énfasis en el ROI, la precisión de los pronósticos, la confianza y el cumplimiento normativo.",
     items: [
-      { author: "Alexey K.", role: "Empresario", location: "Moscú", text: "En 3 meses +23% frente a +4% del S&P 500. Las señales ayudaron a coger el rally de Tesla." },
-      { author: "Maria S.", role: "Diseñadora", location: "San Petersburgo", text: "Principiante, pero con un mentor de IA +3.200 $ en 6 meses. El stop-loss automático me salvó en la volatilidad." },
-      { author: "Dmitry V.", role: "Gestor de activos", location: "Ekaterimburgo", text: "La analítica supera a las alternativas. La API ha automatizado las estrategias. La rentabilidad es del 34% anual." },
+      { author: "Jayden Tan", role: "Empresario", location: "Moscú", text: "En 3 meses +23% frente a +4% del S&P 500. Las señales ayudaron a coger el rally de Tesla.", roi: "+23%" },
+      { author: "Charlotte Lee", role: "Diseñadora", location: "San Petersburgo", text: "Principiante, pero con un mentor de IA +3.200 $ en 6 meses. El stop-loss automático me salvó en la volatilidad.", roi: "+7%" },
+      { author: "Ethan Wong", role: "Gestor de activos", location: "Ekaterimburgo", text: "La analítica supera a las alternativas. La API ha automatizado las estrategias. La rentabilidad es del 34% anual.", roi: "+34%" },
     ],
     labels: {
       verified: "Verificado",

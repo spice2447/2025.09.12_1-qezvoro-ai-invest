@@ -220,10 +220,9 @@ const enSG = {
     subtitle:
       "Real user stories focusing on ROI, prediction accuracy, trust and regulatory compliance.",
     items: [
-      { author: "Rajesh T., financial advisor, Singapore", text: "5 months, +31% vs STI +6%. Precise signals — caught DBS rally 3 weeks before earnings." },
-      { author: "Michelle L., marketing executive, Singapore", text: "Beginner; S$5,400 profit in 7 months. Auto risk-management saved me during tech selloff." },
-      { author: "David C., portfolio manager, Singapore", text: "12 years trading — analytics outperform Reuters. API automation; 15% → 42% annual returns." },
-      { author: "Priya S., tech entrepreneur, Singapore", text: "Initially skeptical; MAS compliance + transparency. +187% in crypto positions in 9 months." },
+      { author: "Jayden Tan", text: "5 months, +31% vs STI +6%. Precise signals — caught DBS rally 3 weeks before earnings.", roi: "+23%" },
+      { author: "Charlotte Lee", text: "Beginner; S$5,400 profit in 7 months. Auto risk-management saved me during tech selloff.", roi: "+7%" },
+      { author: "Ethan Wong", text: "12 years trading — analytics outperform Reuters. API automation; 15% → 42% annual returns.", roi: "+34%" },
     ],
     labels: {
       verified: "Verified",

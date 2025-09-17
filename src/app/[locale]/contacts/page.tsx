@@ -10,14 +10,19 @@ import SecurityBadges from "@/components/contacts/SecurityBadges";
 
 import { absUrl, baseOpenGraph, buildAlternates } from "@/lib/seo";
 import { getMessages } from "@/i18n";
+import { LocalePageProps } from "../layout";
 
 export async function generateMetadata({
   params,
-}: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
   const t = await getMessages(locale);
-  const title = `${t.brand?.name ?? "Qezvoro Invest"} — ${t.common?.contacts ?? "Contacts"}`;
-  const description = "Начните инвестировать с ИИ за 3 минуты. Регистрация бесплатна, демо-счёт $100,000.";
+  const title = `${t.brand?.name ?? "Qezvoro Invest"} — ${
+    t.common?.contacts ?? "Contacts"
+  }`;
+  const description = t.contactPage?.meta?.description;
   const url = absUrl(locale, "/contacts");
 
   return {
@@ -26,32 +31,34 @@ export async function generateMetadata({
   };
 }
 
-export default function ContactsPage() {
+export default async function ContactsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getMessages(locale);
+  const d = t.contactPage;
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <main className="pt-20">
         <section className="py-20 bg-gradient-to-br from-background to-muted/20">
           <div className="container mx-auto px-4 sm:px-6">
-            <ContactHero />
+            <ContactHero dictionary={d?.hero} />
             <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-              <ContactForm />
+              <ContactForm dictionary={d?.form} />
               <div className="space-y-8">
-                <ContactInfo />
-                <Offices />
-                <SocialLinks />
+                <ContactInfo dictionary={d?.info} />
+                <Offices dictionary={d?.offices} />
+                <SocialLinks dictionary={d?.social} />
+                <FAQCompact dictionary={d?.faq} />
               </div>
             </div>
           </div>
         </section>
-
-        <section className="py-8">
-          <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-            <FAQCompact />
-          </div>
-        </section>
-
-        <SecurityBadges />
-        <ContactCTA />
+        <SecurityBadges dictionary={d?.security} />
+        <ContactCTA dictionary={d?.cta} />
       </main>
     </div>
   );

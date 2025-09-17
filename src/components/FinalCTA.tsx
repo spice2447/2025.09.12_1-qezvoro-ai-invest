@@ -1,12 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check, Zap, Shield, Clock, DollarSign, ArrowRight, TrendingUp } from "lucide-react";
+import QuickRegistrationForm from "./forms/QuickRegistrationForm";
+import { useModal } from "./modal/ModalProvider";
 
 type Props = { t: any; locale?: string };
 
 const FinalCTA = ({ t, locale }: Props) => {
   const tt = t?.finalCta ?? {};
+  const { openModal, closeModal } = useModal();
 
+  const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    // Здесь можно добавить логику для кнопки, например, открыть модальное окно
+    openModal({
+      // title: t?.common?.ctaStart ?? "Начать сейчас",
+      title: "",
+      // description: t?.common?.ctaDescription ?? "Свяжитесь с нами, чтобы начать ваше инвестиционное путешествие с Qezvoro.",
+      description: "",
+      content: <QuickRegistrationForm t={t} locale={locale} />,
+      footer: (
+        <Button onClick={closeModal} className="gradient-bg hover:opacity-90 transition-opacity">
+          {t?.common?.close ?? "Закрыть"}
+        </Button>
+      ),
+      dismissible: true,
+      contentClassName: "sm:max-w-lg",
+    });
+  }
   const benefits: string[] =
     tt.bullets ?? [
       "Бесплатная регистрация за 2 минуты",
@@ -83,7 +103,7 @@ const FinalCTA = ({ t, locale }: Props) => {
 
           {/* CTA */}
           <div className="mb-12">
-            <Button size="lg" className="gradient-bg hover:opacity-90 transition-all glow text-lg px-12 py-6">
+            <Button onClick={handleButtonClick} size="lg" className="gradient-bg hover:opacity-90 transition-all glow text-lg px-12 py-6">
               <Zap className="w-6 h-6 mr-3" />
               {tt.ctaButton ?? "Запустить ИИ-инвестирование немедленно"}
               <ArrowRight className="w-6 h-6 ml-3" />

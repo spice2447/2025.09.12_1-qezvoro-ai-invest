@@ -201,9 +201,9 @@ const ms = {
     title: "Ulasan mengenai Qezvoro: pengalaman sebenar",
     subtitle: "Pengalaman pengguna sebenar – tumpuan pada ROI, ketepatan ramalan, kepercayaan dan pematuhan peraturan.",
     items: [
-      { author: "Alexey K., usahawan, Moscow", text: "Dalam 3 bulan, +23% berbanding +4% S&P 500. Isyarat membantu menangkap rali Tesla." },
-      { author: "Maria S., pereka, St. Petersburg", text: "Baru, tetapi dengan mentor AI +$3,200 dalam 6 bulan. Henti rugi automatik menyelamatkan saya semasa turun naik." },
-      { author: "Dmitry V., pengurus aset", text: "Analitis mengatasi alternatif. API mengautomasikan strategi. Pulangan 34%/tahun." },
+      { author: "Jayden Tan", text: "Dalam 3 bulan, +23% berbanding +4% S&P 500. Isyarat membantu menangkap rali Tesla.", roi: "+23%" },
+      { author: "Charlotte Lee", text: "Baru, tetapi dengan mentor AI +$3,200 dalam 6 bulan. Henti rugi automatik menyelamatkan saya semasa turun naik.", roi: "+7%" },
+      { author: "Ethan Wong", text: "Analitis mengatasi alternatif. API mengautomasikan strategi. Pulangan 34%/tahun.", roi: "+34%" },
     ],
     labels: {
       verified: "Disahkan",

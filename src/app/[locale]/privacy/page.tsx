@@ -22,11 +22,11 @@ export async function generateMetadata({
   return { ...baseOpenGraph(title, description, url), alternates: buildAlternates(locale, "/privacy") };
 }
 
-const CONTENT_DIR = path.join(process.cwd(), "src", "i18n", "articles");
+const CONTENT_DIR = path.join(process.cwd(), "src", "content");
 
-async function load(locale: string, slug: string, fallback = "ru") {
+async function load(locale: string, slug: string, fallback = "en") {
   const read = async (loc: string) =>
-    fs.readFile(path.join(CONTENT_DIR, `${slug}.md`), "utf8"); // статьи у тебя общие — оставляем ru как основной
+    fs.readFile(path.join(CONTENT_DIR, loc, `${slug}.mdx`), "utf8");
   try {
     return await read(locale);
   } catch {
@@ -35,9 +35,9 @@ async function load(locale: string, slug: string, fallback = "ru") {
 }
 
 export default async function PrivacyPage(
-  { params }: { params: Promise<{ locale: string }> }   // <-- тут Promise
+  { params }: { params: Promise<{ locale: string }> }
 ) {
-  const { locale } = await params;                      // <-- достаём из промиса
+  const { locale } = await params;
   const raw = await load(locale, "privacy");
   const { content, data } = matter(raw);
   const toc = extractToc(content);

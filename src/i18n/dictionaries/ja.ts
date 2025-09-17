@@ -203,9 +203,9 @@ const ja = {
     title: "顧客レビュー",
     subtitle: "ユーザーの実際の経験 — ROI、予測の正確さ、信頼性、規制遵守に焦点を当てています。",
     items: [
-      { author: "田中 健太（東京）", text: "4ヶ月で+27%（日経+5.8%）。AIシグナルで決算2週間前の上昇を捉え、ROIは5週間で回収。" },
-      { author: "佐藤 美咲（大阪）", text: "初心者でも6ヶ月で48万円の利益。自動SLが大きな損失を回避。" },
-      { author: "山田 浩司（名古屋）", text: "13年の経験。分析はBloomberg超え。APIで戦略自動化、年利14%→39%へ。" },
+      { author: "Jayden Tan", text: "4ヶ月で+27%（日経+5.8%）。AIシグナルで決算2週間前の上昇を捉え、ROIは5週間で回収。", roi: "+23%" },
+      { author: "Charlotte Lee", text: "初心者でも6ヶ月で48万円の利益。自動SLが大きな損失を回避。", roi: "+7%" },
+      { author: "Ethan Wong", text: "13年の経験。分析はBloomberg超え。APIで戦略自動化、年利14%→39%へ。", roi: "+34%" },
     ],
     labels: {
       verified: "検証済み",

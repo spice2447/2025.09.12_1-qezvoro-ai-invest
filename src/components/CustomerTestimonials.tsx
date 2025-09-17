@@ -26,8 +26,8 @@ const CustomerTestimonials = ({ t }: Props) => {
     content: item.text,
     role: item.role,
     location: item.location,
-    roi: '+0%',
-    duration: 'N/A',
+    roi: item.roi,
+    duration: '3',
     rating: 5,
     verified: true,
   }));
@@ -73,6 +73,8 @@ const CustomerTestimonials = ({ t }: Props) => {
   const next = () => setCurrentIndex((p) => (p + 1) % testimonials.length);
   const prev = () => setCurrentIndex((p) => (p - 1 + testimonials.length) % testimonials.length);
   const cur = testimonials[currentIndex];
+  console.log('testimonials:', tt.items)
+  console.log('cur:', cur)
 
   return (
     <section id="reviews" className="py-24 bg-secondary/10">
@@ -106,10 +108,10 @@ const CustomerTestimonials = ({ t }: Props) => {
                         )}
                       </div>
                       <p className="text-muted-foreground">{cur.role}</p>
-                      <div className="flex items-center gap-1 text-sm text-muted-foreground mt-1">
+                      {/* <div className="flex items-center gap-1 text-sm text-muted-foreground mt-1">
                         <MapPin className="w-3 h-3" />
                         {cur.location}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 

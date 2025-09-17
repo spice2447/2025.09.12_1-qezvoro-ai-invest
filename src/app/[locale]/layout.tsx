@@ -19,9 +19,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }): Promise<Metadata> {
-  const { locale } = await params;
+  const { locale } = params;
   const loc = coerceLocale(locale);
   await getMessages(loc); // прогрузка словаря, если нужно
 
@@ -31,6 +31,10 @@ export async function generateMetadata({
     title: { default: "Qezvoro Invest", template: "%s — Qezvoro Invest" },
   };
 }
+
+export type LocalePageProps = {
+  params: { locale: string };
+};
 
 export default async function LocaleLayout({
   children,
@@ -44,14 +48,10 @@ export default async function LocaleLayout({
   const dict = await getMessages(loc);
 
   return (
-    <html lang={loc} dir={isRtl(loc) ? "rtl" : "ltr"}>
-      <body>
-        <Providers>
-          <LocalizedHeader locale={loc} />
-          <main>{children}</main>
-          <Footer dict={dict} />
-        </Providers>
-      </body>
-    </html>
+    <Providers>
+      <LocalizedHeader locale={loc} />
+      <main>{children}</main>
+      <Footer dict={dict} />
+    </Providers>
   );
 }

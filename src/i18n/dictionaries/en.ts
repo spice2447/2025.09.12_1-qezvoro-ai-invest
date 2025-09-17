@@ -224,9 +224,9 @@ const enSG = {
     subtitle:
       "Real user experience - emphasis on ROI, forecast accuracy, trust and regulatory compliance.",
     items: [
-      { author: "Alexey K.", role: "Entrepreneur", location: "Moscow", text: "In 3 months +23% vs +4% S&P 500. The signals helped to catch the Tesla rally." },
-      { author: "Maria S.", role: "Designer", location: "Saint Petersburg", text: "A beginner, but with an AI mentor +$3,200 in 6 months. Auto-stop-loss saved me in volatility." },
-      { author: "Dmitry V.", role: "Asset Manager", location: "Yekaterinburg", text: "Analytics surpasses alternatives. The API has automated strategies. Profitability is 34%/year." },
+      { author: "Jayden Tan", role: "Entrepreneur", location: "Moscow", text: "In 3 months +23% vs +4% S&P 500. The signals helped to catch the Tesla rally.", roi: "+23%" },
+      { author: "Charlotte Lee", role: "Designer", location: "Saint Petersburg", text: "A beginner, but with an AI mentor +$3,200 in 6 months. Auto-stop-loss saved me in volatility.", roi: "+7%" },
+      { author: "Ethan Wong", role: "Asset Manager", location: "Yekaterinburg", text: "Analytics surpasses alternatives. The API has automated strategies. Profitability is 34%/year.", roi: "+34%" },
     ],
     labels: {
       verified: "Verified",
@@ -413,6 +413,128 @@ const enSG = {
     bottom: {
       copyright: "© 2025 Qezvoro Invest. All rights reserved.",
       riskWarning: "Trading financial instruments involves a high level of risk and may result in the loss of invested funds.",
+    },
+  },
+
+  // other pages
+  contactPage: {
+    meta: {
+      description: "Start investing with AI in 3 minutes. Registration is free, demo account of $100,000.",
+    },
+    hero: {
+      title: "Start Investing with AI in 3 Minutes",
+      subtitle: "Join 50,000+ successful investors. Registration is free, with a $100,000 demo account for practice.",
+    },
+    form: {
+      title: "Get Access to AI Analytics",
+      nameLabel: "Name",
+      namePlaceholder: "Your name",
+      emailLabel: "Email",
+      emailPlaceholder: "email@example.com",
+      phoneLabel: "Phone",
+      phonePlaceholder: "+1 (202) 555-0147",
+      experienceLabel: "Investment Experience",
+      experiencePlaceholder: "Select experience",
+      experienceOptions: {
+        beginner: "Beginner",
+        "1-3": "1–3 years",
+        "3-5": "3–5 years",
+        "5+": "More than 5 years",
+      },
+      budgetLabel: "Planned Investment Amount",
+      budgetPlaceholder: "Select range",
+      budgetOptions: {
+        "100-1000": "$100–1,000",
+        "1k-10k": "$1,000–10,000",
+        "10k-100k": "$10,000–100,000",
+        "100k+": "More than $100,000",
+      },
+      messageLabel: "Message",
+      messagePlaceholder: "Tell us about your investment goals...",
+      agreeLabel: "I agree with the ",
+      termsLink: "terms of use",
+      and: " and ",
+      privacyLink: "privacy policy",
+      submitButton: "Create Free Account",
+      submittingButton: "Submitting...",
+      formPerks: [
+        "✓ 2-minute registration",
+        "✓ $100,000 demo account",
+        "✓ 30 days of free AI signals",
+        "✓ No obligations",
+      ],
+    },
+    info: {
+      title: "Contact Us",
+      email: {
+        title: "Email",
+        support: "support@qezvoro.com - technical support",
+        sales: "sales@qezvoro.com - tariff questions",
+        partners: "partners@qezvoro.com - collaboration",
+      },
+      messengers: {
+        title: "Messengers",
+        telegram: "Telegram: @QezvoroSupport",
+        whatsapp: "WhatsApp: +1 (202) 555-0147",
+      },
+      phone: {
+        title: "Phone",
+        london: "+44 20 7946 0958 (London)",
+        ny: "+1 212 555 0123 (New York)",
+        singapore: "+65 6789 0123 (Singapore)",
+      },
+      support: {
+        title: "Support",
+        responseTime: "Average response time is less than 2 minutes during business hours",
+        channels: "Online chat, phone, email",
+      },
+    },
+    offices: {
+      title: "Offices",
+      items: [
+        {
+          title: "London (Headquarters)",
+          address: ["25 Old Broad Street", "London EC2N 1HN, UK"],
+          hours: "Mon–Fri: 9:00 AM–5:00 PM GMT",
+        },
+        {
+          title: "Singapore",
+          address: ["1 Raffles Quay, South Tower Level 20", "Singapore"],
+          hours: "Mon–Fri: 9:00 AM–5:00 PM SGT",
+        },
+      ],
+    },
+    social: {
+      title: "Social Networks",
+      links: [
+        { label: "Telegram: @QezvoroInvest - news and analytics", href: "#" },
+        { label: "Twitter / X: @QezvoroAI - global updates", href: "#" },
+        { label: "LinkedIn: Qezvoro Invest - for professionals", href: "#" },
+      ],
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      items: [
+        { q: "How long does registration take?", a: "2–3 minutes. You will get access to a demo account immediately after registration." },
+        { q: "What is the minimum deposit?", a: "$100. You can start with a free $100,000 demo account." },
+        { q: "How quickly does support respond?", a: "The average response time is less than 2 minutes during business hours." },
+      ],
+    },
+    cta: {
+      title: "Ready to start investing with AI?",
+      subtitle: "Join 50,000+ investors who are already using our algorithms.",
+      mainButton: "Start Investing Now",
+      demoButton: "$100,000 Demo Account",
+    },
+    security: {
+      licenses: "Licenses",
+      licensesDesc: "SEC, FCA, CySEC",
+      insurance: "Insurance",
+      insuranceDesc: "Deposits up to $250,000",
+      encryption: "Encryption",
+      encryptionDesc: "AES-256, TLS 1.3",
+      audit: "Audit",
+      auditDesc: "Annually by PwC",
     },
   },
 };

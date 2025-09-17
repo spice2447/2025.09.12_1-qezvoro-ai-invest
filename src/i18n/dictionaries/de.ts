@@ -201,9 +201,9 @@ const de = {
     title: "Bewertungen zu Qezvoro: Echte Erfahrungen",
     subtitle: "Echte Benutzererfahrungen – Fokus auf ROI, Vorhersagegenauigkeit, Vertrauen und Einhaltung gesetzlicher Vorschriften.",
     items: [
-      { author: "Alexei K., Unternehmer, Moskau", text: "In 3 Monaten +23% gegenüber +4% beim S&P 500. Die Signale halfen, die Tesla-Rallye zu erwischen." },
-      { author: "Maria S., Designerin, St. Petersburg", text: "Anfängerin, aber mit KI-Mentor +3.200 $ in 6 Monaten. Auto-Stop-Loss hat mich bei Volatilität gerettet." },
-      { author: "Dmitry V., Vermögensverwalter", text: "Die Analytik übertrifft Alternativen. API hat Strategien automatisiert. Rendite 34%/Jahr." },
+      { author: "Jayden Tan", text: "In 3 Monaten +23% gegenüber +4% beim S&P 500. Die Signale halfen, die Tesla-Rallye zu erwischen.", roi: "+23%" },
+      { author: "Charlotte Lee", text: "Anfängerin, aber mit KI-Mentor +3.200 $ in 6 Monaten. Auto-Stop-Loss hat mich bei Volatilität gerettet.", roi: "+7%" },
+      { author: "Ethan Wong", text: "Die Analytik übertrifft Alternativen. API hat Strategien automatisiert. Rendite 34%/Jahr.", roi: "+34%" },
     ],
     labels: {
       verified: "Verifiziert",

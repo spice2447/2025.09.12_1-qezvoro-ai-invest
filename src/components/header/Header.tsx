@@ -7,11 +7,32 @@ import MobileToggle from "./MobileToggle";
 import MobileMenu from "./MobileMenu";
 import Logo from "./Logo";
 import { Button } from "@/components/ui/button";
+import { useModal } from "@/components/modal/ModalProvider";
+import QuickRegistrationForm from "../forms/QuickRegistrationForm";
 
 type HeaderProps = { t: any; locale: string };
 
 export default function Header({ t, locale }: HeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { openModal, closeModal } = useModal();
+
+  const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    // Здесь можно добавить логику для кнопки, например, открыть модальное окно
+    openModal({
+      // title: t?.common?.ctaStart ?? "Начать сейчас",
+      title: "",
+      // description: t?.common?.ctaDescription ?? "Свяжитесь с нами, чтобы начать ваше инвестиционное путешествие с Qezvoro.",
+      description: "",
+      content: <QuickRegistrationForm t={t} locale={locale} />,
+      footer: (
+        <Button onClick={closeModal} className="gradient-bg hover:opacity-90 transition-opacity">
+          {t?.common?.close ?? "Закрыть"}
+        </Button>
+      ),
+      dismissible: true,
+      contentClassName: "sm:max-w-lg",
+    });
+  }
 
   const navItems = [
     { label: t?.nav?.about ?? "О платформе", href: "#platform" },
@@ -32,7 +53,7 @@ export default function Header({ t, locale }: HeaderProps) {
 
           <div className="hidden lg:flex items-center space-x-4">
             <LanguageSelector locale={locale} />
-            <Button className="gradient-bg hover:opacity-90 transition-opacity">
+            <Button onClick={handleButtonClick} className="gradient-bg hover:opacity-90 transition-opacity">
               {t?.common?.ctaStart ?? "Начать сейчас"}
             </Button>
           </div>

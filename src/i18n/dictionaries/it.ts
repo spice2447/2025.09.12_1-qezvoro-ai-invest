@@ -201,9 +201,9 @@ const it = {
     title: "Recensioni su Qezvoro: esperienza reale",
     subtitle: "Esperienza reale degli utenti – enfasi su ROI, precisione delle previsioni, fiducia e conformità normativa.",
     items: [
-      { author: "Alexey K., imprenditore, Mosca", text: "In 3 mesi, +23% contro il +4% dell'S&P 500. I segnali hanno aiutato a cogliere il rally di Tesla." },
-      { author: "Maria S., designer, San Pietroburgo", text: "Principiante, ma con un mentore di IA +3.200 $ in 6 mesi. Lo stop-loss automatico mi ha salvato durante la volatilità." },
-      { author: "Dmitry V., gestore patrimoniale", text: "L'analisi supera le alternative. L'API ha automatizzato le strategie. Rendimento del 34%/anno." },
+      { author: "Jayden Tan", text: "In 3 mesi, +23% contro il +4% dell'S&P 500. I segnali hanno aiutato a cogliere il rally di Tesla.", roi: "+23%" },
+      { author: "Charlotte Lee", text: "Principiante, ma con un mentore di IA +3.200 $ in 6 mesi. Lo stop-loss automatico mi ha salvato durante la volatilità.", roi: "+7%" },
+      { author: "Ethan Wong", text: "L'analisi supera le alternative. L'API ha automatizzato le strategie. Rendimento del 34%/anno.", roi: "+34%" },
     ],
     labels: {
       verified: "Verificato",

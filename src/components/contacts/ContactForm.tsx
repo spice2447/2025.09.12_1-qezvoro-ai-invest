@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 
-export default function ContactForm() {
+export default function ContactForm({ dictionary }: { dictionary: any }) {
   const [submitting, setSubmitting] = useState(false);
   const [agree, setAgree] = useState(false);
 
@@ -26,62 +26,62 @@ export default function ContactForm() {
   return (
     <Card className="border-border/50 backdrop-blur-sm">
       <CardHeader>
-        <CardTitle className="text-2xl">Получить доступ к ИИ-аналитике</CardTitle>
+        <CardTitle className="text-2xl">{dictionary.title}</CardTitle>
       </CardHeader>
       <CardContent>
         <form className="space-y-6" onSubmit={onSubmit}>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="text-sm font-medium mb-2 block">Имя</label>
-              <Input name="name" placeholder="Ваше имя" required />
+              <label className="text-sm font-medium mb-2 block">{dictionary.nameLabel}</label>
+              <Input name="name" placeholder={dictionary.namePlaceholder} required />
             </div>
             <div>
-              <label className="text-sm font-medium mb-2 block">Email</label>
-              <Input name="email" type="email" placeholder="email@example.com" required />
+              <label className="text-sm font-medium mb-2 block">{dictionary.emailLabel}</label>
+              <Input name="email" type="email" placeholder={dictionary.emailPlaceholder} required />
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="text-sm font-medium mb-2 block">Телефон</label>
-              <Input name="phone" placeholder="+1 (202) 555-0147" />
+              <label className="text-sm font-medium mb-2 block">{dictionary.phoneLabel}</label>
+              <Input name="phone" placeholder={dictionary.phonePlaceholder} />
             </div>
             <div>
-              <label className="text-sm font-medium mb-2 block">Опыт инвестирования</label>
+              <label className="text-sm font-medium mb-2 block">{dictionary.experienceLabel}</label>
               <Select name="experience">
-                <SelectTrigger><SelectValue placeholder="Выберите опыт" /></SelectTrigger>
+                <SelectTrigger><SelectValue placeholder={dictionary.experiencePlaceholder} /></SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="beginner">Новичок</SelectItem>
-                  <SelectItem value="1-3">1–3 года</SelectItem>
-                  <SelectItem value="3-5">3–5 лет</SelectItem>
-                  <SelectItem value="5+">Более 5 лет</SelectItem>
+                  <SelectItem value="beginner">{dictionary.experienceOptions.beginner}</SelectItem>
+                  <SelectItem value="1-3">{dictionary.experienceOptions["1-3"]}</SelectItem>
+                  <SelectItem value="3-5">{dictionary.experienceOptions["3-5"]}</SelectItem>
+                  <SelectItem value="5+">{dictionary.experienceOptions["5+"]}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
           </div>
 
           <div>
-            <label className="text-sm font-medium mb-2 block">Планируемая сумма инвестиций</label>
+            <label className="text-sm font-medium mb-2 block">{dictionary.budgetLabel}</label>
             <Select name="budget">
-              <SelectTrigger><SelectValue placeholder="Выберите диапазон" /></SelectTrigger>
+              <SelectTrigger><SelectValue placeholder={dictionary.budgetPlaceholder} /></SelectTrigger>
               <SelectContent>
-                <SelectItem value="100-1000">$100–1,000</SelectItem>
-                <SelectItem value="1k-10k">$1,000–10,000</SelectItem>
-                <SelectItem value="10k-100k">$10,000–100,000</SelectItem>
-                <SelectItem value="100k+">Более $100,000</SelectItem>
+                <SelectItem value="100-1000">{dictionary.budgetOptions["100-1000"]}</SelectItem>
+                <SelectItem value="1k-10k">{dictionary.budgetOptions["1k-10k"]}</SelectItem>
+                <SelectItem value="10k-100k">{dictionary.budgetOptions["10k-100k"]}</SelectItem>
+                <SelectItem value="100k+">{dictionary.budgetOptions["100k+"]}</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
           <div>
-            <label className="text-sm font-medium mb-2 block">Сообщение</label>
-            <Textarea name="message" placeholder="Расскажите о ваших инвестиционных целях..." rows={4} />
+            <label className="text-sm font-medium mb-2 block">{dictionary.messageLabel}</label>
+            <Textarea name="message" placeholder={dictionary.messagePlaceholder} rows={4} />
           </div>
 
           <div className="flex items-start gap-3">
             <Checkbox id="agree" checked={agree} onCheckedChange={(v) => setAgree(Boolean(v))} />
             <label htmlFor="agree" className="text-sm text-muted-foreground">
-              Согласен с <a className="underline" href="/ru/privacy" target="_blank">условиями использования</a> и <a className="underline" href="/ru/privacy">политикой конфиденциальности</a>
+              {dictionary.agreeLabel}<a className="underline" href="/ru/privacy" target="_blank">{dictionary.termsLink}</a>{dictionary.and}<a className="underline" href="/ru/privacy">{dictionary.privacyLink}</a>
             </label>
           </div>
 
@@ -90,15 +90,12 @@ export default function ContactForm() {
             disabled={submitting || !agree}
             className="w-full gradient-bg hover:opacity-90 transition-opacity"
           >
-            {submitting ? "Отправка..." : "Создать аккаунт бесплатно"}
+            {submitting ? dictionary.submittingButton : dictionary.submitButton}
           </Button>
 
           {/* подписи под формой */}
           <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-1 text-sm text-muted-foreground mt-2">
-            <li>✓ Регистрация за 2 минуты</li>
-            <li>✓ Демо-счёт $100,000</li>
-            <li>✓ 30 дней бесплатных ИИ-сигналов</li>
-            <li>✓ Без обязательств</li>
+            {dictionary.formPerks.map((perk: string) => <li key={perk}>{perk}</li>)}
           </ul>
         </form>
       </CardContent>

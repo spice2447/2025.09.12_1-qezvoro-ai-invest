@@ -12,15 +12,15 @@ const Item = ({ icon: Icon, title, subtitle }:{icon:any; title:string; subtitle:
   </div>
 );
 
-export default function SecurityBadges() {
+export default function SecurityBadges({ dictionary }: { dictionary: any }) {
   return (
     <section className="py-12">
       <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Item icon={ShieldCheck} title="Лицензии" subtitle="SEC, FCA, CySEC" />
-          <Item icon={BadgeCheck} title="Страхование" subtitle="Депозиты до $250,000" />
-          <Item icon={Lock} title="Шифрование" subtitle="AES-256, TLS 1.3" />
-          <Item icon={FileCheck2} title="Аудит" subtitle="Ежегодно PwC" />
+          <Item icon={ShieldCheck} title={dictionary.licenses} subtitle={dictionary.licensesDesc} />
+          <Item icon={BadgeCheck} title={dictionary.insurance} subtitle={dictionary.insuranceDesc} />
+          <Item icon={Lock} title={dictionary.encryption} subtitle={dictionary.encryptionDesc} />
+          <Item icon={FileCheck2} title={dictionary.audit} subtitle={dictionary.auditDesc} />
         </div>
       </div>
     </section>

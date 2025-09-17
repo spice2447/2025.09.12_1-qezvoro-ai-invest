@@ -45,7 +45,7 @@ const QezvoroLanding = ({ t, locale }: QezvoroLandingProps) => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <main>
-        <HeroSection t={t} />
+        <HeroSection t={t} locale={locale} />
         <RegistrationForm t={t} locale={locale} />
         <KeyIndicators t={t} />
         <FunctionalCapabilities t={t} />

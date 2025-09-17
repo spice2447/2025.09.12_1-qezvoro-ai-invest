@@ -1,11 +1,32 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { UserPlus, CreditCard, Bot, ArrowRight, Clock, Shield, Zap } from "lucide-react";
+import { useModal } from "./modal/ModalProvider";
+import QuickRegistrationForm from "./forms/QuickRegistrationForm";
 
 type Props = { t: any; locale?: string };
 
 const GettingStarted = ({ t, locale }: Props) => {
   const tt = t?.gettingStarted ?? {};
+    const { openModal, closeModal } = useModal();
+
+  const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    // Здесь можно добавить логику для кнопки, например, открыть модальное окно
+    openModal({
+      // title: t?.common?.ctaStart ?? "Начать сейчас",
+      title: "",
+      // description: t?.common?.ctaDescription ?? "Свяжитесь с нами, чтобы начать ваше инвестиционное путешествие с Qezvoro.",
+      description: "",
+      content: <QuickRegistrationForm t={t} locale={locale} />,
+      footer: (
+        <Button onClick={closeModal} className="gradient-bg hover:opacity-90 transition-opacity">
+          {t?.common?.close ?? "Закрыть"}
+        </Button>
+      ),
+      dismissible: true,
+      contentClassName: "sm:max-w-lg",
+    });
+  }
 
   const steps =
     (tt.steps ?? []).map((step: any, index: number) => ({
@@ -124,7 +145,7 @@ const GettingStarted = ({ t, locale }: Props) => {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-6">
-                <Button size="lg" className="gradient-bg hover:opacity-90 transition-all glow">
+                <Button onClick={handleButtonClick} size="lg" className="gradient-bg hover:opacity-90 transition-all glow">
                   <Zap className="w-5 h-5 mr-2" />
                   {tt.ctaButton ?? "Начать сейчас"}
                   <ArrowRight className="w-5 h-5 ml-2" />
