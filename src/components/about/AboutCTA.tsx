@@ -1,6 +1,7 @@
 // src/components/about/AboutCTA.tsx
 import { CheckCircle, Mail } from "lucide-react";
 import Link from 'next/link';
+import QuickRegistrationForm from "../forms/QuickRegistrationForm";
 
 export default function AboutCTA({ dictionary }: { dictionary: any }) {
   return (
@@ -37,7 +38,7 @@ export default function AboutCTA({ dictionary }: { dictionary: any }) {
             </div>
         </div>
 
-        <div>
+        {/* <div>
             <h3 className="font-bold text-xl mb-4">{dictionary?.contacts?.title}</h3>
             <div className="flex justify-center items-center gap-6 flex-wrap">
                  {dictionary?.contacts?.emails?.map((email: string, i: number) => (
@@ -46,6 +47,9 @@ export default function AboutCTA({ dictionary }: { dictionary: any }) {
                     </a>
                 ))}
             </div>
+        </div> */}
+        <div className="max-w-2xl mx-auto">
+          <QuickRegistrationForm t={dictionary?.form ?? {}} />
         </div>
       </div>
     </section>

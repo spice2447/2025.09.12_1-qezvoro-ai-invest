@@ -73,7 +73,7 @@ const Footer = ({ dict, locale }: FooterProps) => {
               </p>
 
               {/* Contact Info */}
-              <div className="space-y-3 text-sm">
+              {/* <div className="space-y-3 text-sm">
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Mail className="w-4 h-4" />
                   <span>{INFO.email}</span>
@@ -86,7 +86,7 @@ const Footer = ({ dict, locale }: FooterProps) => {
                   <MapPin className="w-4 h-4" />
                   <span>{footer.brand.locations}</span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Navigation Sections */}

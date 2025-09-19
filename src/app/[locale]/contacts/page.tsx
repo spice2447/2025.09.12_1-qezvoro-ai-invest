@@ -52,7 +52,7 @@ export default async function ContactsPage({
                 <QuickRegistrationForm t={t} />
               </div>
               <div className="space-y-8">
-                <ContactInfo dictionary={d?.info} />
+                {/* <ContactInfo dictionary={d?.info} /> */}
                 <Offices dictionary={d?.offices} />
                 <SocialLinks dictionary={d?.social} />
                 <FAQCompact dictionary={d?.faq} />

@@ -11,7 +11,7 @@ export default function Team({ dictionary }: { dictionary: any }) {
         <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-16">
           {dictionary?.founders?.map((founder: any, index: number) => (
             <div key={index} className="flex flex-col items-center text-center">
-              <Image src={'/placeholder.svg'} alt={founder.name} width={120} height={120} className="rounded-full mb-4 border-4 border-primary/30" />
+              {/* <Image src={'/placeholder.svg'} alt={founder.name} width={120} height={120} className="rounded-full mb-4 border-4 border-primary/30" /> */}
               <h3 className="text-xl font-bold">{founder.name}</h3>
               <p className="text-primary font-semibold">{founder.role}</p>
               <p className="text-sm text-muted-foreground mt-2 mb-4">{founder.bio}</p>

@@ -13,6 +13,7 @@ import PartnerEcosystem from "@/components/reviews/PartnerEcosystem";
 // import JointResearch from "@/components/reviews/JointResearch";
 // import TrustAndTransparency from "@/components/reviews/TrustAndTransparency";
 import ReviewsCTA from "@/components/reviews/ReviewsCTA";
+import TechnologicalPartners from "@/components/TechnologicalPartners";
 
 export async function generateMetadata({
   params,
@@ -41,7 +42,9 @@ export default async function ReviewsPage({ params }: {params: Promise<{ locale:
         <UserReviews dictionary={d?.userReviews} />
         {/* <VideoTestimonials dictionary={d?.videoTestimonials} /> */}
         {/* <CaseStudies dictionary={d?.caseStudies} /> */}
-        <PartnerEcosystem dictionary={d?.partnerEcosystem} />
+        {/* <PartnerEcosystem dictionary={d?.partnerEcosystem} /> */}
+        <TechnologicalPartners t={t} />
+
         {/* <CertificationsAwards dictionary={d?.certifications} /> */}
         {/* <JointResearch dictionary={d?.jointResearch} /> */}
         {/* <TrustAndTransparency dictionary={d?.trustAndTransparency} /> */}
