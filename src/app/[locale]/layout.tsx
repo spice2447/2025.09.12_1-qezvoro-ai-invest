@@ -51,7 +51,7 @@ export default async function LocaleLayout({
     <Providers>
       <LocalizedHeader locale={loc} />
       <main>{children}</main>
-      <Footer dict={dict} />
+      <Footer dict={dict} locale={locale} />
     </Providers>
   );
 }

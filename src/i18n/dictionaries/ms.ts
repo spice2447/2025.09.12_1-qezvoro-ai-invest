@@ -389,6 +389,374 @@ const ms = {
       riskWarning: "Perdagangan instrumen kewangan melibatkan tahap risiko yang tinggi dan boleh mengakibatkan kehilangan dana yang dilaburkan.",
     },
   },
+
+  // halaman lain
+  contactPage: {
+    meta: {
+      description: "Mula melabur dengan AI dalam 3 minit. Pendaftaran percuma, akaun demo $100,000.",
+    },
+    hero: {
+      title: "Mula melabur dengan AI dalam 3 minit",
+      subtitle: "Sertai 50,000+ pelabur berjaya. Pendaftaran percuma, akaun demo $100,000 untuk latihan.",
+    },
+    form: {
+      title: "Dapatkan akses kepada analitik AI",
+      nameLabel: "Nama",
+      namePlaceholder: "Nama anda",
+      emailLabel: "Email",
+      emailPlaceholder: "email@example.com",
+      phoneLabel: "Telefon",
+      phonePlaceholder: "+1 (202) 555-0147",
+      experienceLabel: "Pengalaman pelaburan",
+      experiencePlaceholder: "Pilih pengalaman",
+      experienceOptions: {
+        beginner: "Pemula",
+        "1-3": "1–3 tahun",
+        "3-5": "3–5 tahun",
+        "5+": "Lebih 5 tahun",
+      },
+      budgetLabel: "Jumlah pelaburan dirancang",
+      budgetPlaceholder: "Pilih julat",
+      budgetOptions: {
+        "100-1000": "$100–1,000",
+        "1k-10k": "$1,000–10,000",
+        "10k-100k": "$10,000–100,000",
+        "100k+": "Lebih $100,000",
+      },
+      messageLabel: "Mesej",
+      messagePlaceholder: "Ceritakan matlamat pelaburan anda…",
+      agreeLabel: "Saya bersetuju dengan ",
+      termsLink: "terma penggunaan",
+      and: " dan ",
+      privacyLink: "dasar privasi",
+      submitButton: "Buat akaun percuma",
+      submittingButton: "Menghantar…",
+      formPerks: [
+        "✓ Pendaftaran 2 minit",
+        "✓ Akaun demo $100,000",
+        "✓ 30 hari isyarat AI percuma",
+        "✓ Tiada komitmen",
+      ],
+    },
+    info: {
+      title: "Hubungi kami",
+      email: {
+        title: "Email",
+        support: "support@qezvoro.com — sokongan teknikal",
+        sales: "sales@qezvoro.com — soalan pelan harga",
+        partners: "partners@qezvoro.com — kerjasama",
+      },
+      messengers: {
+        title: "Pemesejan",
+        telegram: "Telegram: @QezvoroSupport",
+        whatsapp: "WhatsApp: +1 (202) 555-0147",
+      },
+      phone: {
+        title: "Telefon",
+        london: "+44 20 7946 0958 (London)",
+        ny: "+1 212 555 0123 (New York)",
+        singapore: "+65 6789 0123 (Singapura)",
+      },
+      support: {
+        title: "Sokongan",
+        responseTime: "Masa tindak balas purata kurang 2 minit dalam waktu bekerja",
+        channels: "Sembang dalam talian, telefon, email",
+      },
+    },
+    offices: {
+      title: "Pejabat",
+      items: [
+        {
+          title: "London (Ibu pejabat)",
+          address: ["25 Old Broad Street", "London EC2N 1HN, UK"],
+          hours: "Isn–Jum: 9:00–17:00 GMT",
+        },
+        {
+          title: "Singapura",
+          address: ["1 Raffles Quay, South Tower Level 20", "Singapore"],
+          hours: "Isn–Jum: 9:00–17:00 SGT",
+        },
+      ],
+    },
+    social: {
+      title: "Rangkaian sosial",
+      links: [
+        { label: "Telegram: @QezvoroInvest — berita dan analitik", href: "#" },
+        { label: "Twitter / X: @QezvoroAI — kemas kini global", href: "#" },
+        { label: "LinkedIn: Qezvoro Invest — untuk profesional", href: "#" },
+      ],
+    },
+    faq: {
+      title: "Soalan lazim",
+      items: [
+        { q: "Berapa lama pendaftaran?", a: "2–3 minit. Anda akan mendapat akses kepada akaun demo sebaik sahaja mendaftar." },
+        { q: "Berapakah deposit minimum?", a: "$100. Anda boleh bermula dengan akaun demo percuma $100,000." },
+        { q: "Seberapa pantas sokongan membalas?", a: "Masa tindak balas purata kurang 2 minit dalam waktu bekerja." },
+      ],
+    },
+    cta: {
+      title: "Sedia untuk mula melabur dengan AI?",
+      subtitle: "Sertai 50,000+ pelabur yang sudah menggunakan algoritma kami.",
+      mainButton: "Mula melabur sekarang",
+      demoButton: "Akaun demo $100,000",
+    },
+    security: {
+      licenses: "Lesen",
+      licensesDesc: "SEC, FCA, CySEC",
+      insurance: "Insurans",
+      insuranceDesc: "Deposit sehingga $250,000",
+      encryption: "Penyulitan",
+      encryptionDesc: "AES-256, TLS 1.3",
+      audit: "Audit",
+      auditDesc: "Tahunan oleh PwC",
+    },
+  },
+
+  reviewsPage: {
+    meta: {
+      title: "Ulasan & rakan kongsi",
+      description:
+        "Terokai ulasan pelanggan sebenar, kisah kejayaan dan ekosistem rakan kongsi kami yang dipercayai. Ketahui mengapa 50,000+ pelabur memilih Qezvoro untuk dagangan berasaskan AI.",
+    },
+    hero: {
+      headline: "Ulasan Qezvoro — maklum balas pelanggan dan rangkaian rakan kongsi",
+      subheadline: "Lebih 50,000 pelabur mempercayakan modal mereka kepada Qezvoro Invest",
+      trustIndicators: [
+        { label: "Penilaian purata", value: "4.9/5.0" },
+        { label: "Cadangan pelanggan", value: "94%" },
+        { label: "NPS", value: "81" },
+        { label: "Perikatan strategik", value: "15+" },
+        { label: "Modal di bawah pengurusan", value: "$2.3B+" },
+      ],
+    },
+    userReviews: {
+      title: "Dipercayai oleh pelabur di seluruh dunia",
+      tabs: {
+        all: "Semua",
+        beginner: "Pemula",
+        professional: "Profesional",
+        large: "Portfolio besar",
+        international: "Pelanggan antarabangsa",
+      },
+      reviews: {
+        beginner: [
+          { name: "Emily Rodriguez", role: "Pemasaran, Austin", text: "+28% dalam 4 bulan, bermula dengan $200, kini $5,000." },
+          { name: "David Kim", role: "Pembangun IT, Seattle", text: "+42.5% dalam 6 bulan, setara dengan $3,400 keuntungan." },
+        ],
+        professional: [
+          { name: "Michael Anderson", role: "Pengurus Portfolio, NY", text: "$2M AUM: daripada 18% ke 31% setahun dengan automasi API." },
+          { name: "Jonathan Wilson", role: "Pengurus Hedge Fund, Chicago", text: "Isyarat arbitraj tiada tandingan. ROI 187% tahun lalu." },
+        ],
+        international: [
+          { name: "James Richardson", role: "Penasihat, NY", text: "+43% pada portfolio pasaran membangun." },
+          { name: "Hans Mueller", role: "Usahawan, Berlin", text: "+29% dalam 10 bulan, pengurusan portfolio AI pasif." },
+        ],
+      },
+    },
+    videoTestimonials: {
+      title: "Testimoni video",
+      videos: [
+        { title: "$10,000 pertama saya dengan Qezvoro", author: "Sergey Nikolaev (3 min)" },
+        { title: "Family Office memilih penyelesaian AI", author: "Kristina Andreeva (5 min)" },
+        { title: "Daripada biasiswa ke Stanford", author: "Anastasia Komarova (2 min)" },
+      ],
+    },
+    caseStudies: {
+      title: "Kisah kejayaan terperinci",
+      studies: [
+        { title: "Kajian #1: Perancangan persaraan dalam 5 tahun", description: "Vladimir P., jurutera, matlamat $200k. Dengan platform kami, beliau berjaya simpan $89k dalam 2 tahun." },
+        { title: "Kajian #2: Modal untuk startup dalam 18 bulan", description: "Maria K., pemasaran, menyasar $50k. Mencapai +68% dalam 14 bulan dan melebihi sasaran lebih awal." },
+      ],
+    },
+    partnerEcosystem: {
+      title: "Ekosistem rakan kongsi kami",
+      categories: [
+        {
+          title: "Integrasi bursa",
+          partners: [
+            { name: "Binance", description: "Akses 500+ instrumen, komisen dari 0.05%, volum $15B+/hari." },
+            { name: "Coinbase", description: "Dikawal selia di AS, perlindungan insurans $255M, akses Coinbase Prime." },
+            { name: "Interactive Brokers", description: "135+ pasaran, komisen $0.005/saham, aset $300B+." },
+          ],
+        },
+        {
+          title: "Perikatan teknologi",
+          partners: [
+            { name: "Google Cloud AI", description: "Model BERT untuk +15% ketepatan ramalan." },
+            { name: "NVIDIA", description: "Pengkomputeran dipercepat H100/A100 untuk analisis lebih pantas." },
+            { name: "Bloomberg", description: "Akses data terminal, nilai $24k/tahun setiap lesen." },
+          ],
+        },
+        {
+          title: "Perbankan & kustodi",
+          partners: [
+            { name: "JP Morgan Chase", description: "Akaun berasingan, insurans FDIC sehingga $250k." },
+            { name: "HSBC", description: "Perbankan global di 64 negara, yuran lebih rendah." },
+            { name: "State Street", description: "Perkhidmatan kustodi untuk >$40T aset di bawah pentadbiran." },
+          ],
+        },
+        {
+          title: "Kerjasama akademik",
+          partners: [
+            { name: "MIT Sloan", description: "Penyelidikan fintech bersama, 3 paten terhasil." },
+            { name: "Stanford AI Lab", description: "Projek XAI untuk model kewangan." },
+            { name: "London School of Economics", description: "Kajian risiko sistemik dalam pasaran dipacu AI." },
+          ],
+        },
+      ],
+    },
+    certifications: {
+      title: "Pensijilan & anugerah rakan kongsi",
+      items: [
+        "Google Cloud Partner Award 2024 — AI Innovation Partner",
+        "NVIDIA Inception Program — Elite Partner",
+        "Bloomberg Market Data Certification",
+        "Interactive Brokers Technology Partner",
+        "JP Morgan FinTech Certificate",
+      ],
+    },
+    jointResearch: {
+      title: "Projek penyelidikan bersama",
+      projects: [
+        { title: "AI dalam pelaburan runcit dengan MIT Sloan & LBS", result: "Membuktikan peningkatan +23% dalam keuntungan jangka panjang." },
+        { title: "Arbitraj rentas pasaran dengan ML di Stanford", result: "Menyumbang kepada 3 paten dan strategi +8–12% setahun." },
+      ],
+    },
+    trustAndTransparency: {
+      title: "Kepercayaan & ketelusan: penipuan atau peluang sah?",
+      points: [
+        "Dilesenkan di 12 bidang kuasa",
+        "Audit berkala oleh PwC & pengesahan bebas",
+        "Laporan prestasi awam",
+        "Insurans deposit Lloyd’s of London",
+        "Pasukan pengurusan telus dengan profil awam",
+        "Lebih 4 tahun rekod yang stabil",
+        "50,000+ pelabur berpuas hati",
+      ],
+    },
+    cta: {
+      headline: "Sertai komuniti pelabur berjaya",
+      stats: [
+        { value: "98%", label: "memperbaharui langganan" },
+        { value: "89%", label: "pelanggan baharu daripada rujukan" },
+        { value: "4.9/5.0", label: "penilaian purata" },
+        { value: "$2.3B+", label: "aset yang dipercayakan kepada kami" },
+      ],
+      guaranteesTitle: "Jaminan kualiti kami:",
+      guarantees: [
+        "Jaminan wang dikembalikan 30 hari",
+        "Laporan tahunan diaudit oleh PwC",
+        "Insurans deposit menyeluruh",
+        "Sokongan pelanggan berdedikasi 24/7",
+      ],
+      buttonText: "Mula melabur dengan peneraju pasaran",
+      partnerQuote:
+        "\"Alat AI Qezvoro memberikan kelebihan analitikal yang sangat diperlukan dalam pasaran hari ini.\" – Dmitry Grishankov, Runa Capital",
+    },
+  },
+
+  aboutPage: {
+    meta: {
+      title: "Tentang kami",
+      description:
+        "Ketahui sejarah, misi, visi dan pasukan di sebalik Qezvoro Invest. Pelajari teknologi, pencapaian dan komitmen kami terhadap inovasi kewangan.",
+    },
+    hero: {
+      headline: "Qezvoro Invest — Platform pelaburan AI inovatif",
+      subheadline: "Kami mengubah fintech dengan kecerdasan buatan",
+      intro:
+        "Kami membina generasi baharu teknologi pelaburan, di mana pembelajaran mesin membuka akses kepada strategi profesional untuk khalayak luas. Sejak 2021, pasukan kami mencipta penyelesaian algoritma canggih yang telah membantu 50,000+ pedagang di seluruh dunia meningkatkan keuntungan dan mengoptimumkan risiko.",
+    },
+    timeline: {
+      title: "Evolusi Qezvoro — Dari idea ke peneraju fintech",
+      milestones: [
+        { year: "2021", title: "Kelahiran konsep", description: "Pasukan bekas Google & Goldman Sachs di Silicon Valley. Algoritma pertama dengan ketepatan 73%." },
+        { year: "2022", title: "Pencapaian awal", description: "Beta tertutup (500 peserta): purata +34%. Pembiayaan awal $5M (Andreessen Horowitz); lesen SEC/FINRA." },
+        { year: "2023", title: "Perkembangan pesat", description: "Pelancaran awam, 15,000 pengguna. HQ di New York, rakan bursa, Siri A $25M (Sequoia)." },
+        { year: "2024", title: "Pengembangan global", description: "50+ bidang kuasa, aplikasi mudah alih, anugerah TechCrunch. 35,000 pengguna, $1.2B AUM." },
+        { year: "2025", title: "Kepimpinan", description: "50,000+ pengguna dan $2.3B+ AUM. Ketepatan AI 87%, persiapan penyenaraian NASDAQ." },
+      ],
+    },
+    mission: {
+      title: "Misi, visi strategik dan falsafah",
+      mission: {
+        title: "Misi",
+        text:
+          "Menghapuskan ketidaksamaan akses kepada teknologi pelaburan profesional melalui penyelesaian AI. Ekosistem di mana kebebasan kewangan boleh dicapai oleh semua orang.",
+      },
+      vision: {
+        title: "Visi",
+        text:
+          "Menjadi ekosistem global dominan untuk pelaburan berasaskan AI, di mana berjuta‑juta orang membina kesejahteraan kewangan menggunakan teknologi termaju.",
+      },
+      philosophy: {
+        title: "Prinsip asas",
+        principles: [
+          { title: "Kepimpinan teknologi", text: ">40% bajet untuk R&D bagi mengekalkan kedudukan teraju dalam fintech." },
+          { title: "Keterbukaan dan kebolehpercayaan", text: "Ketelusan maksimum: laporan berkala, audit bebas, pendedahan risiko yang jujur." },
+          { title: "Fokus pelanggan", text: "Setiap keputusan strategik demi kepentingan pelanggan. Sokongan 24/7 sebagai standard." },
+          { title: "Keselamatan dan kestabilan", text: "Standard perbankan untuk perlindungan modal dan data peribadi." },
+          { title: "Ketersediaan antarabangsa", text: "Peluang kewangan tidak harus terhad oleh geografi. Akses global terjamin." },
+        ],
+      },
+    },
+    team: {
+      title: "Pasukan bertaraf dunia",
+      founders: [
+        { name: "Michael Thompson", role: "CEO & Pengasas", bio: "15 tahun dalam AI, bekas Principal Engineer di Google DeepMind. PhD MIT dalam ML.", quote: "AI berpotensi merevolusikan keputusan pelaburan. Kami menukar algoritma kompleks menjadi alat intuitif untuk semua.", image: "/assets/team/michael.png" },
+        { name: "Sarah Chen", role: "CTO & Pengasas Bersama", bio: "12 tahun di Goldman Sachs, mengetuai platform dagangan algoritma. Sarjana Matematik Kewangan (Stanford).", quote: "Pasaran ialah aliran maklumat besar yang hanya boleh dianalisis dengan AI. Kami mengesan corak tersembunyi yang tidak kelihatan oleh manusia.", image: "/assets/team/sarah.png" },
+      ],
+      developmentTeam: {
+        title: "Pasukan pembangunan teras kami",
+        roles: [
+          { count: "25", title: "Jurutera ML", from: "Google, Microsoft, Amazon" },
+          { count: "15", title: "Penganalisis kewangan", from: "Goldman Sachs, Morgan Stanley, BlackRock" },
+          { count: "12", title: "Pakar keselamatan siber", from: "Bank terkemuka" },
+          { count: "8", title: "Product Designers", from: "Apple, Airbnb, Stripe" },
+        ],
+      },
+    },
+    technology: { /* ... */ },
+    awards: { /* ... */ },
+    licensing: { /* ... */ },
+    transparency: { /* ... */ },
+    partnerships: { /* ... */ },
+    csr: { /* ... */ },
+    roadmap: {
+      title: "Pelan pembangunan & visi",
+      plans: [
+        { title: "Matlamat jangka pendek (2025)", goals: ["100,000 pelabur aktif", "Dilancar di 20 pasaran baharu", "Dagangan derivatif", "Ketepatan AI 90%", "ETF diurus AI"] },
+        { title: "Strategi jangka sederhana (2026–2027)", goals: ["1 juta pengguna global", "IPO di NASDAQ/NYSE", "M&A dalam fintech", "Bangunkan ekosistem kripto sendiri", "Penyelesaian B2B untuk institusi"] },
+        { title: "Pandangan jangka panjang (2028–2030)", goals: ["Kepimpinan global dalam pelaburan AI", "10+ juta pengguna di 150+ negara", "Ekosistem kewangan bersepadu sepenuhnya", "Membangunkan AGI untuk pasaran kewangan"] },
+      ],
+    },
+    cta: {
+      headline: "Sertai revolusi kewangan Qezvoro",
+      subheadline:
+        "Kisah kami baru bermula. Sertai komuniti global yang telah membina masa depan kewangan mereka dengan AI.",
+      benefits: {
+        title: "Kelebihan memilih Qezvoro Invest hari ini:",
+        list: [
+          "Pasukan bertaraf dunia daripada gergasi teknologi dan kewangan",
+          "Prestasi terbukti: 87% ketepatan, +31% pulangan purata",
+          "Peraturan di 12 bidang kuasa dan standard perlindungan tertinggi",
+          "Inovasi berterusan & pelaburan R&D",
+          "Komuniti pelabur antarabangsa yang berkembang",
+        ],
+      },
+      resources: {
+        title: "Sumber tambahan:",
+        links: [
+          { text: "Pembentangan korporat (PDF)" },
+          { text: "Laporan kewangan & audit" },
+          { text: "Penerbitan saintifik pasukan" },
+          { text: "Hubungan pelabur" },
+          { text: "Surat berita" },
+        ],
+      },
+      contacts: { title: "Hubungi:", emails: ["press@qezvoro.com", "partners@qezvoro.com", "investors@qezvoro.com"] },
+    },
+  },
 };
 
 export default ms;

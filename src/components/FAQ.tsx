@@ -82,7 +82,7 @@ const FAQ = ({ t, locale }: Props) => {
           </Accordion>
         </div>
 
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <div className="inline-block bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-2xl p-6">
             <h3 className="text-lg font-bold gradient-text mb-2">
               {tt.support?.title ?? "Не нашли ответ на свой вопрос?"}
@@ -96,7 +96,7 @@ const FAQ = ({ t, locale }: Props) => {
               <div>📞 {tt.support?.phone ?? "+1 (555) 123-4567"}</div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

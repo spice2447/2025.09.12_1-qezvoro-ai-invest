@@ -16,6 +16,7 @@ const enSG = {
   common: {
     contacts: "Contacts",
     ctaStart: "Start now",
+    close: 'Close'
   },
 
   hero: {
@@ -45,7 +46,7 @@ const enSG = {
       emailPlaceholder: "your@email.com",
       phone: "Phone number",
       phonePlaceholder: "+1 (202) 555-0147",
-      fullName: "Full name",  
+      fullName: "Full name",
       experience: "Investment experience",
       namePlaceholder: "John Johnson",
 
@@ -278,12 +279,18 @@ const enSG = {
       "From registration to your first AI recommendation — under 6 minutes. A fully automated, hassle-free process.",
     stepLabel: "Step",
     steps: [
-      { title: "Quick Registration", text: "Enter email and phone, verify via document upload or video call.", time: "2 min",
-        details: ["2 minutes to register","Automated process","No complex forms","Instant activation"] },
-      { title: "Top up your account", text: "Cards, bank transfer, PayPal, crypto, e-wallets. Instant funding. From $100.", time: "1 min",
-        details: ["Multiple funding methods","Instant crediting","First top-up from $100","Secure transactions"] },
-      { title: "Activate AI assistant", text: "Quick profile test, personal recommendations and start trading.", time: "3 min",
-        details: ["Personalised profile","Individual recommendations","AI support 24/7","Immediate trading start"] },
+      {
+        title: "Quick Registration", text: "Enter email and phone, verify via document upload or video call.", time: "2 min",
+        details: ["2 minutes to register", "Automated process", "No complex forms", "Instant activation"]
+      },
+      {
+        title: "Top up your account", text: "Cards, bank transfer, PayPal, crypto, e-wallets. Instant funding. From $100.", time: "1 min",
+        details: ["Multiple funding methods", "Instant crediting", "First top-up from $100", "Secure transactions"]
+      },
+      {
+        title: "Activate AI assistant", text: "Quick profile test, personal recommendations and start trading.", time: "3 min",
+        details: ["Personalised profile", "Individual recommendations", "AI support 24/7", "Immediate trading start"]
+      },
     ],
     ctaTitle: "Ready to start AI investing?",
     ctaText:
@@ -537,6 +544,254 @@ const enSG = {
       auditDesc: "Annually by PwC",
     },
   },
+
+  reviewsPage: {
+    meta: {
+      title: "Reviews & Partners",
+      description: "Explore real client reviews, success stories, and our ecosystem of trusted partners. See why over 50,000 investors choose Qezvoro for AI-powered trading.",
+    },
+    hero: {
+      headline: "Qezvoro Reviews — Customer Reviews and Affiliate Network",
+      subheadline: "Over 50,000 investors trust Qezvoro Invest with their capital",
+      trustIndicators: [
+        { label: "Average Rating", value: "4.9/5.0" },
+        { label: "Client Recommendations", value: "94%" },
+        { label: "NPS", value: "81" },
+        { label: "Strategic Alliances", value: "15+" },
+        { label: "Capital Under Management", value: "$2.3B+" },
+      ],
+    },
+    userReviews: {
+      title: "Trusted by Investors Worldwide",
+      tabs: {
+        all: "All",
+        beginner: "Beginner Investors",
+        professional: "Professional Traders",
+        large: "Large Portfolios",
+        international: "International Clients",
+      },
+      reviews: {
+        beginner: [
+          { name: "Emily Rodriguez", role: "Marketing, Austin", text: "+28% in 4 months, starting with $200, now at $5,000." },
+          { name: "David Kim", role: "IT Developer, Seattle", text: "+42.5% in 6 months, which translated to a $3,400 profit." },
+        ],
+        professional: [
+          { name: "Michael Anderson", role: "Portfolio Manager, NY", text: "Grew my $2M AUM from 18% to 31% annually using their API automation." },
+          { name: "Jonathan Wilson", role: "Hedge Fund Manager, Chicago", text: "The arbitrage signals are unmatched. Achieved a 187% ROI last year." },
+        ],
+        international: [
+          { name: "James Richardson", role: "Advisor, NY", text: "+43% in emerging markets portfolio." },
+          { name: "Hans Mueller", role: "Entrepreneur, Berlin", text: "+29% in 10 months, passive AI portfolio mgmt." },
+        ],
+      },
+    },
+    videoTestimonials: {
+      title: "Video Testimonials",
+      videos: [
+        { title: "My first $10,000 with Qezvoro", author: "Sergey Nikolaev (3 min)" },
+        { title: "Family Office chooses AI solutions", author: "Kristina Andreeva (5 min)" },
+        { title: "From a Scholarship to Stanford", author: "Anastasia Komarova (2 min)" },
+      ],
+    },
+    caseStudies: {
+      title: "Detailed Success Stories",
+      studies: [
+        {
+          title: "Case Study #1: Retirement Planning in 5 Years",
+          description: "Vladimir P., an engineer, had a $200k target. With our platform, he saved $89k in just 2 years, accelerating his goal significantly.",
+        },
+        {
+          title: "Case Study #2: Startup Capital in 18 Months",
+          description: "Maria K., a marketer, aimed for a $50k goal to fund her startup. She achieved a +68% return in only 14 months, exceeding her target ahead of schedule.",
+        },
+      ],
+    },
+    partnerEcosystem: {
+      title: "Our Partner Ecosystem",
+      categories: [
+        {
+          title: "Exchange Integrations",
+          partners: [
+            { name: "Binance", description: "Access to 500+ instruments, commissions from 0.05%, $15B+ turnover." },
+            { name: "Coinbase", description: "US regulated, $255M insurance coverage, access to Coinbase Prime." },
+            { name: "Interactive Brokers", description: "135+ markets, commissions from $0.005/share, $300B+ assets." },
+          ],
+        },
+        {
+          title: "Technology Alliances",
+          partners: [
+            { name: "Google Cloud AI", description: "Utilizing BERT models for a +15% accuracy in market prediction." },
+            { name: "NVIDIA", description: "Accelerated computing with H100 & A100 GPUs for faster analysis." },
+            { name: "Bloomberg", description: "Access to terminal data, valued at $24k/year per license." },
+          ],
+        },
+        {
+          title: "Banking & Custody",
+          partners: [
+            { name: "JP Morgan Chase", description: "Segregated accounts with FDIC insurance up to $250k." },
+            { name: "HSBC", description: "Global banking across 64 countries with reduced transaction fees." },
+            { name: "State Street", description: "Custody services for over $40T in assets under management." },
+          ],
+        },
+        {
+          title: "Academic Partnerships",
+          partners: [
+            { name: "MIT Sloan", description: "Fintech research collaboration resulting in 3 patents." },
+            { name: "Stanford AI Lab", description: "Joint projects on explainable AI for financial models." },
+            { name: "London School of Economics", description: "Advanced studies on systemic risk in AI-driven markets." },
+          ],
+        },
+      ],
+    },
+    certifications: {
+      title: "Certifications & Awards from Partners",
+      items: [
+        "Google Cloud Partner Award 2024 — AI Innovation Partner",
+        "NVIDIA Inception Program — Elite Partner",
+        "Bloomberg Market Data Certification",
+        "Interactive Brokers Technology Partner",
+        "JP Morgan FinTech Certificate",
+      ],
+    },
+    jointResearch: {
+      title: "Joint Research Projects",
+      projects: [
+        { title: "AI in Retail Investment with MIT Sloan & LBS", result: "Demonstrated a +23% increase in long-term profitability for retail investors." },
+        { title: "Cross-Market Arbitrage with ML at Stanford", result: "Led to 3 patents and strategies yielding +8–12% in annual gains." },
+      ],
+    },
+    trustAndTransparency: {
+      title: "Trust & Transparency: Scam vs. Legit Opportunity",
+      points: [
+        "Licensed in 12 jurisdictions",
+        "Regular audits by PwC & independent verification",
+        "Publicly available performance reports",
+        "Lloyd’s of London deposit insurance",
+        "Transparent management team with public profiles",
+        "Over 4 years of stable track record",
+        "More than 50,000 satisfied investors",
+      ],
+    },
+    cta: {
+      headline: "Join the Community of Successful Investors",
+      stats: [
+        { value: "98%", label: "renew their subscription" },
+        { value: "89%", label: "new clients from recommendations" },
+        { value: "4.9/5.0", label: "average rating" },
+        { value: "$2.3B+", label: "assets trusted to us" },
+      ],
+      guaranteesTitle: "Our Quality Guarantees:",
+      guarantees: [
+        "30-day money-back guarantee",
+        "Annual reports audited by PwC",
+        "Comprehensive deposit insurance",
+        "24/7 dedicated customer support",
+      ],
+      buttonText: "Start Investing with Market Leaders",
+      partnerQuote: '"Qezvoro\'s AI tools provide an analytical edge that is simply indispensable in today\'s markets." - Dmitry Grishankov, Runa Capital',
+    },
+  },
+
+  aboutPage: {
+  meta: {
+    title: "About Us",
+    description: "Discover the history, mission, vision, and team behind Qezvoro Invest. Learn about our technology, achievements, and commitment to revolutionizing the world of finance.",
+  },
+  hero: {
+    headline: "Qezvoro Invest — Innovative AI Investing Platform",
+    subheadline: "Transforming financial technology with artificial intelligence",
+    intro: "We are building a new generation of investment technologies, where machine learning opens access to professional trading strategies for a wide audience. Since 2021, our expert team has been creating advanced algorithmic solutions that have already ensured the success of over 50,000 traders worldwide, helping to increase profitability and optimize risks.",
+  },
+  timeline: {
+    title: "Evolution of Qezvoro — From Idea to Fintech Leader",
+    milestones: [
+      { year: "2021", title: "Birth of a Concept", description: "A team of ex-Google and Goldman Sachs experts united in Silicon Valley. The initial algorithm achieved 73% prediction accuracy." },
+      { year: "2022", title: "First Achievements", description: "Closed testing with 500 participants showed a 34% average return. Secured $5M in seed funding from Andreessen Horowitz and obtained SEC/FINRA licenses." },
+      { year: "2023", title: "Rapid Development", description: "Public launch saw user growth to 15,000. Opened a New York HQ, partnered with major exchanges, and raised a $25M Series A from Sequoia Capital." },
+      { year: "2024", title: "Global Expansion", description: "Expanded to 50+ jurisdictions, launched a mobile app, and won the TechCrunch 'FinTech Innovation of the Year' award. Grew to 35,000 users and $1.2B AUM." },
+      { year: "2025", title: "Industry Leadership", description: "Became a leader with 50,000+ users and $2.3B+ AUM. AI accuracy reached 87%, now preparing for a NASDAQ listing." },
+    ],
+  },
+  mission: {
+    title: "Mission, Strategic Vision and Corporate Philosophy",
+    mission: {
+      title: "Mission",
+      text: "To eliminate inequality in access to professional investment technologies through the implementation of AI solutions. We strive to create an ecosystem where financial independence is achievable for everyone, regardless of educational background or portfolio size.",
+    },
+    vision: {
+      title: "Vision",
+      text: "To become the dominant global ecosystem for AI-driven investing, where millions of participants shape their financial well-being using cutting-edge technology solutions. We envision a future where artificial intelligence functions as a personalized financial strategist.",
+    },
+    philosophy: {
+      title: "Fundamental Principles",
+      principles: [
+        { title: "Technological Leadership", text: "Over 40% of our budget is invested in R&D to stay at the forefront of the fintech industry." },
+        { title: "Openness and Reliability", text: "Maximum transparency through regular performance reports, independent audits, and honest risk reporting." },
+        { title: "Customer Orientation", text: "Every strategic decision is made with a focus on our customers' benefit, supported by 24/7 support." },
+        { title: "Security and Stability", text: "Application of banking-grade security standards to protect client capital and personal data." },
+        { title: "International Availability", text: "Financial opportunities should not be limited by geography. We ensure global availability of our services." },
+      ],
+    },
+  },
+  team: {
+    title: "World-Class Team of Experts",
+    founders: [
+      { name: "Michael Thompson", role: "CEO & Founder", bio: "15 years in AI, ex-Principal Engineer at Google DeepMind. MIT PhD in Machine Learning.", quote: "I am convinced that AI has the potential to revolutionize investment decision making. Our goal is to transform complex algorithms into intuitive tools for every user.", image: "/assets/team/michael.png" },
+      { name: "Sarah Chen", role: "CTO & Co-Founder", bio: "12 years at Goldman Sachs, led algorithmic trading platform development. Stanford Master's in Financial Mathematics.", quote: "Financial markets are colossal information flows that can only be analyzed using AI. We develop algorithms that can identify hidden patterns inaccessible to human perception.", image: "/assets/team/sarah.png" },
+    ],
+    developmentTeam: {
+      title: "Our Core Development Team",
+      roles: [
+        { count: "25", title: "ML Engineers", from: "Google, Microsoft, Amazon" },
+        { count: "15", title: "Financial Analysts", from: "Goldman Sachs, Morgan Stanley, BlackRock" },
+        { count: "12", title: "Cybersecurity Experts", from: "Leading Banks" },
+        { count: "8", title: "Product Designers", from: "Apple, Airbnb, Stripe" },
+      ]
+    }
+  },
+  technology: { /* ... */ },
+  awards: { /* ... */ },
+  licensing: { /* ... */ },
+  transparency: { /* ... */ },
+  partnerships: { /* ... */ },
+  csr: { /* ... */ },
+  roadmap: {
+    title: "Development Plans and Strategic Vision",
+    plans: [
+      { title: "Short-Term Goals (2025)", goals: ["Expand to 100,000 active investors", "Launch in 20 new markets", "Implement derivatives trading", "Increase AI accuracy to 90%", "Launch our own AI-managed ETF"] },
+      { title: "Mid-Term Strategy (2026-2027)", goals: ["Reach 1 million users globally", "IPO on NASDAQ/NYSE", "M&A activity in the fintech segment", "Develop our own cryptocurrency ecosystem", "Launch B2B solutions for institutional clients"] },
+      { title: "Long-Term Perspective (2028-2030)", goals: ["Achieve global leadership in AI investing", "Grow to 10+ million users in 150+ countries", "Build a fully integrated financial ecosystem", "Develop AGI for financial markets"] },
+    ],
+  },
+  cta: {
+    headline: "Join the Qezvoro Financial Revolution",
+    subheadline: "Our story is just gaining momentum. Become part of a global community of people who are already shaping their financial future with the help of artificial intelligence.",
+    benefits: {
+        title: "Benefits of Choosing Qezvoro Invest Today:",
+        list: [
+            "A world-class team from leading technology and financial corporations",
+            "Proven performance: 87% forecast accuracy, +31% average return",
+            "Comprehensive regulation across 12 jurisdictions and the highest standards of protection",
+            "Continuous innovation and R&D investment",
+            "A growing international community of successful investors",
+        ]
+    },
+    resources: {
+        title: "Additional Resources:",
+        links: [
+            {text: "Corporate Presentation (PDF)"},
+            {text: "Financial Reporting and Audits"},
+            {text: "Scientific Publications of the Team"},
+            {text: "Investor Relations"},
+            {text: "Newsletter"}
+        ]
+    },
+    contacts: {
+        title: "Contacts:",
+        emails: ["press@qezvoro.com", "partners@qezvoro.com", "investors@qezvoro.com"]
+    }
+  },
+},
 };
 
 export default enSG;

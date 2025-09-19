@@ -391,6 +391,374 @@ const ja = {
       riskWarning: "金融商品の取引には高レベルのリスクが伴い、投資資金を失う可能性があります。",
     },
   },
+
+  // その他のページ
+  contactPage: {
+    meta: {
+      description: "3分でAI投資を開始。登録無料、$100,000のデモ口座付き。",
+    },
+    hero: {
+      title: "3分でAI投資をはじめる",
+      subtitle: "5万人以上の成功した投資家に参加しましょう。登録は無料、練習用に$100,000のデモ口座をご用意。",
+    },
+    form: {
+      title: "AIアナリティクスにアクセス",
+      nameLabel: "お名前",
+      namePlaceholder: "お名前",
+      emailLabel: "メール",
+      emailPlaceholder: "email@example.com",
+      phoneLabel: "電話番号",
+      phonePlaceholder: "+1 (202) 555-0147",
+      experienceLabel: "投資経験",
+      experiencePlaceholder: "経験を選択",
+      experienceOptions: {
+        beginner: "初心者",
+        "1-3": "1–3年",
+        "3-5": "3–5年",
+        "5+": "5年以上",
+      },
+      budgetLabel: "予定投資額",
+      budgetPlaceholder: "範囲を選択",
+      budgetOptions: {
+        "100-1000": "$100–1,000",
+        "1k-10k": "$1,000–10,000",
+        "10k-100k": "$10,000–100,000",
+        "100k+": "$100,000以上",
+      },
+      messageLabel: "メッセージ",
+      messagePlaceholder: "投資目標についてお聞かせください…",
+      agreeLabel: "以下に同意します: ",
+      termsLink: "利用規約",
+      and: " と ",
+      privacyLink: "プライバシーポリシー",
+      submitButton: "無料アカウントを作成",
+      submittingButton: "送信中…",
+      formPerks: [
+        "✓ 2分で登録完了",
+        "✓ $100,000 デモ口座",
+        "✓ 30日間の無料AIシグナル",
+        "✓ いつでも解約可能",
+      ],
+    },
+    info: {
+      title: "お問い合わせ",
+      email: {
+        title: "メール",
+        support: "support@qezvoro.com — テクニカルサポート",
+        sales: "sales@qezvoro.com — 料金に関するお問い合わせ",
+        partners: "partners@qezvoro.com — パートナーシップ",
+      },
+      messengers: {
+        title: "メッセージング",
+        telegram: "Telegram: @QezvoroSupport",
+        whatsapp: "WhatsApp: +1 (202) 555-0147",
+      },
+      phone: {
+        title: "電話",
+        london: "+44 20 7946 0958（ロンドン）",
+        ny: "+1 212 555 0123（ニューヨーク）",
+        singapore: "+65 6789 0123（シンガポール）",
+      },
+      support: {
+        title: "サポート",
+        responseTime: "営業時間内の平均応答時間は2分未満",
+        channels: "オンラインチャット、電話、メール",
+      },
+    },
+    offices: {
+      title: "オフィス",
+      items: [
+        {
+          title: "ロンドン（本社）",
+          address: ["25 Old Broad Street", "London EC2N 1HN, UK"],
+          hours: "月–金: 9:00–17:00 GMT",
+        },
+        {
+          title: "シンガポール",
+          address: ["1 Raffles Quay, South Tower Level 20", "Singapore"],
+          hours: "月–金: 9:00–17:00 SGT",
+        },
+      ],
+    },
+    social: {
+      title: "ソーシャルネットワーク",
+      links: [
+        { label: "Telegram: @QezvoroInvest — ニュースと分析", href: "#" },
+        { label: "Twitter / X: @QezvoroAI — グローバルアップデート", href: "#" },
+        { label: "LinkedIn: Qezvoro Invest — プロフェッショナル向け", href: "#" },
+      ],
+    },
+    faq: {
+      title: "よくある質問",
+      items: [
+        { q: "登録にはどのくらい時間がかかりますか？", a: "2〜3分です。登録後すぐにデモ口座にアクセスできます。" },
+        { q: "最低入金額はいくらですか？", a: "$100です。$100,000の無料デモ口座から始められます。" },
+        { q: "サポートの返答はどれくらい早いですか？", a: "営業時間内の平均応答時間は2分未満です。" },
+      ],
+    },
+    cta: {
+      title: "AI投資を始める準備はできていますか？",
+      subtitle: "すでに当社のアルゴリズムを利用している5万人以上の投資家に参加しましょう。",
+      mainButton: "今すぐ投資を始める",
+      demoButton: "$100,000 デモ口座",
+    },
+    security: {
+      licenses: "ライセンス",
+      licensesDesc: "SEC, FCA, CySEC",
+      insurance: "保険",
+      insuranceDesc: "$250,000までの預金",
+      encryption: "暗号化",
+      encryptionDesc: "AES-256, TLS 1.3",
+      audit: "監査",
+      auditDesc: "PwCによる年次監査",
+    },
+  },
+
+  reviewsPage: {
+    meta: {
+      title: "レビュー & パートナー",
+      description:
+        "実際のお客様のレビュー、成功事例、信頼できるパートナーエコシステムをご紹介。なぜ5万人以上の投資家がAI駆動のQezvoroを選ぶのかをご確認ください。",
+    },
+    hero: {
+      headline: "Qezvoro レビュー — お客様の声とパートナーネットワーク",
+      subheadline: "5万人以上の投資家がQezvoro Investに資産を託しています",
+      trustIndicators: [
+        { label: "平均評価", value: "4.9/5.0" },
+        { label: "顧客の推奨率", value: "94%" },
+        { label: "NPS", value: "81" },
+        { label: "戦略的アライアンス", value: "15+" },
+        { label: "運用資産", value: "$2.3B+" },
+      ],
+    },
+    userReviews: {
+      title: "世界中の投資家からの信頼",
+      tabs: {
+        all: "すべて",
+        beginner: "初心者",
+        professional: "プロ",
+        large: "大口ポートフォリオ",
+        international: "海外クライアント",
+      },
+      reviews: {
+        beginner: [
+          { name: "Emily Rodriguez", role: "マーケティング（オースティン）", text: "4ヶ月で+28%。$200から開始し、現在$5,000に。" },
+          { name: "David Kim", role: "IT開発（シアトル）", text: "6ヶ月で+42.5%、利益は$3,400。" },
+        ],
+        professional: [
+          { name: "Michael Anderson", role: "ポートフォリオマネージャー（NY）", text: "API自動化により、$2M AUMの年率18%→31%に。" },
+          { name: "Jonathan Wilson", role: "ヘッジファンドマネージャー（シカゴ）", text: "裁定取引シグナルは他の追随を許しません。昨年のROIは187%。" },
+        ],
+        international: [
+          { name: "James Richardson", role: "アドバイザー（NY）", text: "新興国ポートフォリオで+43%。" },
+          { name: "Hans Mueller", role: "起業家（ベルリン）", text: "10ヶ月で+29%。AIによるパッシブ運用。" },
+        ],
+      },
+    },
+    videoTestimonials: {
+      title: "動画で見るお客様の声",
+      videos: [
+        { title: "Qezvoroで最初の$10,000", author: "Sergey Nikolaev（3分）" },
+        { title: "ファミリーオフィスがAIソリューションを選ぶ理由", author: "Kristina Andreeva（5分）" },
+        { title: "奨学金からスタンフォードへ", author: "Anastasia Komarova（2分）" },
+      ],
+    },
+    caseStudies: {
+      title: "成功事例の詳細",
+      studies: [
+        { title: "事例1：5年でのリタイア設計", description: "エンジニアのVladimir P.氏、目標$200k。2年で$89kを蓄え、目標達成を大幅に前倒し。" },
+        { title: "事例2：18ヶ月でスタートアップ資金調達", description: "マーケターのMaria K.氏、$50kを目標に。14ヶ月で+68%を達成し、予定より早く目標超え。" },
+      ],
+    },
+    partnerEcosystem: {
+      title: "パートナーエコシステム",
+      categories: [
+        {
+          title: "取引所連携",
+          partners: [
+            { name: "Binance", description: "500+銘柄、手数料0.05%〜、日次出来高$15B+。" },
+            { name: "Coinbase", description: "米国規制、$255M保険、Coinbase Prime対応。" },
+            { name: "Interactive Brokers", description: "135+市場、$0.005/株〜、$300B+の資産。" },
+          ],
+        },
+        {
+          title: "テクノロジーアライアンス",
+          partners: [
+            { name: "Google Cloud AI", description: "BERTモデルで市場予測精度が+15%。" },
+            { name: "NVIDIA", description: "H100/A100による高速計算で分析を加速。" },
+            { name: "Bloomberg", description: "ターミナルデータへアクセス（$24k/年相当）。" },
+          ],
+        },
+        {
+          title: "バンキング＆カストディ",
+          partners: [
+            { name: "JP Morgan Chase", description: "分別管理口座、FDIC保険$250kまで。" },
+            { name: "HSBC", description: "64カ国のグローバルバンキング、手数料低減。" },
+            { name: "State Street", description: "$40T超の資産管理におけるカストディサービス。" },
+          ],
+        },
+        {
+          title: "学術連携",
+          partners: [
+            { name: "MIT Sloan", description: "フィンテック共同研究、成果として特許3件。" },
+            { name: "Stanford AI Lab", description: "XAI（説明可能AI）を用いた金融モデル研究。" },
+            { name: "London School of Economics", description: "AI主導市場におけるシステミックリスクの先端研究。" },
+          ],
+        },
+      ],
+    },
+    certifications: {
+      title: "認定・パートナー受賞歴",
+      items: [
+        "Google Cloud Partner Award 2024 — AI Innovation Partner",
+        "NVIDIA Inception Program — Elite Partner",
+        "Bloomberg Market Data Certification",
+        "Interactive Brokers Technology Partner",
+        "JP Morgan FinTech Certificate",
+      ],
+    },
+    jointResearch: {
+      title: "共同研究プロジェクト",
+      projects: [
+        { title: "MIT Sloan & LBSと行うリテール投資×AI", result: "個人投資の長期収益性が+23%向上することを実証。" },
+        { title: "Stanfordでの機械学習×裁定取引", result: "特許3件と年率+8–12%の戦略に結実。" },
+      ],
+    },
+    trustAndTransparency: {
+      title: "信頼と透明性：詐欺か、それとも正当な機会か？",
+      points: [
+        "12法域でのライセンス",
+        "PwCの定期監査と独立検証",
+        "公開されるパフォーマンスレポート",
+        "ロイズ・オブ・ロンドンの預金保険",
+        "実名・公開プロフィールの経営陣",
+        "4年以上の安定した実績",
+        "50,000人超の満足した投資家",
+      ],
+    },
+    cta: {
+      headline: "成功する投資家コミュニティに参加しよう",
+      stats: [
+        { value: "98%", label: "がサブスクリプションを継続" },
+        { value: "89%", label: "が紹介経由の新規" },
+        { value: "4.9/5.0", label: "平均評価" },
+        { value: "$2.3B+", label: "お預かり資産" },
+      ],
+      guaranteesTitle: "品質保証：",
+      guarantees: [
+        "30日間返金保証",
+        "PwCによる年次監査レポート",
+        "包括的な預金保険",
+        "24/7の専任カスタマーサポート",
+      ],
+      buttonText: "マーケットリーダーと投資を始める",
+      partnerQuote:
+        "\"QezvoroのAIツールは、現代の市場で不可欠な分析上の優位性を提供します。\" — Dmitry Grishankov, Runa Capital",
+    },
+  },
+
+  aboutPage: {
+    meta: {
+      title: "私たちについて",
+      description:
+        "Qezvoro Investの歴史・ミッション・ビジョン・チームをご紹介。技術・実績・金融イノベーションへの取り組みを知る。",
+    },
+    hero: {
+      headline: "Qezvoro Invest — 革新的なAI投資プラットフォーム",
+      subheadline: "人工知能でフィンテックを変革",
+      intro:
+        "私たちは新世代の投資テクノロジーを構築しています。機械学習により、これまでプロ専用だった戦略を一般に解放。2021年以降、先端アルゴリズムで世界5万人超のトレーダーを支援し、収益性向上とリスク最適化を実現してきました。",
+    },
+    timeline: {
+      title: "Qezvoroの歩み — アイデアからフィンテックリーダーへ",
+      milestones: [
+        { year: "2021", title: "コンセプト誕生", description: "元Google/Goldman Sachsの精鋭がシリコンバレーに集結。初号アルゴが73%の予測精度に到達。" },
+        { year: "2022", title: "初期の成果", description: "クローズドβ（500名）で平均+34%。Andreessen Horowitzから$5Mのシード。SEC/FINRAライセンス。" },
+        { year: "2023", title: "急速な成長", description: "一般公開し1.5万人に。NY本社、主要取引所と連携、Sequoia主導で$25MのシリーズA。" },
+        { year: "2024", title: "グローバル展開", description: "50+法域、モバイルアプリ、TechCrunch賞。3.5万人、$1.2B AUM。" },
+        { year: "2025", title: "リーダーシップ", description: "5万人+と$2.3B+ AUM。AI精度87%、NASDAQ上場準備。" },
+      ],
+    },
+    mission: {
+      title: "ミッション・ビジョン・フィロソフィー",
+      mission: {
+        title: "ミッション",
+        text:
+          "AIソリューションでプロの投資テクノロジーへのアクセス格差を解消。誰もが目指せる金融的自立のエコシステムを。",
+      },
+      vision: {
+        title: "ビジョン",
+        text:
+          "AI投資のグローバル標準となるエコシステムを確立し、最先端のテクノロジーで数百万の人々の資産形成を支援。",
+      },
+      philosophy: {
+        title: "基本原則",
+        principles: [
+          { title: "技術リーダーシップ", text: "R&Dに予算の40%以上を投資し、最前線を走り続ける。" },
+          { title: "オープンネスと信頼性", text: "定期レポート、第三者監査、リスクの正直な開示で最大限の透明性を。" },
+          { title: "カスタマー中心", text: "あらゆる戦略判断はお客様の利益から。24/7サポートを標準に。" },
+          { title: "セキュリティと安定性", text: "銀行水準の保護で、資産と個人データを守る。" },
+          { title: "グローバルアクセス", text: "金融機会に国境は不要。世界中からの利用を実現。" },
+        ],
+      },
+    },
+    team: {
+      title: "ワールドクラスのチーム",
+      founders: [
+        { name: "Michael Thompson", role: "CEO・創業者", bio: "AI歴15年。元Google DeepMind Principal Engineer。MITで機械学習の博士号。", quote: "AIは投資意思決定を変革しうる。複雑なアルゴリズムを、誰でも使える直感的なツールへ。", image: "/assets/team/michael.png" },
+        { name: "Sarah Chen", role: "CTO・共同創業者", bio: "Goldman Sachsで12年、アルゴ取引基盤を主導。Stanfordで数理ファイナンス修士。", quote: "市場は巨大な情報フローであり、AIがなければ捉えられないパターンがある。私たちはその不可視の兆しを掬い上げる。", image: "/assets/team/sarah.png" },
+      ],
+      developmentTeam: {
+        title: "コア開発チーム",
+        roles: [
+          { count: "25", title: "MLエンジニア", from: "Google, Microsoft, Amazon" },
+          { count: "15", title: "ファイナンスアナリスト", from: "Goldman Sachs, Morgan Stanley, BlackRock" },
+          { count: "12", title: "サイバーセキュリティ専門家", from: "大手銀行" },
+          { count: "8", title: "プロダクトデザイナー", from: "Apple, Airbnb, Stripe" },
+        ],
+      },
+    },
+    technology: { /* ... */ },
+    awards: { /* ... */ },
+    licensing: { /* ... */ },
+    transparency: { /* ... */ },
+    partnerships: { /* ... */ },
+    csr: { /* ... */ },
+    roadmap: {
+      title: "開発計画とビジョン",
+      plans: [
+        { title: "短期目標（2025）", goals: ["アクティブ投資家10万人へ", "新規20市場での展開", "デリバティブ取引対応", "AI精度90%へ", "AI運用ETFのローンチ"] },
+        { title: "中期戦略（2026–2027）", goals: ["世界で100万人のユーザー", "NASDAQ/NYSEでのIPO", "フィンテック領域でのM&A", "自社クリプトエコシステム", "機関投資家向けB2Bソリューション"] },
+        { title: "長期展望（2028–2030）", goals: ["AI投資の世界的リーダー", "150+カ国で1,000万人以上", "完全統合の金融エコシステム", "金融市場向けAGIの開発"] },
+      ],
+    },
+    cta: {
+      headline: "Qezvoroの金融革命に参加しよう",
+      subheadline:
+        "私たちの物語は始まったばかり。すでにAIで未来を切り拓く世界中のコミュニティの一員に。",
+      benefits: {
+        title: "Qezvoro Investを今日選ぶメリット：",
+        list: [
+          "ビッグテックと金融の精鋭によるワールドクラスのチーム",
+          "実証済みの成果：予測精度87%、平均+31%の収益性",
+          "12法域での規制体制と最高水準の保護",
+          "継続的な革新とR&D投資",
+          "成長を続ける国際的な成功投資家コミュニティ",
+        ],
+      },
+      resources: {
+        title: "追加リソース：",
+        links: [
+          { text: "コーポレートプレゼン（PDF）" },
+          { text: "財務レポート・監査" },
+          { text: "チームの学術論文" },
+          { text: "IR（投資家向け情報）" },
+          { text: "ニュースレター" },
+        ],
+      },
+      contacts: { title: "連絡先：", emails: ["press@qezvoro.com", "partners@qezvoro.com", "investors@qezvoro.com"] },
+    },
+  },
 };
 
 export default ja;

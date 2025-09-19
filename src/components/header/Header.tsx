@@ -35,8 +35,8 @@ export default function Header({ t, locale }: HeaderProps) {
   }
 
   const navItems = [
-    { label: t?.nav?.about ?? "О платформе", href: "#platform" },
-    { label: t?.nav?.reviews ?? "Qezvoro Отзывы", href: "#reviews" },
+    { label: t?.nav?.about ?? "О платформе", href: "/about" },
+    { label: t?.nav?.reviews ?? "Qezvoro Отзывы", href: "/reviews" },
     { label: t?.nav?.contactStart ?? "Контакты", href: "/contacts" },
     // { label: t?.nav?.privacy ?? "Политика конфиденциальности", href: "/privacy" },
   ];

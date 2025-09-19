@@ -1,5 +1,5 @@
 export const INFO = {
 	title: "Qezvoro Invest",
-	phone: "+7 (495) 123-45-67",
+	phone: "+1 (202) 555-0147",
 	email: "info@qezvoro.com"
 }

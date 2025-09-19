@@ -89,6 +89,6 @@ export default async function HomeLocale(props: { params: Promise<{ locale: stri
         }),
       }}
     />
-    <QezvoroLanding t={t} locale={locale} />;
+    <QezvoroLanding t={t} locale={locale} />
   </>
 }

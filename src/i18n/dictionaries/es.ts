@@ -391,6 +391,374 @@ const es = {
       riskWarning: "El comercio de instrumentos financieros implica un alto nivel de riesgo y puede resultar en la pérdida de los fondos invertidos.",
     },
   },
+
+  // otras páginas
+  contactPage: {
+    meta: {
+      description: "Comience a invertir con IA en 3 minutos. Registro gratuito, cuenta demo de $100,000.",
+    },
+    hero: {
+      title: "Comience a invertir con IA en 3 minutos",
+      subtitle: "Únase a 50,000+ inversores exitosos. Registro gratuito y cuenta demo de $100,000 para practicar.",
+    },
+    form: {
+      title: "Obtener acceso a la analítica con IA",
+      nameLabel: "Nombre",
+      namePlaceholder: "Su nombre",
+      emailLabel: "Email",
+      emailPlaceholder: "email@example.com",
+      phoneLabel: "Teléfono",
+      phonePlaceholder: "+1 (202) 555-0147",
+      experienceLabel: "Experiencia en inversión",
+      experiencePlaceholder: "Seleccione experiencia",
+      experienceOptions: {
+        beginner: "Principiante",
+        "1-3": "1–3 años",
+        "3-5": "3–5 años",
+        "5+": "Más de 5 años",
+      },
+      budgetLabel: "Monto de inversión previsto",
+      budgetPlaceholder: "Seleccione rango",
+      budgetOptions: {
+        "100-1000": "$100–1,000",
+        "1k-10k": "$1,000–10,000",
+        "10k-100k": "$10,000–100,000",
+        "100k+": "Más de $100,000",
+      },
+      messageLabel: "Mensaje",
+      messagePlaceholder: "Cuéntenos sobre sus objetivos de inversión…",
+      agreeLabel: "Acepto los ",
+      termsLink: "términos de uso",
+      and: " y ",
+      privacyLink: "política de privacidad",
+      submitButton: "Crear cuenta gratis",
+      submittingButton: "Enviando…",
+      formPerks: [
+        "✓ Registro de 2 minutos",
+        "✓ Cuenta demo de $100,000",
+        "✓ 30 días de señales IA gratis",
+        "✓ Sin compromisos",
+      ],
+    },
+    info: {
+      title: "Contáctenos",
+      email: {
+        title: "Email",
+        support: "support@qezvoro.com — soporte técnico",
+        sales: "sales@qezvoro.com — preguntas sobre tarifas",
+        partners: "partners@qezvoro.com — colaboraciones",
+      },
+      messengers: {
+        title: "Mensajería",
+        telegram: "Telegram: @QezvoroSupport",
+        whatsapp: "WhatsApp: +1 (202) 555-0147",
+      },
+      phone: {
+        title: "Teléfono",
+        london: "+44 20 7946 0958 (Londres)",
+        ny: "+1 212 555 0123 (Nueva York)",
+        singapore: "+65 6789 0123 (Singapur)",
+      },
+      support: {
+        title: "Soporte",
+        responseTime: "Tiempo medio de respuesta inferior a 2 minutos en horario laboral",
+        channels: "Chat en línea, teléfono, email",
+      },
+    },
+    offices: {
+      title: "Oficinas",
+      items: [
+        {
+          title: "Londres (Sede)",
+          address: ["25 Old Broad Street", "London EC2N 1HN, UK"],
+          hours: "Lun–Vie: 9:00–17:00 GMT",
+        },
+        {
+          title: "Singapur",
+          address: ["1 Raffles Quay, South Tower Level 20", "Singapore"],
+          hours: "Lun–Vie: 9:00–17:00 SGT",
+        },
+      ],
+    },
+    social: {
+      title: "Redes sociales",
+      links: [
+        { label: "Telegram: @QezvoroInvest — noticias y análisis", href: "#" },
+        { label: "Twitter / X: @QezvoroAI — actualizaciones globales", href: "#" },
+        { label: "LinkedIn: Qezvoro Invest — para profesionales", href: "#" },
+      ],
+    },
+    faq: {
+      title: "Preguntas frecuentes",
+      items: [
+        { q: "¿Cuánto tarda el registro?", a: "2–3 minutos. Obtendrá acceso a la cuenta demo inmediatamente después del registro." },
+        { q: "¿Cuál es el depósito mínimo?", a: "$100. Puede comenzar con una cuenta demo gratuita de $100,000." },
+        { q: "¿Qué tan rápido responde el soporte?", a: "El tiempo medio de respuesta es inferior a 2 minutos en horario laboral." },
+      ],
+    },
+    cta: {
+      title: "¿Listo para invertir con IA?",
+      subtitle: "Únase a 50,000+ inversores que ya usan nuestros algoritmos.",
+      mainButton: "Comenzar a invertir ahora",
+      demoButton: "Cuenta demo de $100,000",
+    },
+    security: {
+      licenses: "Licencias",
+      licensesDesc: "SEC, FCA, CySEC",
+      insurance: "Seguro",
+      insuranceDesc: "Depósitos hasta $250,000",
+      encryption: "Cifrado",
+      encryptionDesc: "AES-256, TLS 1.3",
+      audit: "Auditoría",
+      auditDesc: "Anual por PwC",
+    },
+  },
+
+  reviewsPage: {
+    meta: {
+      title: "Reseñas y socios",
+      description:
+        "Explore reseñas reales de clientes, historias de éxito y nuestro ecosistema de socios de confianza. Vea por qué más de 50.000 inversores eligen Qezvoro para el trading impulsado por IA.",
+    },
+    hero: {
+      headline: "Reseñas de Qezvoro — Opiniones de clientes y red de socios",
+      subheadline: "Más de 50.000 inversores confían su capital a Qezvoro Invest",
+      trustIndicators: [
+        { label: "Calificación promedio", value: "4,9/5,0" },
+        { label: "Recomendaciones de clientes", value: "94%" },
+        { label: "NPS", value: "81" },
+        { label: "Alianzas estratégicas", value: "15+" },
+        { label: "Capital bajo gestión", value: "$2,3B+" },
+      ],
+    },
+    userReviews: {
+      title: "Confiado por inversores de todo el mundo",
+      tabs: {
+        all: "Todos",
+        beginner: "Principiantes",
+        professional: "Profesionales",
+        large: "Grandes carteras",
+        international: "Clientes internacionales",
+      },
+      reviews: {
+        beginner: [
+          { name: "Emily Rodriguez", role: "Marketing, Austin", text: "+28% en 4 meses, comenzó con $200, ahora $5.000." },
+          { name: "David Kim", role: "Desarrollador IT, Seattle", text: "+42,5% en 6 meses, $3.400 de beneficio." },
+        ],
+        professional: [
+          { name: "Michael Anderson", role: "Gestor de cartera, NY", text: "Elevé $2M AUM de 18% a 31% anual con automatización vía API." },
+          { name: "Jonathan Wilson", role: "Gestor de hedge fund, Chicago", text: "Las señales de arbitraje no tienen rival. Logré 187% ROI el año pasado." },
+        ],
+        international: [
+          { name: "James Richardson", role: "Asesor, NY", text: "+43% en cartera de mercados emergentes." },
+          { name: "Hans Mueller", role: "Empresario, Berlín", text: "+29% en 10 meses, gestión de cartera pasiva con IA." },
+        ],
+      },
+    },
+    videoTestimonials: {
+      title: "Testimonios en video",
+      videos: [
+        { title: "Mis primeros $10.000 con Qezvoro", author: "Sergey Nikolaev (3 min)" },
+        { title: "Family Office elige soluciones de IA", author: "Kristina Andreeva (5 min)" },
+        { title: "De una beca a Stanford", author: "Anastasia Komarova (2 min)" },
+      ],
+    },
+    caseStudies: {
+      title: "Historias de éxito detalladas",
+      studies: [
+        { title: "Caso #1: Planificación de jubilación en 5 años", description: "Vladimir P., ingeniero, objetivo de $200k. Con nuestra plataforma ahorró $89k en 2 años, acelerando significativamente su meta." },
+        { title: "Caso #2: Capital para startup en 18 meses", description: "María K., marketing, buscaba $50k para su startup. Obtuvo +68% en 14 meses y superó su objetivo antes de tiempo." },
+      ],
+    },
+    partnerEcosystem: {
+      title: "Nuestro ecosistema de socios",
+      categories: [
+        {
+          title: "Integraciones con bolsas",
+          partners: [
+            { name: "Binance", description: "Acceso a 500+ instrumentos, comisiones desde 0,05%, volumen $15B+/día." },
+            { name: "Coinbase", description: "Regulado en EE. UU., cobertura de seguro $255M, acceso a Coinbase Prime." },
+            { name: "Interactive Brokers", description: "135+ mercados, comisiones desde $0,005/acción, $300B+ en activos." },
+          ],
+        },
+        {
+          title: "Alianzas tecnológicas",
+          partners: [
+            { name: "Google Cloud AI", description: "Modelos BERT para +15% de precisión en predicción." },
+            { name: "NVIDIA", description: "Cómputo acelerado con H100 y A100 para análisis más rápidos." },
+            { name: "Bloomberg", description: "Acceso a datos de terminal, valor $24k/año por licencia." },
+          ],
+        },
+        {
+          title: "Banca y custodia",
+          partners: [
+            { name: "JP Morgan Chase", description: "Cuentas segregadas, seguro FDIC hasta $250k." },
+            { name: "HSBC", description: "Banca global en 64 países, comisiones reducidas." },
+            { name: "State Street", description: "Servicios de custodia para más de $40T en activos bajo administración." },
+          ],
+        },
+        {
+          title: "Colaboraciones académicas",
+          partners: [
+            { name: "MIT Sloan", description: "Investigación fintech conjunta, resultado: 3 patentes." },
+            { name: "Stanford AI Lab", description: "Proyectos de IA explicable para modelos financieros." },
+            { name: "London School of Economics", description: "Estudios avanzados sobre riesgo sistémico en mercados impulsados por IA." },
+          ],
+        },
+      ],
+    },
+    certifications: {
+      title: "Certificaciones y premios de socios",
+      items: [
+        "Google Cloud Partner Award 2024 — AI Innovation Partner",
+        "NVIDIA Inception Program — Elite Partner",
+        "Bloomberg Market Data Certification",
+        "Interactive Brokers Technology Partner",
+        "JP Morgan FinTech Certificate",
+      ],
+    },
+    jointResearch: {
+      title: "Proyectos de investigación conjunta",
+      projects: [
+        { title: "IA en inversión minorista con MIT Sloan y LBS", result: "Demostró un aumento de +23% en rentabilidad a largo plazo." },
+        { title: "Arbitraje intermercado con ML en Stanford", result: "Condujo a 3 patentes y estrategias con +8–12% anual." },
+      ],
+    },
+    trustAndTransparency: {
+      title: "Confianza y transparencia: ¿estafa o oportunidad legítima?",
+      points: [
+        "Licencias en 12 jurisdicciones",
+        "Auditorías regulares de PwC y verificación independiente",
+        "Informes de rendimiento públicos",
+        "Seguro de depósitos de Lloyd’s of London",
+        "Equipo directivo transparente con perfiles públicos",
+        "Más de 4 años de historial estable",
+        "Más de 50.000 inversores satisfechos",
+      ],
+    },
+    cta: {
+      headline: "Únase a la comunidad de inversores exitosos",
+      stats: [
+        { value: "98%", label: "renuevan su suscripción" },
+        { value: "89%", label: "nuevos clientes por recomendaciones" },
+        { value: "4,9/5,0", label: "calificación promedio" },
+        { value: "$2,3B+", label: "activos confiados a nosotros" },
+      ],
+      guaranteesTitle: "Nuestras garantías de calidad:",
+      guarantees: [
+        "Garantía de devolución de dinero de 30 días",
+        "Informes anuales auditados por PwC",
+        "Seguro de depósitos integral",
+        "Atención al cliente dedicada 24/7",
+      ],
+      buttonText: "Comenzar a invertir con líderes del mercado",
+      partnerQuote:
+        "\"Las herramientas de IA de Qezvoro brindan una ventaja analítica indispensable en los mercados actuales.\" - Dmitry Grishankov, Runa Capital",
+    },
+  },
+
+  aboutPage: {
+    meta: {
+      title: "Sobre nosotros",
+      description:
+        "Descubra la historia, misión, visión y equipo detrás de Qezvoro Invest. Conozca nuestra tecnología, logros y compromiso con la innovación financiera.",
+    },
+    hero: {
+      headline: "Qezvoro Invest — Plataforma de inversión con IA innovadora",
+      subheadline: "Transformamos la tecnología financiera con inteligencia artificial",
+      intro:
+        "Estamos construyendo una nueva generación de tecnologías de inversión, donde el aprendizaje automático abre acceso a estrategias profesionales para un amplio público. Desde 2021, nuestro equipo ha creado soluciones algorítmicas avanzadas que ya han ayudado a más de 50.000 traders en todo el mundo a aumentar su rentabilidad y optimizar riesgos.",
+    },
+    timeline: {
+      title: "Evolución de Qezvoro — De la idea al líder fintech",
+      milestones: [
+        { year: "2021", title: "Nacimiento del concepto", description: "Equipo de ex Google y Goldman Sachs en Silicon Valley. Primer algoritmo con 73% de precisión." },
+        { year: "2022", title: "Primeros logros", description: "Beta cerrada con 500 participantes: +34% promedio. $5M seed de Andreessen Horowitz; licencias SEC/FINRA." },
+        { year: "2023", title: "Crecimiento acelerado", description: "Lanzamiento público, 15.000 usuarios. HQ en Nueva York, alianzas con bolsas, Serie A $25M (Sequoia)." },
+        { year: "2024", title: "Expansión global", description: "50+ jurisdicciones, app móvil, premio TechCrunch ‘FinTech Innovation of the Year’. 35.000 usuarios, $1,2B AUM." },
+        { year: "2025", title: "Liderazgo", description: "50.000+ usuarios y $2,3B+ AUM. Precisión de IA 87%, preparación para listado en NASDAQ." },
+      ],
+    },
+    mission: {
+      title: "Misión, visión estratégica y filosofía",
+      mission: {
+        title: "Misión",
+        text:
+          "Eliminar la desigualdad de acceso a tecnologías de inversión profesionales mediante soluciones de IA. Queremos un ecosistema donde la independencia financiera sea alcanzable para todos.",
+      },
+      vision: {
+        title: "Visión",
+        text:
+          "Convertirnos en el ecosistema global dominante de inversión con IA, donde millones construyan su bienestar con tecnología de vanguardia. La IA como estratega financiero personal.",
+      },
+      philosophy: {
+        title: "Principios fundamentales",
+        principles: [
+          { title: "Liderazgo tecnológico", text: ">40% del presupuesto a I+D para mantenernos a la vanguardia del fintech." },
+          { title: "Apertura y fiabilidad", text: "Máxima transparencia: informes periódicos, auditorías independientes, divulgación honesta de riesgos." },
+          { title: "Orientación al cliente", text: "Cada decisión estratégica con enfoque en el beneficio del cliente. Soporte 24/7 como estándar." },
+          { title: "Seguridad y estabilidad", text: "Estándares bancarios para proteger capital y datos personales." },
+          { title: "Disponibilidad internacional", text: "Las oportunidades financieras no deben limitarse por geografía. Garantizamos acceso global." },
+        ],
+      },
+    },
+    team: {
+      title: "Equipo de clase mundial",
+      founders: [
+        { name: "Michael Thompson", role: "CEO y Fundador", bio: "15 años en IA, ex Principal Engineer en Google DeepMind. PhD MIT en ML.", quote: "La IA puede transformar las decisiones de inversión. Convertimos algoritmos complejos en herramientas intuitivas para todos.", image: "/assets/team/michael.png" },
+        { name: "Sarah Chen", role: "CTO y Cofundadora", bio: "12 años en Goldman Sachs, lideró plataformas de trading algorítmico. Máster en Matemáticas Financieras por Stanford.", quote: "Los mercados son flujos de información masivos analizables solo con IA. Detectamos patrones ocultos inaccesibles al ojo humano.", image: "/assets/team/sarah.png" },
+      ],
+      developmentTeam: {
+        title: "Nuestro equipo central de desarrollo",
+        roles: [
+          { count: "25", title: "Ingenieros de ML", from: "Google, Microsoft, Amazon" },
+          { count: "15", title: "Analistas financieros", from: "Goldman Sachs, Morgan Stanley, BlackRock" },
+          { count: "12", title: "Expertos en ciberseguridad", from: "Bancos líderes" },
+          { count: "8", title: "Product Designers", from: "Apple, Airbnb, Stripe" },
+        ],
+      },
+    },
+    technology: { /* ... */ },
+    awards: { /* ... */ },
+    licensing: { /* ... */ },
+    transparency: { /* ... */ },
+    partnerships: { /* ... */ },
+    csr: { /* ... */ },
+    roadmap: {
+      title: "Planes de desarrollo y visión",
+      plans: [
+        { title: "Objetivos a corto plazo (2025)", goals: ["Llegar a 100.000 inversores activos", "Lanzarnos en 20 nuevos mercados", "Implementar trading de derivados", "Aumentar la precisión de IA al 90%", "Lanzar nuestro ETF gestionado por IA"] },
+        { title: "Estrategia a medio plazo (2026–2027)", goals: ["1 millón de usuarios globales", "IPO en NASDAQ/NYSE", "M&A en fintech", "Desarrollar ecosistema cripto propio", "Soluciones B2B para institucionales"] },
+        { title: "Perspectiva a largo plazo (2028–2030)", goals: ["Liderazgo global en inversión con IA", "10+ millones de usuarios en 150+ países", "Ecosistema financiero totalmente integrado", "Desarrollar AGI para mercados financieros"] },
+      ],
+    },
+    cta: {
+      headline: "Únase a la revolución financiera de Qezvoro",
+      subheadline:
+        "Nuestra historia apenas comienza. Sea parte de la comunidad global que ya construye su futuro financiero con IA.",
+      benefits: {
+        title: "Ventajas de elegir Qezvoro Invest hoy:",
+        list: [
+          "Equipo de clase mundial de grandes tecnológicas y financieras",
+          "Desempeño probado: 87% precisión, +31% rentabilidad promedio",
+          "Regulación en 12 jurisdicciones y máximos estándares de protección",
+          "Innovación continua e inversión en I+D",
+          "Comunidad internacional de inversores exitosos en crecimiento",
+        ],
+      },
+      resources: {
+        title: "Recursos adicionales:",
+        links: [
+          { text: "Presentación corporativa (PDF)" },
+          { text: "Informes financieros y auditorías" },
+          { text: "Publicaciones científicas del equipo" },
+          { text: "Relación con inversores" },
+          { text: "Newsletter" },
+        ],
+      },
+      contacts: { title: "Contactos:", emails: ["press@qezvoro.com", "partners@qezvoro.com", "investors@qezvoro.com"] },
+    },
+  },
 };
 
 export default es;

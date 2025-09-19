@@ -1,12 +1,13 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building, TrendingUp, DollarSign, Globe, BarChart, LucideIcon } from "lucide-react";
+import Image from "next/image";
 
 type Props = { t: any };
 
 
 type Partner = {
-  icon: LucideIcon;
+  icon: string;
   name: string;
   category: string;
   description: string;
@@ -27,7 +28,13 @@ const TechnologicalPartners = ({ t }: { t: any }) => {
 
   const partners: Partner[] = (tt.items ?? []).map(
     (item: any, index: number) => ({
-      icon: [Building, TrendingUp, DollarSign, Globe, BarChart][index] ?? Building,
+      icon: [
+        '/assets/partners/binance.png',
+        '/assets/partners/coinbase.png',
+        '/assets/partners/kraken.png',
+        '/assets/partners/interactive_brokers.png',
+        '/assets/partners/bloomberg.png'
+      ][index] ?? Building,
       name: item.name,
       category: item.name,
       description: item.text,
@@ -56,7 +63,14 @@ const TechnologicalPartners = ({ t }: { t: any }) => {
               <Card key={index} className="h-full">
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-2">
-                    <partner.icon className="w-8 h-8 text-primary" />
+                    {/* <partner.icon className="w-8 h-8 text-primary" /> */}
+                    <Image
+                      src={partner.icon}
+                      alt={partner.name}
+                      width={32}
+                      height={32}
+                      className="w-8 h-8"
+                    />
                     <CardTitle>{partner.name}</CardTitle>
                   </div>
                   <CardDescription className="text-muted-foreground leading-relaxed text-sm">

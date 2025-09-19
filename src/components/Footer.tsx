@@ -9,29 +9,30 @@ import { Button } from "./ui/button";
 
 interface FooterProps {
   dict: Dictionary;
+  locale: string; 
 }
 
-const Footer = ({ dict }: FooterProps) => {
+const Footer = ({ dict, locale }: FooterProps) => {
   const { footer, brand } = dict;
   const { openModal, closeModal } = useModal();
 
-  // const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-  //   // Здесь можно добавить логику для кнопки, например, открыть модальное окно
-  //   openModal({
-  //     // title: t?.common?.ctaStart ?? "Начать сейчас",
-  //     title: "",
-  //     // description: t?.common?.ctaDescription ?? "Свяжитесь с нами, чтобы начать ваше инвестиционное путешествие с Qezvoro.",
-  //     description: "",
-  //     content: <QuickRegistrationForm t={t} locale={locale} />,
-  //     footer: (
-  //       <Button onClick={closeModal} className="gradient-bg hover:opacity-90 transition-opacity">
-  //         {t?.common?.close ?? "Закрыть"}
-  //       </Button>
-  //     ),
-  //     dismissible: true,
-  //     contentClassName: "sm:max-w-lg",
-  //   });
-  // }
+  const handleButtonClick = (e: React.MouseEvent<HTMLLIElement>) => {
+    // Здесь можно добавить логику для кнопки, например, открыть модальное окно
+    openModal({
+      // title: t?.common?.ctaStart ?? "Начать сейчас",
+      title: "",
+      // description: t?.common?.ctaDescription ?? "Свяжитесь с нами, чтобы начать ваше инвестиционное путешествие с Qezvoro.",
+      description: "",
+      content: <QuickRegistrationForm t={dict} locale={locale} />,
+      footer: (
+        <Button onClick={closeModal} className="gradient-bg hover:opacity-90 transition-opacity">
+          {dict?.common?.close ?? "Закрыть"}
+        </Button>
+      ),
+      dismissible: true,
+      contentClassName: "sm:max-w-lg",
+    });
+  }
   const navigation = {
     platform: footer.nav.platform.links.map(link => ({ ...link })),
     company: footer.nav.company.links.map(link => ({ ...link })),
@@ -93,7 +94,7 @@ const Footer = ({ dict }: FooterProps) => {
               <h3 className="font-semibold mb-4">{footer.nav.platform.title}</h3>
               <ul className="space-y-2">
                 {navigation.platform.map((item) => (
-                  <li key={item.name}>
+                  <li onClick={handleButtonClick} key={item.name}>
                     <a
                       href={item.href}
                       className="text-muted-foreground hover:text-foreground transition-colors text-sm"
@@ -109,7 +110,7 @@ const Footer = ({ dict }: FooterProps) => {
               <h3 className="font-semibold mb-4">{footer.nav.company.title}</h3>
               <ul className="space-y-2">
                 {navigation.company.map((item) => (
-                  <li key={item.name}>
+                  <li onClick={handleButtonClick} key={item.name}>
                     <a
                       href={item.href}
                       className="text-muted-foreground hover:text-foreground transition-colors text-sm"
@@ -125,7 +126,7 @@ const Footer = ({ dict }: FooterProps) => {
               <h3 className="font-semibold mb-4">{footer.nav.support.title}</h3>
               <ul className="space-y-2">
                 {navigation.support.map((item) => (
-                  <li key={item.name}>
+                  <li onClick={handleButtonClick} key={item.name}>
                     <a
                       href={item.href}
                       className="text-muted-foreground hover:text-foreground transition-colors text-sm"
@@ -141,7 +142,7 @@ const Footer = ({ dict }: FooterProps) => {
               <h3 className="font-semibold mb-4">{footer.nav.legal.title}</h3>
               <ul className="space-y-2">
                 {navigation.legal.map((item) => (
-                  <li key={item.name}>
+                  <li onClick={handleButtonClick} key={item.name}>
                     <a
                       href={item.href}
                       className="text-muted-foreground hover:text-foreground transition-colors text-sm"
