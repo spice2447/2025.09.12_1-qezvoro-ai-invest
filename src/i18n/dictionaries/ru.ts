@@ -553,6 +553,12 @@ const ru = {
     },
   },
 
+  privacyPage: {
+    title: "Политика конфиденциальности",
+    updatedAt: "Обновлено:",
+    toc: "содержание",
+  },
+
   reviewsPage: {
     meta: {
       title: "Отзывы и партнёры",

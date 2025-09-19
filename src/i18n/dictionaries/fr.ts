@@ -512,6 +512,12 @@ const fr = {
     },
   },
 
+  privacyPage: {
+    title: "Politique de confidentialité",
+    updatedAt: "Mis à jour :",
+    toc: "Sommaire",
+  },
+
   reviewsPage: {
     meta: {
       title: "Avis et partenaires",

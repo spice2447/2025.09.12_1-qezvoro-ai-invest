@@ -39,6 +39,7 @@ export default async function PrivacyPage(
 ) {
   const { locale } = await params;
   const raw = await load(locale, "privacy");
+  const t = await getMessages(locale);
   const { content, data } = matter(raw);
   const toc = extractToc(content);
 
@@ -50,7 +51,7 @@ export default async function PrivacyPage(
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-5xl mx-auto text-center mb-8">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 gradient-text">
-                {data.title ?? "Политика конфиденциальности"}
+                {t.privacyPage?.title ?? "Политика конфиденциальности"}
               </h1>
               {data.description && (
                 <p className="text-lg text-muted-foreground">{data.description}</p>
@@ -66,7 +67,7 @@ export default async function PrivacyPage(
                 <Markdown>{content}</Markdown>
               </article>
 
-              <TOC items={toc} />
+              <TOC items={toc} t={t} />
             </div>
           </div>
         </section>

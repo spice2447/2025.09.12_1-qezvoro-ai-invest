@@ -51,7 +51,7 @@ export default async function AboutPage({ params }: {params: Promise<{ locale: s
         <StrategicPartnerships dictionary={d?.partnerships} />
         <SocialResponsibility dictionary={d?.csr} /> */}
         <Roadmap dictionary={d?.roadmap} />
-        <AboutCTA dictionary={d?.cta} />
+        <AboutCTA dictionary={t} locale={locale} />
       </main>
     </div>
   );

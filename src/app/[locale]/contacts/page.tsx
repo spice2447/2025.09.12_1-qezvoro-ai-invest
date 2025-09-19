@@ -54,14 +54,14 @@ export default async function ContactsPage({
               <div className="space-y-8">
                 {/* <ContactInfo dictionary={d?.info} /> */}
                 <Offices dictionary={d?.offices} />
-                <SocialLinks dictionary={d?.social} />
+                {/* <SocialLinks dictionary={d?.social} /> */}
                 <FAQCompact dictionary={d?.faq} />
               </div>
             </div>
           </div>
         </section>
         <SecurityBadges dictionary={d?.security} />
-        <ContactCTA dictionary={d?.cta} />
+        <ContactCTA t={t} locale={locale} />
       </main>
     </div>
   );

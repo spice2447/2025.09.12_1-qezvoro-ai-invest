@@ -524,6 +524,12 @@ const pt = {
     },
   },
 
+  privacyPage: {
+    title: "Política de Privacidade",
+    updatedAt: "Atualizado:",
+    toc: "Conteúdo",
+  },
+
   reviewsPage: {
     meta: {
       title: "Avaliações e parceiros",

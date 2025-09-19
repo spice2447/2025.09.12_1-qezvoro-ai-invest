@@ -512,6 +512,12 @@ const ms = {
     },
   },
 
+  privacyPage: {
+    title: "Dasar Privasi",
+    updatedAt: "Dikemas kini:",
+    toc: "Kandungan",
+  },
+
   reviewsPage: {
     meta: {
       title: "Ulasan & rakan kongsi",

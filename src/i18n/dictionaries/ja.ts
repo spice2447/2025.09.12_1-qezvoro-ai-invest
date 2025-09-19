@@ -514,6 +514,12 @@ const ja = {
     },
   },
 
+  privacyPage: {
+    title: "プライバシーポリシー",
+    updatedAt: "更新日:",
+    toc: "目次",
+  },
+
   reviewsPage: {
     meta: {
       title: "レビュー & パートナー",

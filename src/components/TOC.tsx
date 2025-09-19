@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import type { TocItem } from "@/lib/toc";
 
-export default function TOC({ items, className }: { items: TocItem[]; className?: string }) {
+export default function TOC({ items, className, t }: { items: TocItem[]; className?: string; t: any }) {
   const [active, setActive] = useState<string | null>(null);
 
   // Подсветка активного раздела
@@ -42,7 +42,7 @@ export default function TOC({ items, className }: { items: TocItem[]; className?
         className
       )}
     >
-      <div className="text-sm font-semibold mb-2">Содержание</div>
+      <div className="text-sm font-semibold mb-2">{t.privacyPage?.toc ?? "Содержание"}</div>
       <nav className="space-y-1 text-sm">
         {items.map((it) => (
           <a

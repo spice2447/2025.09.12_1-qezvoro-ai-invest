@@ -695,6 +695,12 @@ const cs = {
     },
   },
 
+  privacyPage: {
+    title: "Zásady ochrany osobních údajů",
+    updatedAt: "Aktualizováno:",
+    toc: "Obsah",
+  },
+
   reviewsPage: {
     meta: {
       title: "Recenze & Partneři",

@@ -545,6 +545,12 @@ const enSG = {
     },
   },
 
+  privacyPage: {
+    title: "Privacy Policy",
+    updatedAt: "Updated:",
+    toc: "Contents",
+  },
+
   reviewsPage: {
     meta: {
       title: "Reviews & Partners",
